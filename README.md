@@ -6,7 +6,7 @@ Idea is to build a model which will take keywords as inputs and generate sentenc
 
 Two Models have been built: 
 
-- Using T5-base size = 400 MB can be found here: https://huggingface.co/gagan3012/keytotext
+- Using T5-base size = 850 MB can be found here: https://huggingface.co/gagan3012/keytotext
 - Using T5-small size = 230 MB can be found here: https://huggingface.co/gagan3012/keytotext-small
 
 #### Usage:
