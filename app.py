@@ -59,7 +59,8 @@ def display():
 
     if st.button("Get Answer"):
         text = generate(keywords, temp, top_p)
-        st.header(text)
+        st.write("# Generated Sentences:")
+        st.write("## {}".format(text))
 
 
 if __name__ == '__main__':
