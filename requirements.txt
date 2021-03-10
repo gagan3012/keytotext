@@ -1,0 +1,3 @@
+torch==1.7.1
+transformers==4.3.2
+streamlit==0.75.0
