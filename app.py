@@ -40,7 +40,6 @@ def display():
         ''')
     st.sidebar.write('## Options:')
 
-    keys = st.sidebar.slider(label='Number of keywords', min_value=1, max_value=15, value=3, step=1)
     top_p = st.sidebar.slider(label='Top k', min_value=0.0, max_value=40.0, value=1.0, step=1.0)
     temp = st.sidebar.slider(label='Temperature', min_value=0.1, max_value=1.0, value=1.0, step=0.05)
     st.sidebar.markdown(
@@ -50,8 +49,7 @@ def display():
         `Top k:` Integer value controlling diversity. 1 means only 1 word is considered for each step (token), resulting in deterministic completions, while 40 means 40 words are considered at each step. 0 (default) is a special setting meaning no restrictions. 40 generally is a good value.
         ''')
 
-    keywords = st_tags('Enter Keyword:', 'Press enter to add more', ['One', 'Two', 'Three'])
-
+    keywords = st_tags('Enter Keyword:', 'Press enter to add more', ['Indian', 'Wedding', 'Best'])
     if st.button("Get Answer"):
         text = generate(keywords, temp, top_p)
         st.write("# Generated Sentence:")
