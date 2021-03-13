@@ -1,7 +1,8 @@
-import torch
 import streamlit as st
+from streamlit_tags import st_tags
 from transformers import AutoTokenizer, AutoModelWithLMHead
 import re
+import torch
 
 st.set_page_config(
     page_title="Text Generation Using Keywords",
@@ -34,7 +35,6 @@ def display():
     st.sidebar.markdown(
         '''
         ## This is a demo of a text to text generation model trained with T5 to generate Sentences from Keywords
-
         *For additional questions and inquiries, please contact **Gagan Bhatia** via [LinkedIn](
         https://www.linkedin.com/in/gbhatia30/) or [Github](https://github.com/gagan3012).*
         ''')
@@ -50,12 +50,7 @@ def display():
         `Top k:` Integer value controlling diversity. 1 means only 1 word is considered for each step (token), resulting in deterministic completions, while 40 means 40 words are considered at each step. 0 (default) is a special setting meaning no restrictions. 40 generally is a good value.
         ''')
 
-    st.write('## Enter the keywords:')
-    keywords = []
-    for i in range(1, keys + 1):
-        k = st.text_input('Keyword no.{}'.format(i), value='', key=i)
-        keywords.append(k)
-    keywords = st.multiselect('Review Keywords', keywords, keywords)
+    keywords = st_tags('Enter Keyword:', 'Press enter to add more', ['One', 'Two', 'Three'])
 
     if st.button("Get Answer"):
         text = generate(keywords, temp, top_p)
