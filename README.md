@@ -25,7 +25,7 @@ model = AutoModelWithLMHead.from_pretrained("gagan3012/keytotext-small")
 
 https://share.streamlit.io/gagan3012/keytotext/app.py
 
-![image](https://user-images.githubusercontent.com/49101362/110660053-3b20fe80-81d4-11eb-9275-ba402134e8d9.png)
+![image](https://user-images.githubusercontent.com/49101362/111079112-8ce5c380-8509-11eb-83cd-c214e7444a29.png)
 
 
 ### Example: 
