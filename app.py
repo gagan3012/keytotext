@@ -1,6 +1,6 @@
 import streamlit as st
 from streamlit_tags import st_tags
-from transformers import AutoTokenizer, AutoModelWithLMHead
+from transformers import GPT2Tokenizer, GPT2LMHeadModel
 import re
 import torch
 
@@ -12,8 +12,8 @@ st.set_page_config(
 
 @st.cache(suppress_st_warning=True, ttl=1000)
 def generate(keywords, temp, top_p):
-    tokenizer = AutoTokenizer.from_pretrained("gagan3012/keytotext-small")
-    model = AutoModelWithLMHead.from_pretrained("gagan3012/keytotext-small")
+    tokenizer = GPT2Tokenizer.from_pretrained("gagan3012/keytotext-small")
+    model = GPT2LMHeadModel.from_pretrained("gagan3012/keytotext-small")
     text = str(keywords)
     text = text.replace(',', ' | ')
     text = text.replace("'", "")
