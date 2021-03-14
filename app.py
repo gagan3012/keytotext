@@ -34,7 +34,7 @@ def display():
     st.write('# Using AI to Generate Sentences from Keywords')
     st.sidebar.markdown(
         '''
-        ## This is a demo of a text to text generation model trained with T5 to generate Sentences from Keywords
+        ## This is a demo of a text to text generation model to generate Sentences from Keywords
         *For additional questions and inquiries, please contact **Gagan Bhatia** via [LinkedIn](
         https://www.linkedin.com/in/gbhatia30/) or [Github](https://github.com/gagan3012).*
         ''')
