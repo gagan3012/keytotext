@@ -19,6 +19,14 @@ tokenizer = AutoTokenizer.from_pretrained("gagan3012/keytotext-small")
 model = AutoModelWithLMHead.from_pretrained("gagan3012/keytotext-small")
 ```
 
+This uses a custom streamlit compopnet built by me: [GitHub](https://github.com/gagan3012/streamlit-tags)
+
+```
+pip install streamlit-tags
+```
+
+The installation can also be found on [**PyPi**](https://pypi.org/project/streamlit-tags/)
+
 ### Demo:
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/gagan3012/keytotext/app.py)
