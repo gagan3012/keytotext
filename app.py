@@ -10,8 +10,16 @@ st.set_page_config(
     initial_sidebar_state="expanded", )
 
 
+@st.cache(allow_output_mutation=True)
+def load_model():
+    tokenizer = AutoTokenizer.from_pretrained("gagan3012/keytotext-small")
+    model = AutoModelWithLMHead.from_pretrained("gagan3012/keytotext-small")
+    return tokenizer, model
+
+
 @st.cache(suppress_st_warning=True, ttl=1000)
 def generate(keywords, temp, top_p):
+    tokenizer, model = load_model()
     tokenizer = AutoTokenizer.from_pretrained("gagan3012/keytotext-small")
     model = AutoModelWithLMHead.from_pretrained("gagan3012/keytotext-small")
     text = str(keywords)
