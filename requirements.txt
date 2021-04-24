@@ -1,5 +1,5 @@
 torch
-transformers==4.3.2
-streamlit==0.75.0
-streamlit_tags==1.0.0
+transformers
+streamlit
+streamlit_tags
 SentencePiece

@@ -12,16 +12,14 @@ st.set_page_config(
 
 @st.cache(allow_output_mutation=True)
 def load_model():
-    tokenizer = AutoTokenizer.from_pretrained("gagan3012/keytotext-small")
-    model = AutoModelWithLMHead.from_pretrained("gagan3012/keytotext-small")
+    tokenizer = AutoTokenizer.from_pretrained("gagan3012/k2t")
+    model = AutoModelWithLMHead.from_pretrained("gagan3012/k2t")
     return tokenizer, model
 
 
 @st.cache(suppress_st_warning=True, ttl=1000)
 def generate(keywords, temp, top_p):
     tokenizer, model = load_model()
-    tokenizer = AutoTokenizer.from_pretrained("gagan3012/keytotext-small")
-    model = AutoModelWithLMHead.from_pretrained("gagan3012/keytotext-small")
     text = str(keywords)
     text = text.replace(',', ' | ')
     text = text.replace("'", "")
@@ -30,7 +28,7 @@ def generate(keywords, temp, top_p):
     texts = text.split(".")
     result = ""
     for txt in texts:
-        input_ids = tokenizer.encode("WebNLG:{} </s>".format(txt),
+        input_ids = tokenizer.encode("{} </s>".format(txt),
                                      return_tensors="pt")
         outputs = model.generate(input_ids, max_length=1024, temperature=temp, top_p=top_p)
         result += tokenizer.decode(outputs[0])
