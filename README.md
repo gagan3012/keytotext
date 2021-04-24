@@ -8,15 +8,16 @@ Two Models have been built:
 
 - Using T5-base size = 850 MB can be found here: https://huggingface.co/gagan3012/keytotext
 - Using T5-small size = 230 MB can be found here: https://huggingface.co/gagan3012/keytotext-small
+- Updated model: https://huggingface.co/gagan3012/k2t
 
 #### Usage:
 
 ```python
 from transformers import AutoTokenizer, AutoModelWithLMHead
+  
+tokenizer = AutoTokenizer.from_pretrained("gagan3012/k2t")
 
-tokenizer = AutoTokenizer.from_pretrained("gagan3012/keytotext-small")
-
-model = AutoModelWithLMHead.from_pretrained("gagan3012/keytotext-small")
+model = AutoModelWithLMHead.from_pretrained("gagan3012/k2t")
 ```
 
 This uses a custom streamlit component built by me: [GitHub](https://github.com/gagan3012/streamlit-tags)
