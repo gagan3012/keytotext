@@ -1,4 +1,5 @@
 import re
+from typing import Optional, Union
 
 import torch
 from transformers import (
@@ -87,7 +88,28 @@ SUPPORTED_TASKS = {
 }
 
 def pipeline(
-        task: str,
-        model: Optional = None,
-        tokenizer: Optional[Union[str, PreTrainedTokenizer]] = None,
-)
+    task: str,
+    model: Optional = None,
+    tokenizer: Optional[Union[str, PreTrainedTokenizer]] = None,
+    use_cuda: Optional[bool] = True,
+    **kwargs,
+):
+    if task not in SUPPORTED_TASKS:
+        raise KeyError("Unknown task {}, available tasks are {}".format(task, list(SUPPORTED_TASKS.keys())))
+
+    targeted_task = SUPPORTED_TASKS[task]
+    task_class = targeted_task["impl"]
+
+    if model is None:
+        model = targeted_task["default"]["model"]
+
+    if tokenizer is None:
+        if isinstance(model, str):
+            tokenizer = model
+        else:
+            # Impossible to guest what is the right tokenizer here
+            raise Exception(
+                "Please provided a PretrainedTokenizer class or a path/identifier to a pretrained tokenizer."
+            )
+
+    
