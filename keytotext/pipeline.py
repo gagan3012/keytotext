@@ -47,7 +47,7 @@ class K2TPipeline:
             result += self.tokenizer.decode(outputs[0])
 
         result = re.sub("<pad>|</s>", "", result)
-        return result
+        return result.strip()
 
     def _prepare_inputs_for_k2t(self, keywords):
         text = str(keywords)
