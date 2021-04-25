@@ -81,7 +81,13 @@ SUPPORTED_TASKS = {
     "k2t": {
         "impl": K2TPipeline,
         "default": {
-            "model": "valhalla/t5-small-e2e-qg",
+            "model": "gagan3012/k2t",
         }
     }
 }
+
+def pipeline(
+        task: str,
+        model: Optional = None,
+        tokenizer: Optional[Union[str, PreTrainedTokenizer]] = None,
+)
