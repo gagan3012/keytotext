@@ -5,3 +5,11 @@ from transformers import(
     PreTrainedTokenizer,
 )
 
+class K2TPipeline:
+    def __init__(
+        self,
+        model : PreTrainedModel,
+        tokenizer : PreTrainedTokenizer,
+        use_cuda: bool
+    ):
+
