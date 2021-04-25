@@ -16,4 +16,11 @@ home-page = "https://github.com/gagan3012/keytotext"
 classifiers = [ "License :: OSI Approved :: MIT License",]
 description-file = "README.md"
 requires-python = ">=3.7"
+requires = [
+    "torch",
+    "transformers",
+    "re",
+    "typing"
+]
+
 
