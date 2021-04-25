@@ -9,7 +9,10 @@ module = "keytotext"
 author = "Gagan Bhatia"
 author-email = "gbhatia880@gmail.com"
 home-page = "https://github.com/gagan3012/keytotext"
-classifiers = [ "License :: OSI Approved :: MIT License",]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
 description-file = "README.md"
 requires-python = ">=3.7"
 requires = [
