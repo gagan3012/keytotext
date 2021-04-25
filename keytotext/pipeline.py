@@ -84,6 +84,12 @@ SUPPORTED_TASKS = {
         "default": {
             "model": "gagan3012/k2t",
         },
+    },
+    "k2t-tiny": {
+        "impl": K2TPipeline,
+        "default": {
+            "model": "gagan3012/k2t-tiny",
+        },
     }
 }
 
