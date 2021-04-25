@@ -1,5 +1,11 @@
 [build-system]
-requires = ["flit_core >=2,<4"]
+requires = [
+    "flit_core >=2,<4",
+    "torch",
+    "transformers",
+    "re",
+    "typing"
+]
 build-backend = "flit_core.buildapi"
 
 [tool.flit.metadata]
