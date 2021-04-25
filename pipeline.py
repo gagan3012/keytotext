@@ -36,7 +36,6 @@ class K2TPipeline:
         inputs = self._prepare_inputs_for_k2t(keywords)
         if not kwargs:
             kwargs = self.default_generate_kwargs
-        
 
     def _prepare_inputs_for_k2t(self, keywords):
         text = str(keywords)
