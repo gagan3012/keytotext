@@ -92,7 +92,6 @@ def pipeline(
         model: Optional = None,
         tokenizer: Optional[Union[str, PreTrainedTokenizer]] = None,
         use_cuda: Optional[bool] = True,
-        **kwargs,
 ):
     if task not in SUPPORTED_TASKS:
         raise KeyError("Unknown task {}, available tasks are {}".format(task, list(SUPPORTED_TASKS.keys())))
