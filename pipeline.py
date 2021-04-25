@@ -75,3 +75,13 @@ class K2TPipeline:
             return_tensors="pt"
         )
         return inputs
+
+
+SUPPORTED_TASKS = {
+    "k2t": {
+        "impl": K2TPipeline,
+        "default": {
+            "model": "valhalla/t5-small-e2e-qg",
+        }
+    }
+}
