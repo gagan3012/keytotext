@@ -87,12 +87,13 @@ SUPPORTED_TASKS = {
     }
 }
 
+
 def pipeline(
-    task: str,
-    model: Optional = None,
-    tokenizer: Optional[Union[str, PreTrainedTokenizer]] = None,
-    use_cuda: Optional[bool] = True,
-    **kwargs,
+        task: str,
+        model: Optional = None,
+        tokenizer: Optional[Union[str, PreTrainedTokenizer]] = None,
+        use_cuda: Optional[bool] = True,
+        **kwargs,
 ):
     if task not in SUPPORTED_TASKS:
         raise KeyError("Unknown task {}, available tasks are {}".format(task, list(SUPPORTED_TASKS.keys())))
@@ -111,5 +112,9 @@ def pipeline(
             raise Exception(
                 "Please provided a PretrainedTokenizer class or a path/identifier to a pretrained tokenizer."
             )
+    if isinstance(tokenizer, (str, tuple)):
+        tokenizer = AutoTokenizer.from_pretrained(tokenizer)
 
-    
+    # Instantiate model if needed
+    if isinstance(model, str):
+        model = AutoModelForSeq2SeqLM.from_pretrained(model)
