@@ -129,6 +129,3 @@ dmypy.json
 .pyre/
 .pypirc
 
-.github
-.idea
-.streamlit
