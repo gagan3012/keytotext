@@ -14,13 +14,8 @@ Two Models have been built:
 
 #### Usage:
 
-```python
-from transformers import AutoTokenizer, AutoModelWithLMHead
-  
-tokenizer = AutoTokenizer.from_pretrained("gagan3012/k2t")
+![carbon](https://user-images.githubusercontent.com/49101362/116014804-bd0f9e80-a63f-11eb-9b71-2ff574018dc7.png)
 
-model = AutoModelWithLMHead.from_pretrained("gagan3012/k2t")
-```
 
 This uses a custom streamlit component built by me: [GitHub](https://github.com/gagan3012/streamlit-tags)
 
