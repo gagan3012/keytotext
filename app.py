@@ -10,7 +10,7 @@ st.set_page_config(
 
 
 @st.cache(suppress_st_warning=True, ttl=1000)
-def generate(keywords, temp, top_p):
+def generate(keywords):
     nlp = pipeline("k2t")
     return nlp(keywords)
 
@@ -35,13 +35,13 @@ def display():
         ''')
 
     keywords = st_tags(
-        label='Enter Keywords:',
+        label='# Enter Keywords:',
         text='Press enter to add more',
         value=['India', 'wedding', 'Food'],
         maxtags=4,
         key='1')
     if st.button("Get Answer"):
-        text = generate(keywords, temp, top_p)
+        text = generate(keywords)
         st.write("# Generated Sentence:")
         st.write("## {}".format(text))
 
