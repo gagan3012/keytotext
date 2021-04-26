@@ -16,23 +16,30 @@ def generate(keywords, model="k2t"):
 
 def display():
     st.write('# Keytotext UI')
-    st.sidebar.markdown(
+    st.markdown(
         '''
-        ## Keytotext UI 
         *For additional questions and inquiries, please contact **Gagan Bhatia** via [LinkedIn](
         https://www.linkedin.com/in/gbhatia30/) or [Github](https://github.com/gagan3012).*
         ''')
+
+    mt = st.slider(label="Number of Keywords you would like to enter:",
+                           min_value=1,
+                           max_value=10,
+                           value=3,
+                           step=1)
+
+    model = st.selectbox("Select the model you would like to run", ['k2t', 'k2t-base', 'k2t-tiny'])
 
     keywords = st_tags(
         label='## Enter Keywords:',
         text='Press enter to add more',
         value=['India', 'wedding', 'Food'],
-        maxtags=4,
+        maxtags=mt,
         key='1')
 
-    st.sidebar.selectbox("Select the model you would like to run", ['k2t', 'k2t-base', 'k2t-tiny'])
-    if st.button("Get Answer"):
-        text = generate(keywords)
+    if st.button("Generate text"):
+        text = generate(keywords=keywords,
+                        model=model)
         st.write("# Generated Sentence:")
         st.write("## {}".format(text))
 
