@@ -31,12 +31,11 @@ def display():
     model = st.selectbox(label="Select the model you would like to run",
                          options=['k2t', 'k2t-base', 'k2t-tiny'])
 
-    keywords = st_tags(
-        label='## Enter Keywords:',
-        text='Press enter to add more',
-        value=['India', 'wedding', 'Food'],
-        maxtags=mt,
-        key='1')
+    keywords = st_tags(label='## Enter Keywords:',
+                       text='Press enter to add more',
+                       value=['India', 'Capital', 'Delhi'],
+                       maxtags=mt,
+                       key='1')
 
     if st.button("Generate text"):
         text = generate(keywords=keywords,
