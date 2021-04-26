@@ -33,7 +33,7 @@ def display():
 
     keywords = st_tags(label='## Enter Keywords:',
                        text='Press enter to add more',
-                       value=['India', 'Capital', 'Delhi'],
+                       value=['India', 'Capital', 'New Delhi'],
                        maxtags=mt,
                        key='1')
 
