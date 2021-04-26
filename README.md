@@ -30,11 +30,12 @@ pip install keytotext
 
 ## UI:
 
-This uses a custom streamlit component built by me: [GitHub](https://github.com/gagan3012/streamlit-tags)
+UI: [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/gagan3012/keytotext/UI/app.py)
 
 ```
 pip install streamlit-tags
 ```
+This uses a custom streamlit component built by me: [GitHub](https://github.com/gagan3012/streamlit-tags)
 
 ![image](https://user-images.githubusercontent.com/49101362/116162205-fc042980-a6fd-11eb-892e-8f6902f193f4.png)
 
