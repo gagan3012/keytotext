@@ -12,6 +12,8 @@ Two Models have been built:
 - Using T5-small size = 230 MB can be found here: https://huggingface.co/gagan3012/keytotext-small
 - Updated model: https://huggingface.co/gagan3012/k2t
 
+Models trained as in notebooks
+
 #### Usage:
 
 ![carbon](https://user-images.githubusercontent.com/49101362/116014804-bd0f9e80-a63f-11eb-9b71-2ff574018dc7.png)
