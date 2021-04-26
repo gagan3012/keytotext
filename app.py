@@ -10,8 +10,8 @@ st.set_page_config(
 
 
 @st.cache(suppress_st_warning=True, ttl=1000)
-def generate(keywords):
-    nlp = pipeline("k2t")
+def generate(keywords, model="k2t"):
+    nlp = pipeline(model)
     return nlp(keywords)
 
 
@@ -19,7 +19,7 @@ def display():
     st.write('# Keytotext UI')
     st.sidebar.markdown(
         '''
-        ## This is a demo of a text to text generation model to generate Sentences from Keywords
+        ## Keytotext
         *For additional questions and inquiries, please contact **Gagan Bhatia** via [LinkedIn](
         https://www.linkedin.com/in/gbhatia30/) or [Github](https://github.com/gagan3012).*
         ''')
