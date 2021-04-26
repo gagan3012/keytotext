@@ -1,8 +1,8 @@
 # keytotext
 
-Idea is to build a model which will take keywords as inputs and generate sentences as outputs. 
+![keytotext](https://socialify.git.ci/gagan3012/keytotext/image?description=1&language=1&owner=1&stargazers=1&theme=Light)
 
-![carbon](https://user-images.githubusercontent.com/49101362/116014804-bd0f9e80-a63f-11eb-9b71-2ff574018dc7.png)
+Idea is to build a model which will take keywords as inputs and generate sentences as outputs. 
 
 ### Model:
 
