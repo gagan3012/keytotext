@@ -4,8 +4,9 @@ from keytotext import pipeline
 
 st.set_page_config(
     page_title="Text Generation Using Keywords",
-    layout="wide",
-    initial_sidebar_state="expanded", )
+    #layout="wide",
+    #initial_sidebar_state="expanded",
+)
 
 
 @st.cache(suppress_st_warning=True, ttl=1000)
