@@ -111,10 +111,24 @@ def pipeline(
     (:obj:`str`):
             The task defining which pipeline will be returned. Currently accepted tasks are:
 
-            - :obj: 
+            - :obj:`"k2t"`: will return a :class:`K2TPipeline` which is based on the k2t model based on t5-small
+            - :obj:`"k2t-tiny"`: will return a :class:`K2TPipeline` which is based on the k2t model based on t5-tiny
+            - :obj:`"k2t-base"`: will return a :class:`K2TPipeline` which is based on the k2t model based on t5-base
+
     :param model:
+    (:obj:`str` or `optional`):
+            The model that will be used by the pipeline to make predictions.
+
+            If not provided, the default for the :obj:`task` will be loaded.
     :param tokenizer:
+    (:obj:`str` or `optional`):
+            The tokenizer that will be used by the pipeline to encode data for the model. This can be a model
+            identifier or an actual pretrained tokenizer inheriting from :class:`~transformers.PreTrainedTokenizer`.
+
+            If not provided, the default tokenizer for the given :obj:`model` will be loaded (if it is a string).
     :param use_cuda:
+    (:obj:`bool`, `optional`, defaults to :obj:`True`):
+            Whether or not to use a GPU or not Default: True
     :return:
     (:class:):
             `K2TPipeline`: A Keytotext pipeline for the task.
