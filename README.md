@@ -5,17 +5,19 @@
 
 Idea is to build a model which will take keywords as inputs and generate sentences as outputs. 
 
-### Model:
+### Keytotext is powered by Huggingface 🤗
 
-Two Models have been built: 
+## Model:
 
-- Using T5-base size = 850 MB can be found here: https://huggingface.co/gagan3012/keytotext
-- Using T5-small size = 230 MB can be found here: https://huggingface.co/gagan3012/keytotext-small
-- Updated model: https://huggingface.co/gagan3012/k2t
+Keytotext is based on the Amazing T5 Model: 
+
+- `k2t`: [Model](https://huggingface.co/gagan3012/k2t)
+- `k2t-tiny`: [Model](https://huggingface.co/gagan3012/k2t-tiny)
+- `k2t-base`: [Model](https://huggingface.co/gagan3012/k2t-base)
 
 Models trained as in notebooks
 
-### Usage:
+## Usage:
 
 ```
 pip install keytotext
@@ -24,7 +26,7 @@ pip install keytotext
 ![carbon](https://user-images.githubusercontent.com/49101362/116014804-bd0f9e80-a63f-11eb-9b71-2ff574018dc7.png)
 
 
-### UI:
+## UI:
 
 This uses a custom streamlit component built by me: [GitHub](https://github.com/gagan3012/streamlit-tags)
 
