@@ -37,7 +37,7 @@ def generate(keywords, temp, top_p):
 
 
 def display():
-    st.write('# Using AI to Generate Sentences from Keywords')
+    st.write('# Keytotext UI')
     st.sidebar.markdown(
         '''
         ## This is a demo of a text to text generation model to generate Sentences from Keywords
@@ -55,7 +55,12 @@ def display():
         `Top k:` Integer value controlling diversity. 1 means only 1 word is considered for each step (token), resulting in deterministic completions, while 40 means 40 words are considered at each step. 0 (default) is a special setting meaning no restrictions. 40 generally is a good value.
         ''')
 
-    keywords = st_tags('Enter Keyword:', 'Press enter to add more', ['Indian', 'Wedding', 'Best'])
+    keywords = st_tags(
+        label='Enter Keywords:',
+        text='Press enter to add more',
+        value=['India', 'wedding', 'Food'],
+        maxtags=4,
+        key='1')
     if st.button("Get Answer"):
         text = generate(keywords, temp, top_p)
         st.write("# Generated Sentence:")
