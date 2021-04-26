@@ -15,7 +15,11 @@ Two Models have been built:
 
 Models trained as in notebooks
 
-#### Usage:
+### Usage:
+
+```
+pip install keytotext
+```
 
 ![carbon](https://user-images.githubusercontent.com/49101362/116014804-bd0f9e80-a63f-11eb-9b71-2ff574018dc7.png)
 
@@ -28,4 +32,5 @@ This uses a custom streamlit component built by me: [GitHub](https://github.com/
 pip install streamlit-tags
 ```
 
-The installation can also be found on [**PyPi**](https://pypi.org/project/streamlit-tags/)
+![image](https://user-images.githubusercontent.com/49101362/116162205-fc042980-a6fd-11eb-892e-8f6902f193f4.png)
+
