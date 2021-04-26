@@ -91,6 +91,7 @@ SUPPORTED_TASKS = {
             "model": "gagan3012/k2t-tiny",
         },
     }
+    
 }
 
 
