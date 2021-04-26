@@ -1,8 +1,7 @@
 import streamlit as st
 from streamlit_tags import st_tags
-from transformers import AutoTokenizer, AutoModelWithLMHead
+from keytotext import pipeline
 import re
-import torch
 
 st.set_page_config(
     page_title="Text Generation Using Keywords",
@@ -10,30 +9,10 @@ st.set_page_config(
     initial_sidebar_state="expanded", )
 
 
-@st.cache(allow_output_mutation=True)
-def load_model():
-    tokenizer = AutoTokenizer.from_pretrained("gagan3012/k2t")
-    model = AutoModelWithLMHead.from_pretrained("gagan3012/k2t")
-    return tokenizer, model
-
-
 @st.cache(suppress_st_warning=True, ttl=1000)
 def generate(keywords, temp, top_p):
-    tokenizer, model = load_model()
-    text = str(keywords)
-    text = text.replace(',', ' | ')
-    text = text.replace("'", "")
-    text = text.replace('[', '')
-    text = text.replace(']', '')
-    texts = text.split(".")
-    result = ""
-    for txt in texts:
-        input_ids = tokenizer.encode("{} </s>".format(txt),
-                                     return_tensors="pt")
-        outputs = model.generate(input_ids, max_length=1024, temperature=temp, top_p=top_p)
-        result += tokenizer.decode(outputs[0])
-    result = re.sub('<pad>|</s>', "", result)
-    return result
+    nlp = pipeline("k2t")
+    return nlp(keywords)
 
 
 def display():
