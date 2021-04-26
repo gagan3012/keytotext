@@ -15,7 +15,7 @@ Keytotext is based on the Amazing T5 Model:
 - `k2t-tiny`: [Model](https://huggingface.co/gagan3012/k2t-tiny)
 - `k2t-base`: [Model](https://huggingface.co/gagan3012/k2t-base)
 
-Models trained as in notebooks
+Training Notebooks can be found in the [`Training Notebooks`](https://github.com/gagan3012/keytotext/tree/master/Training%20Notebooks) Folder
 
 ## Usage:
 
