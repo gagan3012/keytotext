@@ -104,7 +104,23 @@ def pipeline(
     model: Optional = None,
     tokenizer: Optional[Union[str, PreTrainedTokenizer]] = None,
     use_cuda: Optional[bool] = True,
-):
+    ) -> K2TPipeline:
+    """
+
+    :param task:
+    (:obj:`str`):
+            The task defining which pipeline will be returned. Currently accepted tasks are:
+
+            - :obj: 
+    :param model:
+    :param tokenizer:
+    :param use_cuda:
+    :return:
+    (:class:):
+            `K2TPipeline`: A Keytotext pipeline for the task.
+
+    """
+
     if task not in SUPPORTED_TASKS:
         raise KeyError(
             "Unknown task {}, available tasks are {}".format(
