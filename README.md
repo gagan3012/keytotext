@@ -28,15 +28,6 @@ pip install streamlit-tags
 
 The installation can also be found on [**PyPi**](https://pypi.org/project/streamlit-tags/)
 
-### Demo:
-
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/gagan3012/keytotext/app.py)
-
-https://share.streamlit.io/gagan3012/keytotext/app.py
-
-![image](https://user-images.githubusercontent.com/49101362/111079112-8ce5c380-8509-11eb-83cd-c214e7444a29.png)
-
-
 ### Example: 
 
 ['India', 'Wedding']  -> We are celebrating today in New Delhi with three wedding anniversary parties.
