@@ -2,6 +2,8 @@
 
 Idea is to build a model which will take keywords as inputs and generate sentences as outputs. 
 
+![carbon](https://user-images.githubusercontent.com/49101362/116014804-bd0f9e80-a63f-11eb-9b71-2ff574018dc7.png)
+
 ### Model:
 
 Two Models have been built: 
