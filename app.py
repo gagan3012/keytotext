@@ -35,7 +35,7 @@ def display():
         ''')
 
     keywords = st_tags(
-        label='# Enter Keywords:',
+        label='## Enter Keywords:',
         text='Press enter to add more',
         value=['India', 'wedding', 'Food'],
         maxtags=4,
