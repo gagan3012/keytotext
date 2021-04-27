@@ -1,4 +1,3 @@
-
 # keytotext
 
 ![keytotext](https://socialify.git.ci/gagan3012/keytotext/image?description=1&language=1&owner=1&stargazers=1&theme=Light)
@@ -30,7 +29,7 @@ Example usage: [![Open In Colab](https://colab.research.google.com/assets/colab-
 pip install keytotext
 ```
 
-![carbon](https://user-images.githubusercontent.com/49101362/116014804-bd0f9e80-a63f-11eb-9b71-2ff574018dc7.png)
+![carbon (3)](https://user-images.githubusercontent.com/49101362/116220679-90e64180-a755-11eb-9246-82d93d924a6c.png)
 
 
 ## UI:
