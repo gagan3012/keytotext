@@ -25,6 +25,8 @@ Training Notebooks can be found in the [`Training Notebooks`](https://github.com
 
 Example usage: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gagan3012/keytotext/blob/master/Examples/K2T.ipynb)
 
+Example Notebooks can be found in the [`Notebooks`](https://github.com/gagan3012/keytotext/tree/master/Examples) Folder
+
 ```
 pip install keytotext
 ```
