@@ -1,6 +1,6 @@
 # keytotext
 
-![keytotext](https://socialify.git.ci/gagan3012/keytotext/image?description=1&language=1&owner=1&stargazers=1&theme=Light)
+![keytotext (1)](https://user-images.githubusercontent.com/49101362/116334480-f5e57a00-a7dd-11eb-987c-186477f94b6e.png)
 
 Idea is to build a model which will take keywords as inputs and generate sentences as outputs. 
 
