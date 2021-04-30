@@ -10,7 +10,7 @@ st.set_page_config(
 )
 
 
-@st.cache(suppress_st_warning=True, ttl=1000)
+@st.cache(suppress_st_warning=True, ttl=1000,show_spinner=)
 def generate(keywords, model="k2t"):
     nlp = pipeline(model)
     return nlp(keywords)
