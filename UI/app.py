@@ -5,7 +5,6 @@ import os
 
 os.environ['TOKENIZERS_PARALLELISM'] = 'false'
 
-
 st.set_page_config(
     page_title="Text Generation Using Keywords",
 )
@@ -43,7 +42,7 @@ def display():
     if st.button("Generate text"):
         with st.spinner("Connecting the Dots..."):
             text = generate(keywords=keywords,
-                        model=model)
+                            model=model)
         st.write("# Generated Sentence:")
         st.write("## {}".format(text))
 
