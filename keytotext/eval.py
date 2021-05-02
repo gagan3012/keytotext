@@ -167,3 +167,6 @@ def main():
     test['predctions'] = prediction
 
 
+if __name__ == "__main__":
+    main()
+
