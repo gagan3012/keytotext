@@ -15,7 +15,8 @@ class EvalArgs:
     model_name_or_path: str = field(
         metadata={"help": "Path to pretrained model"}
     )
-    
+    model_type: str = field(metadata={"help": "One of 't5', 'bart'"})
+
 
 
 
