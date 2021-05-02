@@ -25,11 +25,11 @@ class EvalArgs:
     )
 
 
-def eval(model,tokenizer):
+def eval(model,tokenizer,keywords):
     result = ""
     predictions = []
 
-    for txt in inputs:
+    for txt in keywords:
         input_ids = _tokenize(tokenizer=tokenizer,inputs="{} </s>".format(txt), padding=False)
         outputs = model.generate(input_ids.to(self.device), **kwargs)
         result += tokenizer.decode(outputs[0])
