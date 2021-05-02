@@ -48,14 +48,18 @@ class K2TPipeline:
         result = re.sub("<pad>|</s>", "", result)
         return result.strip()
 
-    def _prepare_inputs_for_k2t(self, keywords):
-        text = str(keywords)
-        text = text.replace(",", "|")
-        text = text.replace("'", "")
-        text = text.replace("[", "")
-        text = text.replace("]", "")
-        texts = text.split(".")
-        return texts
+    def _prepare_inputs_for_k2t(self, keywords,eval_mode = False):
+
+        if eval_mode == True:
+            return keywords
+        else:
+            text = str(keywords)
+            text = text.replace(",", "|")
+            text = text.replace("'", "")
+            text = text.replace("[", "")
+            text = text.replace("]", "")
+            texts = text.split(".")
+            return texts
 
     def _tokenize(
         self,
