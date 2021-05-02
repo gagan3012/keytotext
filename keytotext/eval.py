@@ -1,11 +1,12 @@
+from dataclasses import dataclass, field
 import re
 from typing import Optional, Union
 import torch
-from dataclasses import dataclass, field
 from transformers import (
     AutoModelForSeq2SeqLM,
     AutoTokenizer,
-    HfArgumentParser
+    PreTrainedModel,
+    PreTrainedTokenizer,
 )
 
 
@@ -23,18 +24,7 @@ class EvalArgs:
     )
 
 
-import re
-from typing import Optional, Union
-import torch
-from transformers import (
-    AutoModelForSeq2SeqLM,
-    AutoTokenizer,
-    PreTrainedModel,
-    PreTrainedTokenizer,
-)
-
-
-class K2TPipeline:
+class K2TEval:
     def __init__(
             self,
             model: PreTrainedModel,
@@ -60,7 +50,7 @@ class K2TPipeline:
         }
 
     def __call__(self, keywords, **kwargs):
-        inputs = (keywords)
+        inputs = keywords
         result = ""
         if not kwargs:
             kwargs = self.default_generate_kwargs
@@ -95,13 +85,13 @@ class K2TPipeline:
 
 SUPPORTED_TASKS = {
     "k2t": {
-        "impl": K2TPipeline,
+        "impl": K2TEval,
         "default": {
             "model": "gagan3012/k2t",
         },
     },
     "k2t-base": {
-        "impl": K2TPipeline,
+        "impl": K2TEval,
         "default": {
             "model": "gagan3012/k2t-base",
         },
@@ -114,7 +104,7 @@ def eval_pipeline(
         model: Optional = None,
         tokenizer: Optional[Union[str, PreTrainedTokenizer]] = None,
         use_cuda: Optional[bool] = True,
-) -> K2TPipeline:
+) -> K2TEval:
     """
 
     :param task:
@@ -139,7 +129,7 @@ def eval_pipeline(
             Whether or not to use a GPU or not Default: True
     :return:
     (:class:):
-            `K2TPipeline`: A Keytotext pipeline for the task.
+            `K2TEval`: A Keytotext eval pipeline for the task.
 
     """
 
