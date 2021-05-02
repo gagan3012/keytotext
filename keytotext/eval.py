@@ -1,4 +1,4 @@
-from dataclasses import dataclass
+from dataclasses import dataclas
 import re
 from typing import Optional, Union
 import torch
