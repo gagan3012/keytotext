@@ -152,3 +152,6 @@ def eval_pipeline(
     if task == "k2t-base":
         return task_class(model=model, tokenizer=tokenizer, use_cuda=use_cuda)
 
+
+def main():
+    
