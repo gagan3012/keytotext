@@ -32,7 +32,7 @@ def eval(model,tokenizer):
     for txt in inputs:
         input_ids = _tokenize(tokenizer=tokenizer,inputs="{} </s>".format(txt), padding=False)
         outputs = model.generate(input_ids.to(self.device), **kwargs)
-        result += self.tokenizer.decode(outputs[0])
+        result += tokenizer.decode(outputs[0])
 
     result = re.sub("<pad>|</s>", "", result)
     return result.strip()
