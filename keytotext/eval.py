@@ -154,8 +154,7 @@ def eval_pipeline(
         return task_class(model=model, tokenizer=tokenizer, use_cuda=use_cuda)
 
 
-def main():
-
+def eval():
     test = pd.read_csv('data/TestNLG.csv')
     keywords_test = test['input_text']
 
@@ -166,7 +165,7 @@ def main():
 
     test['predctions'] = prediction
 
+    return test
 
-if __name__ == "__main__":
-    main()
+
 
