@@ -11,10 +11,10 @@ from transformers import (
 
 class K2TPipeline:
     def __init__(
-        self,
-        model: PreTrainedModel,
-        tokenizer: PreTrainedTokenizer,
-        use_cuda: bool
+            self,
+            model: PreTrainedModel,
+            tokenizer: PreTrainedTokenizer,
+            use_cuda: bool
     ):
         self.model = model
         self.tokenizer = tokenizer
@@ -48,11 +48,8 @@ class K2TPipeline:
         result = re.sub("<pad>|</s>", "", result)
         return result.strip()
 
-    def _prepare_inputs_for_k2t(self, keywords,eval_mode = False):
-
-        if eval_mode == True:
-            return keywords
-        else:
+    def _prepare_inputs_for_k2t(self, keywords, eval_mode=False):
+        if not eval_mode:
             text = str(keywords)
             text = text.replace(",", "|")
             text = text.replace("'", "")
@@ -60,14 +57,16 @@ class K2TPipeline:
             text = text.replace("]", "")
             texts = text.split(".")
             return texts
+        else:
+            return keywords
 
     def _tokenize(
-        self,
-        inputs,
-        padding=True,
-        truncation=True,
-        add_special_tokens=True,
-        max_length=1024,
+            self,
+            inputs,
+            padding=True,
+            truncation=True,
+            add_special_tokens=True,
+            max_length=1024,
     ):
         inputs = self.tokenizer.encode(
             inputs,
@@ -98,11 +97,11 @@ SUPPORTED_TASKS = {
 
 
 def pipeline(
-    task: str,
-    model: Optional = None,
-    tokenizer: Optional[Union[str, PreTrainedTokenizer]] = None,
-    use_cuda: Optional[bool] = True,
-    ) -> K2TPipeline:
+        task: str,
+        model: Optional = None,
+        tokenizer: Optional[Union[str, PreTrainedTokenizer]] = None,
+        use_cuda: Optional[bool] = True,
+) -> K2TPipeline:
     """
 
     :param task:
