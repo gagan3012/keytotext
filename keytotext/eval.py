@@ -47,8 +47,8 @@ class K2TEval:
             result += self.tokenizer.decode(outputs[0])
 
         result = re.sub("<pad>|</s>", "", result)
-        pred.append(result)
-        return result.strip()
+        pred.append(result.strip())
+        return pred
 
     def _tokenize(
             self,
