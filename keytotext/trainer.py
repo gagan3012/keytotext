@@ -87,7 +87,6 @@ optimizer = Adafactor(model.parameters(),
 
 def trainer(num_of_epochs):
     model.train()
-    #num_of_epochs = 3
 
     loss_per_10_steps = []
     for epoch in range(1, num_of_epochs + 1):
