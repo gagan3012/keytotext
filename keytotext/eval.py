@@ -12,7 +12,10 @@ device = 'cuda' if torch.cuda.is_available else 'cpu'
 
 @dataclass
 class EvalArgs:
-
+    model_name_or_path: str = field(
+        metadata={"help": "Path to pretrained model"}
+    )
+    
 
 
 
