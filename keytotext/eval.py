@@ -156,5 +156,7 @@ def eval_pipeline(
 
 def main():
 
-    test = pd.read_csv('data/webnlg_test.csv')
-    keywords = test['k']
+    test = pd.read_csv('data/TestNLG.csv')
+    keywords_test = test['input_text']
+    for key in keywords_test:
+        
