@@ -25,13 +25,12 @@ class EvalArgs:
     )
 
 
-def eval():
+def eval(tokenizer):
     result = ""
-    if not kwargs:
-        kwargs = self.default_generate_kwargs
+    predictions = []
 
     for txt in inputs:
-        input_ids = self._tokenize("{} </s>".format(txt), padding=False)
+        input_ids = _tokenize(tokenizer=tokenizer,"{} </s>".format(txt), padding=False)
         outputs = self.model.generate(input_ids.to(self.device), **kwargs)
         result += self.tokenizer.decode(outputs[0])
 
