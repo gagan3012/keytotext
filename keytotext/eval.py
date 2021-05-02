@@ -7,6 +7,7 @@ from transformers import (
     PreTrainedModel,
     PreTrainedTokenizer,
 )
+import pandas as pd
 
 
 class K2TEval:
@@ -155,3 +156,5 @@ def eval_pipeline(
 
 def main():
 
+    test = pd.read_csv('data/webnlg_test.csv')
+    keywords = test['k']
