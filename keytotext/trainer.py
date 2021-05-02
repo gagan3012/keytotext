@@ -10,6 +10,10 @@ import re
 import xml.etree.ElementTree as ET
 from IPython.display import HTML, display
 
+
+# WebNLG: https://gitlab.com/shimorina/webnlg-dataset.git
+# DART: https://github.com/Yale-LILY/dart.git
+
 files = []
 dirc = ['/webnlg-dataset/release_v2.1/xml/train/**/*.xml',
         '/webnlg-dataset/release_v3.0/en/train/**/*.xml',
