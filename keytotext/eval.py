@@ -35,7 +35,9 @@ def eval(model,tokenizer,keywords):
         result += tokenizer.decode(outputs[0])
 
     result = re.sub("<pad>|</s>", "", result)
-    return result.strip()
+
+    predictions.extend(result.strip())
+    return 
 
 
 def _tokenize(
