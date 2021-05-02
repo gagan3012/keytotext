@@ -37,7 +37,6 @@ class K2TEval:
     def __call__(self, keywords, **kwargs):
         inputs = keywords
         result = ""
-        pred = []
         if not kwargs:
             kwargs = self.default_generate_kwargs
 
@@ -47,8 +46,7 @@ class K2TEval:
             result += self.tokenizer.decode(outputs[0])
 
         result = re.sub("<pad>|</s>", "", result)
-        pred.append(result.strip())
-        return pred
+        return result.strip()
 
     def _tokenize(
             self,
