@@ -10,6 +10,7 @@ from transformers import (
 
 device = 'cuda' if torch.cuda.is_available else 'cpu'
 
+
 @dataclass
 class EvalArgs:
     model_name_or_path: str = field(
@@ -22,6 +23,7 @@ class EvalArgs:
         default="hypothesis.txt",
         metadata={"help": "path to save the generated text from keywords."}
     )
+
 
 def eval():
     result = ""
@@ -44,17 +46,14 @@ def _tokenize(
         truncation=True,
         add_special_tokens=True,
         max_length=1024,
-    ):
-        inputs = tokenizer.encode(
-            inputs,
-            max_length=max_length,
-            add_special_tokens=add_special_tokens,
-            truncation=truncation,
-            padding="max_length" if padding else False,
-            pad_to_max_length=padding,
-            return_tensors="pt",
-        )
-        return inputs
-
-
-
+):
+    inputs = tokenizer.encode(
+        inputs,
+        max_length=max_length,
+        add_special_tokens=add_special_tokens,
+        truncation=truncation,
+        padding="max_length" if padding else False,
+        pad_to_max_length=padding,
+        return_tensors="pt",
+    )
+    return inputs
