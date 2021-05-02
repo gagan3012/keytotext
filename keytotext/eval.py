@@ -8,8 +8,6 @@ from transformers import (
     HfArgumentParser
 )
 
-device = 'cuda' if torch.cuda.is_available else 'cpu'
-
 
 @dataclass
 class EvalArgs:
@@ -25,14 +23,14 @@ class EvalArgs:
     )
 
 
-def eval(model, tokenizer, keywords):
+def eval(model, tokenizer, keywords, use_cuda):
     result = ""
     predictions = []
     device = "cuda" if torch.cuda.is_available() and use_cuda else "cpu"
 
     for txt in keywords:
         input_ids = _tokenize(tokenizer=tokenizer, inputs="{} </s>".format(txt), padding=False)
-        outputs = model.generate(input_ids.to(self.device))
+        outputs = model.generate(input_ids.to(device))
         result += tokenizer.decode(outputs[0])
 
     result = re.sub("<pad>|</s>", "", result)
