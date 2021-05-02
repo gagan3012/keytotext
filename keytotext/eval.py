@@ -25,19 +25,20 @@ class EvalArgs:
     )
 
 
-def eval(model,tokenizer,keywords):
+def eval(model, tokenizer, keywords):
     result = ""
     predictions = []
+    device = "cuda" if torch.cuda.is_available() and use_cuda else "cpu"
 
     for txt in keywords:
-        input_ids = _tokenize(tokenizer=tokenizer,inputs="{} </s>".format(txt), padding=False)
-        outputs = model.generate(input_ids.to(self.device), **kwargs)
+        input_ids = _tokenize(tokenizer=tokenizer, inputs="{} </s>".format(txt), padding=False)
+        outputs = model.generate(input_ids.to(self.device))
         result += tokenizer.decode(outputs[0])
 
     result = re.sub("<pad>|</s>", "", result)
 
     predictions.extend(result.strip())
-    return 
+    return predictions
 
 
 def _tokenize(
