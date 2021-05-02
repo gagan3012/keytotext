@@ -15,7 +15,13 @@ class EvalArgs:
     model_name_or_path: str = field(
         metadata={"help": "Path to pretrained model"}
     )
-    model_type: str = field(metadata={"help": "One of 't5', 'bart'"})
+    model_type: str = field(
+        metadata={"help": "T5"}
+    )
+    output_path: Optional[str] = field(
+        default="hypothesis.txt",
+        metadata={"help": "path to save the generated text from keywords."}
+    )
 
 
 
