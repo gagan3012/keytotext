@@ -8,6 +8,8 @@ import glob
 import os
 import re
 import xml.etree.ElementTree as ET
+from IPython.display import HTML, display
+
 
 files = []
 dirc = ['/webnlg-dataset/release_v2.1/xml/train/**/*.xml',
@@ -51,3 +53,17 @@ train_df = train_df.iloc[:73424, :]
 train_df = train_df.sample(frac=1)
 batch_size = 8
 num_of_batches = int(len(train_df) / batch_size)
+
+if torch.cuda.is_available():
+    dev = torch.device("cuda:0")
+    print("Running on the GPU")
+else:
+    dev = torch.device("cpu")
+    print("Running on the CPU")
+
+def progress(loss,value, max=100):
+    return HTML(""" Batch loss :{loss}
+      <progress    
+value='{value}'max='{max}',style='width: 100%'>{value}
+      </progress>
+             """.format(loss=loss,value=value, max=max))
