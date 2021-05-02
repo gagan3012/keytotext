@@ -10,7 +10,6 @@ import re
 import xml.etree.ElementTree as ET
 from IPython.display import HTML, display
 
-
 files = []
 dirc = ['/webnlg-dataset/release_v2.1/xml/train/**/*.xml',
         '/webnlg-dataset/release_v3.0/en/train/**/*.xml',
@@ -61,9 +60,10 @@ else:
     dev = torch.device("cpu")
     print("Running on the CPU")
 
-def progress(loss,value, max=100):
+
+def progress(loss, value, max=100):
     return HTML(""" Batch loss :{loss}
       <progress    
 value='{value}'max='{max}',style='width: 100%'>{value}
       </progress>
-             """.format(loss=loss,value=value, max=max))
+             """.format(loss=loss, value=value, max=max))
