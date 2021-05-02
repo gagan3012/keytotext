@@ -158,7 +158,5 @@ def pipeline(
 
     if task == "k2t":
         return task_class(model=model, tokenizer=tokenizer, use_cuda=use_cuda)
-    if task == "k2t-tiny":
-        return task_class(model=model, tokenizer=tokenizer, use_cuda=use_cuda)
     if task == "k2t-base":
         return task_class(model=model, tokenizer=tokenizer, use_cuda=use_cuda)
