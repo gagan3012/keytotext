@@ -1,4 +1,4 @@
-from dataclasses import dataclass, fiel
+from dataclasses import dataclass, fie
 import re
 from typing import Optional, Union
 import torch
