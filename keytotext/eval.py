@@ -37,4 +37,24 @@ def eval():
     return result.strip()
 
 
+def _tokenize(
+        tokenizer,
+        inputs,
+        padding=True,
+        truncation=True,
+        add_special_tokens=True,
+        max_length=1024,
+    ):
+        inputs = tokenizer.encode(
+            inputs,
+            max_length=max_length,
+            add_special_tokens=add_special_tokens,
+            truncation=truncation,
+            padding="max_length" if padding else False,
+            pad_to_max_length=padding,
+            return_tensors="pt",
+        )
+        return inputs
+
+
 
