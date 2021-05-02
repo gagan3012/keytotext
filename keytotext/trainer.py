@@ -68,10 +68,11 @@ value='{value}'max='{max}',style='width: 100%'>{value}
       </progress>
              """.format(loss=loss, value=value, max=max))
 
+
 tokenizer = T5Tokenizer.from_pretrained('t5-base')
 model = T5ForConditionalGeneration.from_pretrained('t5-base',
-                                             return_dict=True)
-#moving the model to GPU
+                                                   return_dict=True)
+# moving the model to GPU
 model.to(dev)
 
 optimizer = Adafactor(model.parameters(),
@@ -84,6 +85,7 @@ optimizer = Adafactor(model.parameters(),
                       relative_step=False,
                       scale_parameter=False,
                       warmup_init=False)
+
 
 def trainer(num_of_epochs):
     model.train()
