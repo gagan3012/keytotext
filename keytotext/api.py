@@ -1,2 +1,6 @@
 from fastapi import FastAPI, Depends
-from pydantic 
+from pydantic import BaseModel
+
+app = FastAPI()
+
+class Keywords
