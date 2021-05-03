@@ -42,7 +42,7 @@ def display():
                        text='Press enter to add more',
                        value=['India', 'Capital', 'New Delhi'],
                        maxtags=mt,
-                       key='1')
+                       key='2')
 
     if st.button("Generate text"):
         with st.spinner("Connecting the Dots..."):
