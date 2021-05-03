@@ -16,8 +16,3 @@ def k2tpost(data: List[str]):
         "keywords": data,
         "text": generate(data)
     }
-
-
-@app.get("/")
-def k2tget(data: List[str]):
-    return {"text": generate(data)}
