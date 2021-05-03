@@ -1,12 +1,15 @@
-from fastapi import FastAPI, Depends
-from pydantic import BaseModel
+from fastapi import FastAPI
 from typing import List
-from starlette.testclient import TestClient
+from .pipeline import pipeline
 
 app = FastAPI()
 
 
+def generate(keywords, model="k2t"):
+    nlp = pipeline(model)
+    return nlp(keywords)
+
 @app.post("/")
 def k2tapi(data: List[str]):
-    print(data)
+    print(type(data))
 
