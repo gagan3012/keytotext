@@ -10,7 +10,7 @@ def generate(keywords, model="k2t"):
     return nlp(keywords)
 
 
-@app.post("/", response_model=List[str])
+@app.post("/api/v1/k2t")
 def k2tpost(data: List[str]):
     return {
         "keywords": data,
