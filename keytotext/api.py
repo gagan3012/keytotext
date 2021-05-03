@@ -23,7 +23,7 @@ def k2t_post(data: List[str]):
     }
 
 
-@app.get("/api/")
+@app.get("/api")
 def k2t_get(data: List[str] = Query(...)):
     return {
         "keywords": data,
