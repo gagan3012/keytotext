@@ -17,6 +17,7 @@ def generate(keywords, model="k2t"):
     nlp = pipeline(model)
     return nlp(keywords)
 
+
 def display():
     st.write('# Keytotext UI')
     st.markdown(
@@ -46,3 +47,7 @@ def display():
                             model=model)
         st.write("# Generated Sentence:")
         st.write("## {}".format(text))
+
+
+if __name__ == '__main__':
+    display()
