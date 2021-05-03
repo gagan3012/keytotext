@@ -32,19 +32,19 @@ def display():
                    value=3,
                    step=1)
 
-    model = st.selectbox(label="Select the model you would like to run",
-                         options=['k2t', 'k2t-base'])
+    model = st.selectbox(label='Select model:',
+                         options=['k2t',k2t-base])
 
     keywords = st_tags(label='## Enter Keywords:',
                        text='Press enter to add more',
                        value=['India', 'Capital', 'New Delhi'],
                        maxtags=mt,
-                       key='1')
+                       key='keywords')
 
     if st.button("Generate text"):
         with st.spinner("Connecting the Dots..."):
             text = generate(keywords=keywords,
-                            model=model)
+                            model=model[0])
         st.write("# Generated Sentence:")
         st.write("## {}".format(text))
 
