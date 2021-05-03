@@ -2,7 +2,6 @@ from fastapi import FastAPI, Query
 from typing import List
 from keytotext.pipeline import pipeline
 
-
 app = FastAPI()
 
 
@@ -22,6 +21,7 @@ def k2t_post(data: List[str]):
         "keywords": data,
         "text": generate(data)
     }
+
 
 @app.get("/api/")
 def k2t_get(data: List[str] = Query(...)):
