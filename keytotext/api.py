@@ -9,7 +9,7 @@ def generate(keywords, model="k2t"):
     nlp = pipeline(model)
     return nlp(keywords)
 
+
 @app.post("/")
 def k2tapi(data: List[str]):
     return generate(data)
-
