@@ -36,13 +36,13 @@ def display():
                     text='',
                     value=['k2t'],
                     maxtags=1,
-                    key='1')
+                    key='Model')
 
     keywords = st_tags(label='## Enter Keywords:',
                        text='Press enter to add more',
                        value=['India', 'Capital', 'New Delhi'],
                        maxtags=mt,
-                       key='2')
+                       key='keywords')
 
     if st.button("Generate text"):
         with st.spinner("Connecting the Dots..."):
