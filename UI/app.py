@@ -33,10 +33,10 @@ def display():
                    step=1)
 
     model = st_tags(label='## Select model:',
-                       text='',
-                       value=['k2t'],
-                       maxtags=1,
-                       key='1')
+                    text='',
+                    value=['k2t'],
+                    maxtags=1,
+                    key='1')
 
     keywords = st_tags(label='## Enter Keywords:',
                        text='Press enter to add more',
@@ -47,7 +47,7 @@ def display():
     if st.button("Generate text"):
         with st.spinner("Connecting the Dots..."):
             text = generate(keywords=keywords,
-                            model=model)
+                            model=model[0])
         st.write("# Generated Sentence:")
         st.write("## {}".format(text))
 
