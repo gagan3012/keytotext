@@ -32,8 +32,11 @@ def display():
                    value=3,
                    step=1)
 
-    model = st.selectbox(label="Select the model you would like to run",
-                         options=['k2t', 'k2t-base'])
+    model = st_tags(label='## Select model:',
+                       text='',
+                       value=['k2t'],
+                       maxtags=1,
+                       key='1')
 
     keywords = st_tags(label='## Enter Keywords:',
                        text='Press enter to add more',
