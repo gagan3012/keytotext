@@ -17,4 +17,4 @@ def k2tapipost(data: List[str]):
 
 @app.get("/")
 def k2tapiget(data: List[str]):
-    return {"text":generate(data)}
+    return {"text": generate(data)}
