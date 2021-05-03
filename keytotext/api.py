@@ -12,7 +12,10 @@ def generate(keywords, model="k2t"):
 
 @app.post("/")
 def k2tpost(data: List[str]):
-    return generate(data)
+    return {
+        "keywords": data,
+        "text": generate(data)
+    }
 
 
 @app.get("/")
