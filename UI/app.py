@@ -24,6 +24,8 @@ def display():
         '''
         *For additional questions and inquiries, please contact **Gagan Bhatia** via [LinkedIn](
         https://www.linkedin.com/in/gbhatia30/) or [Github](https://github.com/gagan3012).*
+        
+        This keyword entry method is called streamlit tags and it also built by me.
         ''')
 
     mt = st.slider(label="Number of Keywords you would like to enter:",
