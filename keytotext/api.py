@@ -4,6 +4,10 @@ from keytotext.pipeline import pipeline
 
 app = FastAPI()
 
+@app.get("/")
+def read_root():
+    return {"Hello": "World"}
+
 
 def generate(keywords, model="k2t"):
     nlp = pipeline(model)
