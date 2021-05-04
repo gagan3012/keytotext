@@ -4,6 +4,6 @@ RUN pip install fastapi uvicorn keytotext
 
 EXPOSE 80
 
-COPY ./app /api/api
+COPY ./api /api/api
 
-CMD ["uvicorn", "api.api:app", "--host", "0.0.0.0", "--port", "80"]
+CMD ["uvicorn", "api.api:app", "--host", "127.0.0.1", "--port", "80"]
