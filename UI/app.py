@@ -39,7 +39,7 @@ def display():
                          value=3,
                          step=1)
 
-    model = st_tags(label='## Select model:',
+    model_name = st_tags(label='## Select model:',
                     text='',
                     value=['k2t'],
                     maxtags=1,
