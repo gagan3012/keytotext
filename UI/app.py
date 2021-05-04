@@ -14,14 +14,13 @@ st.set_page_config(
           ttl=1000,
           show_spinner=False,
           allow_output_mutation=True)
-def modelextract(model="k2t"):
-    pipe = pipeline(model)
+def model(model_name="k2t"):
+    pipe = pipeline(model_name)
     return pipe
 
 
-
 def generate(keywords):
-    nlp = modelextract()
+    nlp = model()
     return nlp(keywords)
 
 
