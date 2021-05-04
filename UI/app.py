@@ -14,7 +14,7 @@ def modelextract(model="k2t"):
     pipe = pipeline(model)
     return pipe
 
-
+nlp = modelextract()
 
 @st.cache(suppress_st_warning=True,
           ttl=1000,
