@@ -34,10 +34,10 @@ def display():
         ''')
 
     mt = st.number_input(label="Number of Keywords you would like to enter:",
-                   min_value=1,
-                   max_value=10,
-                   value=3,
-                   step=1)
+                         min_value=1,
+                         max_value=10,
+                         value=3,
+                         step=1)
 
     model = st_tags(label='## Select model:',
                     text='',
