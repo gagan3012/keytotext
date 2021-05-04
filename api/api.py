@@ -6,10 +6,13 @@ app = FastAPI()
 
 
 def modelextract(model="k2t"):
-    nlp = pipeline(model)
-    return nlp
+    pipe = pipeline(model)
+    return pipe
+
 
 nlp = modelextract()
+
+
 def generate(keywords):
     return nlp(keywords)
 
