@@ -33,6 +33,7 @@ def display():
         This keyword entry method is called [streamlit-tags]() and it also built by me.
         ''')
 
+    mt = st.number_input(label="Number of Keywords you would like to enter:",
                    min_value=1,
                    max_value=10,
                    value=3,
