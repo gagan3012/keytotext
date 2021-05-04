@@ -5,8 +5,12 @@ from keytotext.pipeline import pipeline
 app = FastAPI()
 
 
-def generate(keywords, model="k2t"):
+def modelextract(model="k2t"):
     nlp = pipeline(model)
+    return nlp
+
+nlp = modelextract()
+def generate(keywords):
     return nlp(keywords)
 
 
