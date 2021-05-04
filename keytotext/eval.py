@@ -12,10 +12,7 @@ import pandas as pd
 
 class K2TEval:
     def __init__(
-            self,
-            model: PreTrainedModel,
-            tokenizer: PreTrainedTokenizer,
-            use_cuda: bool
+        self, model: PreTrainedModel, tokenizer: PreTrainedTokenizer, use_cuda: bool
     ):
         self.model = model
         self.tokenizer = tokenizer
@@ -50,12 +47,12 @@ class K2TEval:
         return result.strip()
 
     def _tokenize(
-            self,
-            inputs,
-            padding=True,
-            truncation=True,
-            add_special_tokens=True,
-            max_length=1024,
+        self,
+        inputs,
+        padding=True,
+        truncation=True,
+        add_special_tokens=True,
+        max_length=1024,
     ):
         inputs = self.tokenizer.encode(
             inputs,
@@ -81,15 +78,15 @@ SUPPORTED_TASKS = {
         "default": {
             "model": "gagan3012/k2t-base",
         },
-    }
+    },
 }
 
 
 def eval_pipeline(
-        task: str,
-        model: Optional = None,
-        tokenizer: Optional[Union[str, PreTrainedTokenizer]] = None,
-        use_cuda: Optional[bool] = True,
+    task: str,
+    model: Optional = None,
+    tokenizer: Optional[Union[str, PreTrainedTokenizer]] = None,
+    use_cuda: Optional[bool] = True,
 ) -> K2TEval:
     """
 
@@ -155,17 +152,14 @@ def eval_pipeline(
 
 
 def eval():
-    test = pd.read_csv('data/TestNLG.csv')
-    keywords_test = test['input_text']
+    test = pd.read_csv("data/TestNLG.csv")
+    keywords_test = test["input_text"]
 
     nlp = eval_pipeline("k2t")
     prediction = []
     for key in keywords_test:
         prediction.append(nlp(keywords=key))
 
-    test['predctions'] = prediction
+    test["predctions"] = prediction
 
     return test
-
-
-
