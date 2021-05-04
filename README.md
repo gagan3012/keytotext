@@ -8,7 +8,7 @@
 
 Idea is to build a model which will take keywords as inputs and generate sentences as outputs. 
 
-### Keytotext is powered by Huggingface 🤗
+**Keytotext is powered by Huggingface 🤗**
 
 ## Model:
 
