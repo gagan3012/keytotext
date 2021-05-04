@@ -44,7 +44,7 @@ This uses a custom streamlit component built by me: [GitHub](https://github.com/
 
 ![image](https://user-images.githubusercontent.com/49101362/116162205-fc042980-a6fd-11eb-892e-8f6902f193f4.png)
 
-## API
+## API:
 
 API: 
 
