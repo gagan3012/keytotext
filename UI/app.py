@@ -20,7 +20,8 @@ nlp = modelextract()
 
 @st.cache(suppress_st_warning=True,
           ttl=1000,
-          show_spinner=False)
+          show_spinner=False,
+          allow_output_mutation=True)
 def generate(keywords):
     return nlp(keywords)
 
