@@ -46,6 +46,8 @@ This uses a custom streamlit component built by me: [GitHub](https://github.com/
 
 ## API
 
+To run the API please run the Docker file and then visit 
+
 ```
-To run the API please run the Docker 
+
 ```
