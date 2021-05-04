@@ -11,10 +11,7 @@ from transformers import (
 
 class K2TPipeline:
     def __init__(
-            self,
-            model: PreTrainedModel,
-            tokenizer: PreTrainedTokenizer,
-            use_cuda: bool
+        self, model: PreTrainedModel, tokenizer: PreTrainedTokenizer, use_cuda: bool
     ):
         self.model = model
         self.tokenizer = tokenizer
@@ -58,12 +55,12 @@ class K2TPipeline:
         return texts
 
     def _tokenize(
-            self,
-            inputs,
-            padding=True,
-            truncation=True,
-            add_special_tokens=True,
-            max_length=1024,
+        self,
+        inputs,
+        padding=True,
+        truncation=True,
+        add_special_tokens=True,
+        max_length=1024,
     ):
         inputs = self.tokenizer.encode(
             inputs,
@@ -89,15 +86,15 @@ SUPPORTED_TASKS = {
         "default": {
             "model": "gagan3012/k2t-base",
         },
-    }
+    },
 }
 
 
 def pipeline(
-        task: str,
-        model: Optional = None,
-        tokenizer: Optional[Union[str, PreTrainedTokenizer]] = None,
-        use_cuda: Optional[bool] = True,
+    task: str,
+    model: Optional = None,
+    tokenizer: Optional[Union[str, PreTrainedTokenizer]] = None,
+    use_cuda: Optional[bool] = True,
 ) -> K2TPipeline:
     """
 
