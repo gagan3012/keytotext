@@ -10,12 +10,15 @@ st.set_page_config(
 )
 
 
+@st.cache(suppress_st_warning=True,
+          ttl=1000,
+          show_spinner=False,
+          allow_output_mutation=True)
 def modelextract(model="k2t"):
     pipe = pipeline(model)
     return pipe
 
 
-nlp = modelextract()
 
 
 #@st.cache(suppress_st_warning=True,
@@ -23,6 +26,7 @@ nlp = modelextract()
 #          show_spinner=False,
 #          allow_output_mutation=True)
 def generate(keywords):
+    nlp = modelextract()
     return nlp(keywords)
 
 
