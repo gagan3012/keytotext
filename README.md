@@ -46,7 +46,7 @@ This uses a custom streamlit component built by me: [GitHub](https://github.com/
 
 ## API
 
-To run the API please run the Docker file  using and then visit 
+To run the API please run the Docker file  using `docker-compose build` and then visit 
 
 ```
 http://127.0.0.1/api?data=["India","Capital","New Delhi"]
