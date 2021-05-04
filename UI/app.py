@@ -9,12 +9,17 @@ st.set_page_config(
     page_title="Text Generation Using Keywords",
 )
 
+@st.cache(allow_output_mutation=True)
+def modelextract(model="k2t"):
+    pipe = pipeline(model)
+    return pipe
+
+
 
 @st.cache(suppress_st_warning=True,
           ttl=1000,
           show_spinner=False)
 def generate(keywords, model="k2t"):
-    nlp = pipeline(model)
     return nlp(keywords)
 
 
