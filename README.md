@@ -46,7 +46,7 @@ This uses a custom streamlit component built by me: [GitHub](https://github.com/
 
 ## API:
 
-API: 
+API: [![API Call](https://badgen.net/badge/color/Try%20API%20here/orange?icon=bitcoin-lightning&label)]()
 
 To run the API please run the Docker file using `docker-compose build` and then visit 
 
