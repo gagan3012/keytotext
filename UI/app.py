@@ -10,7 +10,8 @@ st.set_page_config(
 )
 
 
-@st.cache(allow_output_mutation=True,show_spinner=False)
+@st.cache(allow_output_mutation=True,
+          show_spinner=False)
 def modelextract(model="k2t"):
     pipe = pipeline(model)
     return pipe
