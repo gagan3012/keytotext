@@ -40,10 +40,8 @@ def display():
                          step=1)
 
     model_name = st_tags(label='## Select model:',
-                    text='',
-                    value=['k2t'],
-                    maxtags=1,
-                    key='Model')
+                         value=['k2t'],
+                         key='Model')
 
     keywords = st_tags(label='## Enter Keywords:',
                        text='Press enter to add more',
