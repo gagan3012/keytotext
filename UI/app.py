@@ -33,7 +33,6 @@ def display():
         This keyword entry method is called [streamlit-tags]() and it also built by me.
         ''')
 
-    mt = st.slider(label="Number of Keywords you would like to enter:",
                    min_value=1,
                    max_value=10,
                    value=3,
@@ -54,7 +53,7 @@ def display():
     if st.button("Generate text"):
         with st.spinner("Connecting the Dots..."):
             text = generate(keywords=keywords)
-        st.write("## Generated Sentence:")
+        st.write("# Generated Sentence:")
         st.write("## {}".format(text))
 
 
