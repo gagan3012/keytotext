@@ -47,7 +47,7 @@ This uses a custom streamlit component built by me: [GitHub](https://github.com/
 
 ## API:
 
-API: [![API Call](https://img.shields.io/badge/API-Open%20API-red)]()
+API: [![API Call](https://img.shields.io/badge/-Open%20with%20FastAPI-red?logo=fastapi&labelColor=white)]()
 
 To run the API please run the Docker file using `docker-compose build` and then visit 
 
