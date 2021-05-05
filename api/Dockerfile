@@ -10,6 +10,7 @@ WORKDIR /api
 COPY ./requirements.txt .
 # Copy everything from ./src directory to /app in the container
 COPY ./api .
-RUN pip install -r requirements.txt # Install the dependencies
+RUN pip install -r requirements.txt
+# Install the dependencies
 # Run the application in the port 8000
 CMD ["uvicorn", "--host", "0.0.0.0", "--port", "8000", "api:app"]
