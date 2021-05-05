@@ -53,7 +53,7 @@ API: [![API Call](https://img.shields.io/badge/-Open%20with%20FastAPI-red?logo=f
 To run the API please run the Docker file using `docker-compose build` and then visit 
 
 ```
-http://127.0.0.1/api?data=["India","Capital","New Delhi"]
+http://localhost:8000/api?data=[%22India%22,%22Capital%22,%22New%20Delhi%22]
 ```
 ![k2t_json](https://user-images.githubusercontent.com/49101362/117046515-c56e7600-acde-11eb-8a20-7e1ab5f0de02.png)
 
