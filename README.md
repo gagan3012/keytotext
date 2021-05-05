@@ -1,9 +1,10 @@
 # keytotext
-[![pypi Version](https://img.shields.io/pypi/v/keytotext.svg?style=flat-square&logo=pypi&logoColor=white)](https://pypi.org/project/keytotext/)
+[![pypi Version](https://img.shields.io/pypi/v/keytotext.svg?logo=pypi&logoColor=white)](https://pypi.org/project/keytotext/)
 [![Downloads](https://static.pepy.tech/personalized-badge/keytotext?period=total&units=none&left_color=grey&right_color=orange&left_text=Pip%20Downloads)](https://pepy.tech/project/keytotext)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gagan3012/keytotext/blob/master/Examples/K2T.ipynb)
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/gagan3012/keytotext/UI/app.py)
 [![API Call](https://img.shields.io/badge/-Open%20with%20FastAPI-red?logo=fastapi&labelColor=white)]()
+[![Docker Call](https://img.shields.io/badge/-Docker%20Image-blue?logo=docker&labelColor=white)]()
 
 ![keytotext (1)](https://user-images.githubusercontent.com/49101362/116334480-f5e57a00-a7dd-11eb-987c-186477f94b6e.png)
 
