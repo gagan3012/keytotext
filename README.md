@@ -55,7 +55,7 @@ The API is hosted in the Docker container and it can be run quickly.
 To run the API please run the Docker file using `docker pull gagan30/keytotext` and then visit 
 
 ```
-http://localhost:8000/api?data=[%22India","Capital","New Delhi"]
+http://localhost:8000/api?data=["India","Capital","New Delhi"]
 ```
 ![k2t_json](https://user-images.githubusercontent.com/49101362/117046515-c56e7600-acde-11eb-8a20-7e1ab5f0de02.png)
 
