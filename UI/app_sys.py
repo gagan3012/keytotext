@@ -13,9 +13,8 @@ st.set_page_config(
 @st.cache(suppress_st_warning=True,
           ttl=1000,
           show_spinner=False)
-def generate(keywords, model="k2t"):
+def generate_model(model="k2t"):
     nlp = pipeline(model)
-    return nlp(keywords)
 
 
 def display():
@@ -32,7 +31,6 @@ def display():
                    value=3,
                    step=1)
 
-    model = st.selectbox(label='Select model:',
                          options=['k2t','k2t-base'])
 
     keywords = st_tags(label='## Enter Keywords:',
@@ -43,8 +41,6 @@ def display():
 
     if st.button("Generate text"):
         with st.spinner("Connecting the Dots..."):
-            text = generate(keywords=keywords,
-                            model=model[0])
         st.write("# Generated Sentence:")
         st.write("## {}".format(text))
 
