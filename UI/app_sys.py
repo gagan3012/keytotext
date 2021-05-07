@@ -15,6 +15,7 @@ st.set_page_config(
           show_spinner=False)
 def generate_model(model="k2t"):
     nlp = pipeline(model)
+    return nlp
 
 
 def display():
