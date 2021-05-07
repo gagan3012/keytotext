@@ -30,7 +30,7 @@ Example usage: [![Open In Colab](https://colab.research.google.com/assets/colab-
 
 Example Notebooks can be found in the [`Notebooks`](https://github.com/gagan3012/keytotext/tree/master/Examples) Folder
 
-``` s
+``` 
 pip install keytotext
 ```
 
