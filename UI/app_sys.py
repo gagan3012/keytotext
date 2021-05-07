@@ -42,6 +42,7 @@ def display():
 
     if st.button("Generate text"):
         with st.spinner("Connecting the Dots..."):
+            model = generate_model(model=model_name)
             text = model(keywords)
         st.write("# Generated Sentence:")
         st.write("## {}".format(text))
