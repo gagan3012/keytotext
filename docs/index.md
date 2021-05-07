@@ -5,6 +5,8 @@
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/gagan3012/keytotext/UI/app.py)
 [![API Call](https://img.shields.io/badge/-Open%20with%20FastAPI-red?logo=fastapi&labelColor=white)]()
 [![Docker Call](https://img.shields.io/badge/-Docker%20Image-blue?logo=docker&labelColor=white)](https://hub.docker.com/r/gagan30/keytotext)
+[![Documentation Status](https://readthedocs.org/projects/keytotext/badge/?version=latest)](https://keytotext.readthedocs.io/en/latest/?badge=latest)
+
 
 ![keytotext (1)](https://user-images.githubusercontent.com/49101362/116334480-f5e57a00-a7dd-11eb-987c-186477f94b6e.png)
 
@@ -28,7 +30,7 @@ Example usage: [![Open In Colab](https://colab.research.google.com/assets/colab-
 
 Example Notebooks can be found in the [`Notebooks`](https://github.com/gagan3012/keytotext/tree/master/Examples) Folder
 
-```
+``` 
 pip install keytotext
 ```
 
@@ -39,7 +41,7 @@ pip install keytotext
 
 UI: [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/gagan3012/keytotext/UI/app.py)
 
-``` 
+```
 pip install streamlit-tags
 ```
 This uses a custom streamlit component built by me: [GitHub](https://github.com/gagan3012/streamlit-tags)
