@@ -31,6 +31,7 @@ def display():
                    value=3,
                    step=1)
 
+    model_name = st.selectbox(label='Select model:',
                          options=['k2t','k2t-base'])
 
     keywords = st_tags(label='## Enter Keywords:',
@@ -41,6 +42,7 @@ def display():
 
     if st.button("Generate text"):
         with st.spinner("Connecting the Dots..."):
+            text = model(keywords)
         st.write("# Generated Sentence:")
         st.write("## {}".format(text))
 
