@@ -59,8 +59,10 @@ To run the API please run the Docker file using `docker pull gagan30/keytotext` 
 ```
 http://localhost:8000/api?data=["India","Capital","New Delhi"]
 ```
+
 ![k2t_json](https://user-images.githubusercontent.com/49101362/117046515-c56e7600-acde-11eb-8a20-7e1ab5f0de02.png)
 
+Note: The Hosted API is only available on demand
 ## BibTex:
 
 To quote keytotext please use this citation
