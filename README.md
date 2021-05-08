@@ -12,7 +12,7 @@
 
 Idea is to build a model which will take keywords as inputs and generate sentences as outputs. 
 
-**Keytotext is powered by Huggingface 🤗, Streamlit <img src="https://simple-icons.github.io/simple-icons-website/icons/streamlit.svg" width="20" />, FastAPI <img src="https://simple-icons.github.io/simple-icons-website/icons/fastapi.svg" width="20"/>  and Docker <img src="https://simple-icons.github.io/simple-icons-website/icons/docker.svg" width="25" />**
+**Keytotext is powered by Huggingface 🤗**
 
 ## Model:
 
