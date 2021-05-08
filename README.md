@@ -29,7 +29,7 @@ Example usage: [![Open In Colab](https://colab.research.google.com/assets/colab-
 
 Example Notebooks can be found in the [`Notebooks`](https://github.com/gagan3012/keytotext/tree/master/Examples) Folder
 
-``` 
+```shell script
 pip install keytotext
 ```
 
@@ -62,7 +62,7 @@ docker run -dp 8000:8000 gagan30/keytotext
 ```
 
 This will start the api at port 8000 
-``` 
+```
 http://localhost:8000/api?data=["India","Capital","New Delhi"]
 ```
 
