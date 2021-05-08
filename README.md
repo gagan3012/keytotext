@@ -53,7 +53,7 @@ API: [![API Call](https://img.shields.io/badge/-Open%20with%20FastAPI-red?logo=f
 [![Docker Call](https://img.shields.io/badge/-Docker%20Image-blue?logo=docker&labelColor=white)](https://hub.docker.com/r/gagan30/keytotext)
 
 The API is hosted in the Docker container and it can be run quickly.
-To run the API please run the Docker file using `docker pull gagan30/keytotext` and then visit 
+Follow instructions bellow to get started
 
 ```shell script
 docker pull gagan30/keytotext
@@ -61,7 +61,7 @@ docker pull gagan30/keytotext
 docker run -dp 8000:8000 gagan30/keytotext
 ```
 
-This will start the api at port 8000
+This will start the api at port 8000 
 ``` 
 http://localhost:8000/api?data=["India","Capital","New Delhi"]
 ```
