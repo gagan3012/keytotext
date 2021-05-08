@@ -13,8 +13,6 @@
 
 Idea is to build a model which will take keywords as inputs and generate sentences as outputs. 
 
-**Keytotext is powered by Huggingface 🤗**
-
 ## Model:
 
 Keytotext is based on the Amazing T5 Model: [![HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97-Models%20on%20Hub-yellow)](https://huggingface.co/models?filter=keytotext)
