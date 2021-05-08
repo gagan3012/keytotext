@@ -61,7 +61,7 @@ docker pull gagan30/keytotext
 docker run -dp 8000:8000 gagan30/keytotext
 ```
 
-This will start the api at port 8000 
+This will start the api at port 8000 visit the url below to get the results as below:
 ```
 http://localhost:8000/api?data=["India","Capital","New Delhi"]
 ```
