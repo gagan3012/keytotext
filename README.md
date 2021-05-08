@@ -55,6 +55,8 @@ API: [![API Call](https://img.shields.io/badge/-Open%20with%20FastAPI-red?logo=f
 The API is hosted in the Docker container and it can be run quickly.
 To run the API please run the Docker file using `docker pull gagan30/keytotext` and then visit 
 
+
+
 ```
 http://localhost:8000/api?data=["India","Capital","New Delhi"]
 ```
