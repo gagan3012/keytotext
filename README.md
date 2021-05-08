@@ -53,7 +53,7 @@ API: [![API Call](https://img.shields.io/badge/-Open%20with%20FastAPI-red?logo=f
 [![Docker Call](https://img.shields.io/badge/-Docker%20Image-blue?logo=docker&labelColor=white)](https://hub.docker.com/r/gagan30/keytotext)
 
 The API is hosted in the Docker container and it can be run quickly.
-Follow instructions bellow to get started
+Follow instructions below to get started
 
 ```shell script
 docker pull gagan30/keytotext
