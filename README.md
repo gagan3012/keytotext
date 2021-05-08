@@ -56,10 +56,11 @@ The API is hosted in the Docker container and it can be run quickly.
 To run the API please run the Docker file using `docker pull gagan30/keytotext` and then visit 
 
 ```shell script
+docker pull gagan30/keytotext
 
+docker run -dp 8000:8000 gagan30/keytotext
 ```
 
-```
 http://localhost:8000/api?data=["India","Capital","New Delhi"]
 ```
 
