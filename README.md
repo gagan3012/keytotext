@@ -40,7 +40,7 @@ pip install keytotext
 
 UI: [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/gagan3012/keytotext/UI/app.py)
 
-```
+```shell script
 pip install streamlit-tags
 ```
 This uses a custom streamlit component built by me: [GitHub](https://github.com/gagan3012/streamlit-tags)
