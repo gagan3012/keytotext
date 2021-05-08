@@ -17,7 +17,7 @@ Idea is to build a model which will take keywords as inputs and generate sentenc
 
 ## Model:
 
-Keytotext is based on the Amazing T5 Model: 
+Keytotext is based on the Amazing T5 Model: [![HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97-Models%20on%20Hub-yellow)](https://huggingface.co/models?filter=keytotext)
 
 - `k2t`: [Model](https://huggingface.co/gagan3012/k2t)
 - `k2t-tiny`: [Model](https://huggingface.co/gagan3012/k2t-tiny)
