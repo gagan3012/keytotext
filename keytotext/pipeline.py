@@ -9,9 +9,10 @@ from transformers import (
 )
 from .newmodels import NMPipeline
 
+
 class K2TPipeline:
     def __init__(
-        self, model: PreTrainedModel, tokenizer: PreTrainedTokenizer, use_cuda: bool
+            self, model: PreTrainedModel, tokenizer: PreTrainedTokenizer, use_cuda: bool
     ):
         self.model = model
         self.tokenizer = tokenizer
@@ -55,12 +56,12 @@ class K2TPipeline:
         return texts
 
     def _tokenize(
-        self,
-        inputs,
-        padding=True,
-        truncation=True,
-        add_special_tokens=True,
-        max_length=1024,
+            self,
+            inputs,
+            padding=True,
+            truncation=True,
+            add_special_tokens=True,
+            max_length=1024,
     ):
         inputs = self.tokenizer.encode(
             inputs,
@@ -87,7 +88,7 @@ SUPPORTED_TASKS = {
             "model": "gagan3012/k2t-base",
         },
     },
-    "mrm8488/t5-base-finetuned-common_gen":{
+    "mrm8488/t5-base-finetuned-common_gen": {
         "impl": NMPipeline,
         "default": {
             "model": "mrm8488/t5-base-finetuned-common_gen",
@@ -97,10 +98,10 @@ SUPPORTED_TASKS = {
 
 
 def pipeline(
-    task: str,
-    model: Optional = None,
-    tokenizer: Optional[Union[str, PreTrainedTokenizer]] = None,
-    use_cuda: Optional[bool] = True,
+        task: str,
+        model: Optional = None,
+        tokenizer: Optional[Union[str, PreTrainedTokenizer]] = None,
+        use_cuda: Optional[bool] = True,
 ) -> K2TPipeline:
     """
 
