@@ -29,7 +29,7 @@ class NMPipeline:
         }
 
     def __call__(self, keywords, **kwargs):
-        inputs = self._prepare_inputs_for_k2t(keywords)
+        inputs = self._prepare_inputs_for_nm(keywords)
         result = ""
         if not kwargs:
             kwargs = self.default_generate_kwargs
@@ -42,7 +42,7 @@ class NMPipeline:
         result = re.sub("<pad>|</s>", "", result)
         return result.strip()
 
-    def _prepare_inputs_for_k2t(self, keywords):
+    def _prepare_inputs_for_nm(self, keywords):
         text = str(keywords)
         text = text.replace(",", " ")
         text = text.replace("'", "")
