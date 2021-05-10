@@ -5,6 +5,7 @@ from transformers import (
     PreTrainedModel,
     PreTrainedTokenizer,
 )
+import re
 
 
 class NMPipeline:
