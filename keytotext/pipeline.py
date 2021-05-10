@@ -163,3 +163,5 @@ def pipeline(
         return task_class(model=model, tokenizer=tokenizer, use_cuda=use_cuda)
     if task == "k2t-base":
         return task_class(model=model, tokenizer=tokenizer, use_cuda=use_cuda)
+    if task == "mrm8488/t5-base-finetuned-common_gen":
+        return task_class(model=model, tokenizer=tokenizer, use_cuda=use_cuda)
