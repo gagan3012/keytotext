@@ -7,7 +7,7 @@ from transformers import (
     PreTrainedModel,
     PreTrainedTokenizer,
 )
-
+from .newmodels import NMPipeline
 
 class K2TPipeline:
     def __init__(
@@ -87,6 +87,12 @@ SUPPORTED_TASKS = {
             "model": "gagan3012/k2t-base",
         },
     },
+    "mrm8488/t5-base-finetuned-common_gen":{
+        "impl": NMPipeline,
+        "default": {
+            "model": "mrm8488/t5-base-finetuned-common_gen",
+        },
+    }
 }
 
 
