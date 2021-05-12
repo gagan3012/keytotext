@@ -23,11 +23,12 @@ datasets:
 2. In your fork of this repository edit the following lines:
 
 ``` python
-
-"k2t-base": {
-        "impl": K2TPipeline,
+SUPPORTED_TASKS = {
+    <MODEL NAME>: {
+        "impl": NMPipeline,
         "default": {
-            "model": "gagan3012/k2t-base",
+            "model": <MODEL NAME>,
         },
-},
+    },
+}
 ```
