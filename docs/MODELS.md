@@ -37,3 +37,4 @@ SUPPORTED_TASKS = {
 
 ```python
 from keytotext import pipeline
+nlp = pipeline("<MODEL NAME>")
