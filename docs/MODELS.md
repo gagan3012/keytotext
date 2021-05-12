@@ -20,6 +20,7 @@ datasets:
 ---
 ```
 
+2) In your fork of this repository edit the following lines:
 
 ``` python
 SUPPORTED_TASKS = {
