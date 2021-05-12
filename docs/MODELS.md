@@ -32,3 +32,4 @@ SUPPORTED_TASKS = {
     },
 }
 ```
+
