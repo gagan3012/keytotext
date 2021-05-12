@@ -24,10 +24,10 @@ datasets:
 
 ``` python
 SUPPORTED_TASKS = {
-    <MODEL NAME>: {
+    "<MODEL NAME>": {
         "impl": NMPipeline,
         "default": {
-            "model": <MODEL NAME>,
+            "model": "<MODEL NAME>",
         },
     },
 }
