@@ -6,6 +6,7 @@ Keytotext lib is built on top of the Transformers library by HuggingFace
 
 Follow these steps to add your model to keytotext:
 
+1) Upload your model to huggingface Hub with these tags in the model card of your model:
 ```
 language: <LANGUAGE YOUR MODEL SUPPORTS>
 thumbnail: "Keywords to Sentences"
