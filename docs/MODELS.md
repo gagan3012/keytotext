@@ -35,4 +35,5 @@ SUPPORTED_TASKS = {
 
 3) Create a PR request and Once your changes are merged you can use the model as
 
+```python
 from keytotext import pipeline
