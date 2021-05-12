@@ -23,7 +23,6 @@ Keytotext is based on the Amazing T5 Model: [![HuggingFace](https://img.shields.
 - `k2t-base`: [Model](https://huggingface.co/gagan3012/k2t-base)
 - `mrm8488/t5-base-finetuned-common_gen` (by Manuel Romero): [Model](https://huggingface.co/mrm8488/t5-base-finetuned-common_gen?text=India+capital+New+Delhi)
 
-Training Notebooks can be found in the [`Training Notebooks`](https://github.com/gagan3012/keytotext/tree/master/Training%20Notebooks) Folder
 
 ## Usage:
 
