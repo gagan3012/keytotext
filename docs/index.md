@@ -53,6 +53,7 @@ This uses a custom streamlit component built by me: [GitHub](https://github.com/
 
 ## API:
 
+API: [![API Call](https://img.shields.io/badge/-Open%20with%20FastAPI-red?logo=fastapi&labelColor=white)](http://localhost:8000/api?data=[%22India%22,%22Capital%22,%22New%20Delhi%22])
 [![Docker Call](https://img.shields.io/badge/-Docker%20Image-blue?logo=docker&labelColor=white)](https://hub.docker.com/r/gagan30/keytotext)
 
 The API is hosted in the Docker container and it can be run quickly.
