@@ -25,7 +25,7 @@ Keytotext is based on the Amazing T5 Model: [![HuggingFace](https://img.shields.
 
 Training Notebooks can be found in the [`Training Notebooks`](https://github.com/gagan3012/keytotext/tree/master/notebooks) Folder
 
-**Note**: Please raise an issue if you would like to add new model to keytotext
+**Note**: To add your own model to keytotext Please read [`Models Documentation`](https://github.com/gagan3012/keytotext/blob/master/docs/MODELS.md)
 
 ## Usage:
 
