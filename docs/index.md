@@ -10,6 +10,7 @@
 [![Documentation Status](https://readthedocs.org/projects/keytotext/badge/?version=latest)](https://keytotext.readthedocs.io/en/latest/?badge=latest)
 
 
+![keytotext (1)](https://socialify.git.ci/gagan3012/keytotext/image?language=1&owner=1&stargazers=1&theme=Light)
 
 Idea is to build a model which will take keywords as inputs and generate sentences as outputs. 
 
