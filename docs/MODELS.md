@@ -20,7 +20,7 @@ datasets:
 ---
 ```
 
-2) In your fork of this repository edit the following lines:
+2) In your fork of this repository edit the following lines of the `keytotext/pipeline.py` file:
 
 ``` python
 SUPPORTED_TASKS = {
