@@ -14,7 +14,12 @@
 
 ![keytotext (1)](https://socialify.git.ci/gagan3012/keytotext/image?language=1&owner=1&stargazers=1&theme=Light)
 
-Idea is to build a model which will take keywords as inputs and generate sentences as outputs. 
+Idea is to build a model which will take keywords as inputs and generate sentences as outputs.
+
+Potential use case can include: 
+- Marketing 
+- Search Engine Optimization
+- Topic generation etc.
 
 ## Model:
 
