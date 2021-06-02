@@ -11,6 +11,7 @@ from IPython.display import HTML, display
 # DART: https://github.com/Yale-LILY/dart.git
 
 files = []
+dirc = [
 ]
 for dir in dirc:
     file = glob.glob("{}".format(dir), recursive=True)
