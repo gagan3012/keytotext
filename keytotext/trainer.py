@@ -1,4 +1,3 @@
-
 # WebNLG: https://gitlab.com/shimorina/webnlg-dataset.git
 # DART: https://github.com/Yale-LILY/dart.git
 
