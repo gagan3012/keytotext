@@ -12,6 +12,7 @@ from IPython.display import HTML, display
 
 files = []
 dirc = [
+    "/webnlg-dataset/release_v2.1/xml/train/**/*.xml",
 ]
 for dir in dirc:
     file = glob.glob("{}".format(dir), recursive=True)
