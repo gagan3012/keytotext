@@ -1,4 +1,3 @@
-import glob
 import re
 import xml.etree.ElementTree as ET
 from IPython.display import HTML, display
