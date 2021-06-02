@@ -7,6 +7,7 @@ import re
 import xml.etree.ElementTree as ET
 from IPython.display import HTML, display
 
+# WebNLG: https://gitlab.com/shimorina/webnlg-dataset.git
 ]
 for dir in dirc:
     file = glob.glob("{}".format(dir), recursive=True)
