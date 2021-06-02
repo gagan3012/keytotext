@@ -1,4 +1,3 @@
-import re
 from IPython.display import HTML, display
 
 # WebNLG: https://gitlab.com/shimorina/webnlg-dataset.git
