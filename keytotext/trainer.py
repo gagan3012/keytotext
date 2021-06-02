@@ -1,4 +1,3 @@
-import time
 import glob
 import re
 import xml.etree.ElementTree as ET
