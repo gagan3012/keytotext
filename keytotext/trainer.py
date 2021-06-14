@@ -97,5 +97,6 @@ class PLDataModule(LightningDataModule):
     ):
         self.split = split
         self.batch_size = batch_size
+        self.target_max_token_len = target_max_token_len
         
 
