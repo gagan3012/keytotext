@@ -30,6 +30,8 @@ class DataModule(Dataset):
     ):
         self.data = data
         self.target_max_token_len = target_max_token_len
+        self.source_max_token_len = source_max_token_len
+        self.tokenizer = tokenizer
 
     def __getitem__(self, index: int):
         
