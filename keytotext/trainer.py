@@ -14,6 +14,7 @@ from sklearn.model_selection import train_test_split
 import pytorch_lightning as pl
 from pytorch_lightning.callbacks import ModelCheckpoint
 from pytorch_lightning.callbacks.early_stopping import EarlyStopping
+from pytorch_lightning import LightningDataModule
 
 torch.cuda.empty_cache()
 pl.seed_everything(42)
