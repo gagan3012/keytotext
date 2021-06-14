@@ -79,5 +79,8 @@ class DataModule(Dataset):
             keywords=data_row["keywords"],
             text=data_row["text"],
             keywords_input_ids=keywords_encoding["input_ids"].flatten(),
+            keywords_attention_mask=keywords_encoding["attention_mask"].flatten(),
+            labels=labels.flatten(),
+            labels_attention_mask=text_encoding["attention_mask"].flatten(),
         
 
