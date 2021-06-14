@@ -25,3 +25,5 @@ class DataModule(Dataset):
         self,
         data: pd.DataFrame,
         tokenizer: T5Tokenizer,
+        self.data = data
+        self.target_max_token_len = target_max_token_len
