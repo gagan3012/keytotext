@@ -279,4 +279,14 @@ class KeytotextTrainer:
             max_epochs (int, optional): max number of epochs. Defaults to 5.
             use_gpu (bool, optional): if True, model uses gpu for training. Defaults to True.
             outputdir (str, optional): output directory to save model checkpoints. Defaults to "outputs".
+            early_stopping_patience_epochs (int, optional): monitors val_loss on epoch end and stops training, if val_loss does not improve after the specied number of epochs. set 0 to disable early stopping. Defaults to 0 (disabled)
+        """
+        self.target_max_token_len = target_max_token_len
+
+        self.data_module = PLDataModule(
+            data_df=data_df,
+            tokenizer=self.tokenizer,
+            batch_size=batch_size,
+            source_max_token_len=source_max_token_len,
+            target_max_token_len=target_max_token_len,
 
