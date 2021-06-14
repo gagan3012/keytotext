@@ -116,4 +116,11 @@ class PLDataModule(LightningDataModule):
     def prepare_data(self):
         self.train_df, self.test_df = train_test_split(self.data_df, test_size=self.split, shuffle=True)
 
+    def setup(self, stage=None):
+        self.train_dataset = DataModule(
+            self.train_df,
+            self.tokenizer,
+            self.source_max_token_len,
+            self.target_max_token_len,
+        )
 
