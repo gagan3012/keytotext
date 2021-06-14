@@ -215,3 +215,14 @@ class LightningModel(pl.LightningModule):
         attention_mask = batch["keywords_attention_mask"]
         labels = batch["labels"]
         labels_attention_mask = batch["labels_attention_mask"]
+
+        loss, outputs = self(
+            input_ids=input_ids,
+            attention_mask=attention_mask,
+            decoder_attention_mask=labels_attention_mask,
+            labels=labels,
+        )
+
+        self.log("test_loss", loss, prog_bar=True, logger=True)
+        return loss
+
