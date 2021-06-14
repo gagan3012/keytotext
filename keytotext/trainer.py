@@ -48,5 +48,12 @@ class DataModule(Dataset):
         return len(self.data)
 
     def __getitem__(self, index: int):
+        data_row = self.data.iloc[index]
+
+        keywords_encoding = self.tokenizer(
+            data_row["keywords"],
+            max_length=self.source_max_token_len,
+            padding="max_length",
+            truncation=True,
         
 
