@@ -148,4 +148,14 @@ class PLDataModule(LightningDataModule):
             self.test_dataset, batch_size=self.batch_size, shuffle=False, num_workers=2
         )
 
+class LightningModel(pl.LightningModule):
+    """ PyTorch Lightning Model class"""
+
+    def __init__(self, tokenizer, model, outputdir: str = "outputs"):
+        """
+        initiates a PyTorch Lightning Model
+        Args:
+            tokenizer : T5/MT5 tokenizer
+            model : T5/MT5 model
+            outputdir (str, optional): output directory to save model checkpoints. Defaults to "outputs".
 
