@@ -289,6 +289,9 @@ class KeytotextTrainer:
             batch_size=batch_size,
             source_max_token_len=source_max_token_len,
             target_max_token_len=target_max_token_len,
+            split=test_split
+        )
+
         self.T5Model = LightningModel(
             tokenizer=self.tokenizer, model=self.model, output=outputdir
         )
