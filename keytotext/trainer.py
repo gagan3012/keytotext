@@ -250,4 +250,8 @@ class KeytotextTrainer:
     def __init__(self):
         pass
 
+    def from_pretrained(self, model_name="t5-base"):
+        self.tokenizer = T5Tokenizer.from_pretrained(f"{model_name}")
+        self.model = T5ForConditionalGeneration.from_pretrained(
+            f"{model_name}", return_dict=True
 
