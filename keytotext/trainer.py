@@ -175,3 +175,18 @@ class LightningModel(pl.LightningModule):
 
         return output.loss, output.logits
 
+    def training_step(self, batch, batch_size):
+        """ training step """
+        input_ids = batch["keywords_input_ids"]
+        attention_mask = batch["keywords_attention_mask"]
+        labels = batch["labels"]
+        labels_attention_mask = batch["labels_attention_mask"]
+
+        loss, outputs = self(
+            input_ids=input_ids,
+            attention_mask=attention_mask,
+            decoder_attention_mask=labels_attention_mask,
+            labels=labels,
+        )
+
+        self.log("train_loss", loss, prog_bar=True, logger=True)
