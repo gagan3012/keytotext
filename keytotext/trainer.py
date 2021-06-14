@@ -96,6 +96,13 @@ class PLDataModule(LightningDataModule):
             batch_size: int = 4,
             split: float = 0.1
     ):
+        """
+
+        :param data_df:
+        :param tokenizer:
+        :param source_max_token_len:
+        :param target_max_token_len:
+        :param batch_size:
         super().__init__()
         self.test_df = test_df
         self.train_df = train_df
