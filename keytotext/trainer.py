@@ -60,5 +60,7 @@ class DataModule(Dataset):
             return_tensors="pt",
         )
 
+            max_length=self.target_max_token_len,
+            padding="max_length",
         
 
