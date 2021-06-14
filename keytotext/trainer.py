@@ -32,6 +32,13 @@ class DataModule(Dataset):
             source_max_token_len: int = 512,
             target_max_token_len: int = 512,
     ):
+        """
+
+        :param data:
+        :param tokenizer:
+        :param source_max_token_len:
+        :param target_max_token_len:
+        """
         self.data = data
         self.target_max_token_len = target_max_token_len
         self.source_max_token_len = source_max_token_len
