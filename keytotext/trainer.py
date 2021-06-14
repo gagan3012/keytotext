@@ -86,21 +86,25 @@ class DataModule(Dataset):
         )
 
 class PLDataModule(LightningDataModule):
-
     def __init__(
-        self,
-        data_df: pd.DataFrame,
-        tokenizer: T5Tokenizer,
-        source_max_token_len: int = 512,
-        target_max_token_len: int = 512,
-        batch_size: int = 4,
-        split: float = 0.1
+            self,
+            train_df: pd.DataFrame,
+            test_df: pd.DataFrame,
+            tokenizer: T5Tokenizer,
+            source_max_token_len: int = 512,
+            target_max_token_len: int = 512,
+            batch_size: int = 4,
+            split: float = 0.1
     ):
+        super().__init__()
+        self.test_df = test_df
+        self.train_df = train_df
         self.split = split
         self.batch_size = batch_size
         self.target_max_token_len = target_max_token_len
         self.source_max_token_len = source_max_token_len
         self.tokenizer = tokenizer
-        self.data_df = data_df
-        
+
+    def setup(self, ):
+
 
