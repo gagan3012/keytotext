@@ -235,3 +235,7 @@ class LightningModel(pl.LightningModule):
         avg_traning_loss = np.round(
             torch.mean(torch.stack([x["loss"] for x in training_step_outputs])).item(),
             4,
+        path = f"{self.outputdir}/keytotext-epoch-{self.current_epoch}-train-loss-{str(avg_traning_loss)}"
+        self.tokenizer.save_pretrained(path)
+        self.model.save_pretrained(path)
+
