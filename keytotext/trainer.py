@@ -19,3 +19,4 @@ from pytorch_lightning.callbacks.early_stopping import EarlyStopping
 torch.cuda.empty_cache()
 pl.seed_everything(42)
 
+class DataModule(Dataset):
