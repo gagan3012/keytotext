@@ -242,6 +242,10 @@ class LightningModel(pl.LightningModule):
         self.model.save_pretrained(path)
 
 
+class KeytotextTrainer:
+    """
+    Keytotext model trainer
+    """
 
 
 
