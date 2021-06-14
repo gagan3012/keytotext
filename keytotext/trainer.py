@@ -106,8 +106,7 @@ class PLDataModule(LightningDataModule):
         :param split:
         """
         super().__init__()
-        self.test_df = test_df
-        self.train_df = train_df
+        self.data_df = data_df
         self.split = split
         self.batch_size = batch_size
         self.target_max_token_len = target_max_token_len
