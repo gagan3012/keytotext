@@ -247,5 +247,7 @@ class KeytotextTrainer:
     Keytotext model trainer
     """
 
+    def __init__(self):
+        pass
 
 
