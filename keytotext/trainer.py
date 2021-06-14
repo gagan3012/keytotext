@@ -22,3 +22,6 @@ pl.seed_everything(42)
 class DataModule(Dataset):
 
     def __init__(
+        self,
+        data: pd.DataFrame,
+        tokenizer: T5Tokenizer,
