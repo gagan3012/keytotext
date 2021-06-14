@@ -30,3 +30,6 @@ class DataModule(Dataset):
     ):
         self.data = data
         self.target_max_token_len = target_max_token_len
+
+    def __getitem__(self, index: int):
+        
