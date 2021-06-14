@@ -55,5 +55,10 @@ class DataModule(Dataset):
             max_length=self.source_max_token_len,
             padding="max_length",
             truncation=True,
+            return_attention_mask=True,
+            add_special_tokens=True,
+            return_tensors="pt",
+        )
+
         
 
