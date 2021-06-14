@@ -70,5 +70,8 @@ class DataModule(Dataset):
             return_tensors="pt",
         )
 
+        labels = text_encoding["input_ids"]
+        labels[
+            labels == 0
         
 
