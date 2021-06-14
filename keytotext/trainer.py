@@ -158,4 +158,12 @@ class LightningModel(pl.LightningModule):
             tokenizer : T5/MT5 tokenizer
             model : T5/MT5 model
             outputdir (str, optional): output directory to save model checkpoints. Defaults to "outputs".
+        """
+        super().__init__()
+        self.model = model
+        self.tokenizer = tokenizer
+        self.outputdir = outputdir
+
+    def forward(self, input_ids, attention_mask, decoder_attention_mask, labels=None):
+        """ forward step """
 
