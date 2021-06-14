@@ -207,3 +207,9 @@ class LightningModel(pl.LightningModule):
         )
 
         self.log("val_loss", loss, prog_bar=True, logger=True)
+    def test_step(self, batch, batch_size):
+        """ test step """
+        input_ids = batch["keywords_input_ids"]
+        attention_mask = batch["keywords_attention_mask"]
+        labels = batch["labels"]
+        labels_attention_mask = batch["labels_attention_mask"]
