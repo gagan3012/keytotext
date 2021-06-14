@@ -130,3 +130,8 @@ class PLDataModule(LightningDataModule):
             self.target_max_token_len,
         )
 
+    def train_dataloader(self):
+        """ training dataloader """
+        return DataLoader(
+            self.train_dataset, batch_size=self.batch_size, shuffle=True, num_workers=2
+        )
