@@ -21,3 +21,4 @@ pl.seed_everything(42)
 
 class DataModule(Dataset):
 
+    def __init__(
