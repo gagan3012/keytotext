@@ -1,12 +1,3 @@
-import pandas as pd
-import torch
-from transformers import T5Tokenizer, T5ForConditionalGeneration, Adafactor
-import time
-import glob
-import re
-import xml.etree.ElementTree as ET
-from IPython.display import HTML, display
-
 # WebNLG: https://gitlab.com/shimorina/webnlg-dataset.git
 # DART: https://github.com/Yale-LILY/dart.git
 
