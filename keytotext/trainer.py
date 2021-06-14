@@ -273,4 +273,10 @@ class KeytotextTrainer:
         Args:
             train_df (pd.DataFrame): training datarame. Dataframe must have 2 column --> "source_text" and "target_text"
             eval_df ([type], optional): validation datarame. Dataframe must have 2 column --> "source_text" and "target_text"
+            source_max_token_len (int, optional): max token length of source text. Defaults to 512.
+            target_max_token_len (int, optional): max token length of target text. Defaults to 512.
+            batch_size (int, optional): batch size. Defaults to 8.
+            max_epochs (int, optional): max number of epochs. Defaults to 5.
+            use_gpu (bool, optional): if True, model uses gpu for training. Defaults to True.
+            outputdir (str, optional): output directory to save model checkpoints. Defaults to "outputs".
 
