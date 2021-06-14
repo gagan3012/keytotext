@@ -113,6 +113,5 @@ class PLDataModule(LightningDataModule):
         self.source_max_token_len = source_max_token_len
         self.tokenizer = tokenizer
 
-    def setup(self, ):
 
 
