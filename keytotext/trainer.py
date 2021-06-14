@@ -123,4 +123,10 @@ class PLDataModule(LightningDataModule):
             self.source_max_token_len,
             self.target_max_token_len,
         )
+        self.test_dataset = DataModule(
+            self.test_df,
+            self.tokenizer,
+            self.source_max_token_len,
+            self.target_max_token_len,
+        )
 
