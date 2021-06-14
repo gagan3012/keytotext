@@ -207,6 +207,7 @@ class LightningModel(pl.LightningModule):
         )
 
         self.log("val_loss", loss, prog_bar=True, logger=True)
+        return loss
     def test_step(self, batch, batch_size):
         """ test step """
         input_ids = batch["keywords_input_ids"]
