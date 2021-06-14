@@ -265,4 +265,12 @@ class KeytotextTrainer:
             max_epochs: int = 5,
             use_gpu: bool = True,
             outputdir: str = "outputs",
+            early_stopping_patience_epochs: int = 0,  # 0 to disable early stopping feature
+            test_split=0.1,
+    ):
+        """
+        trains T5/MT5 model on custom dataset
+        Args:
+            train_df (pd.DataFrame): training datarame. Dataframe must have 2 column --> "source_text" and "target_text"
+            eval_df ([type], optional): validation datarame. Dataframe must have 2 column --> "source_text" and "target_text"
 
