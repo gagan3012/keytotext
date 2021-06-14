@@ -148,21 +148,22 @@ class PLDataModule(LightningDataModule):
             self.test_dataset, batch_size=self.batch_size, shuffle=False, num_workers=2
         )
 
+
 class LightningModel(pl.LightningModule):
     """ PyTorch Lightning Model class"""
 
-    def __init__(self, tokenizer, model, outputdir: str = "outputs"):
+    def __init__(self, tokenizer, model, output: str = "outputs"):
         """
         initiates a PyTorch Lightning Model
         Args:
-            tokenizer : T5/MT5 tokenizer
-            model : T5/MT5 model
-            outputdir (str, optional): output directory to save model checkpoints. Defaults to "outputs".
+            tokenizer : T5 tokenizer
+            model : T5 model
+            output (str, optional): output directory to save model checkpoints. Defaults to "outputs".
         """
         super().__init__()
         self.model = model
         self.tokenizer = tokenizer
-        self.outputdir = outputdir
+        self.output = output
 
     def forward(self, input_ids, attention_mask, decoder_attention_mask, labels=None):
         """ forward step """
@@ -236,7 +237,10 @@ class LightningModel(pl.LightningModule):
             torch.mean(torch.stack([x["loss"] for x in training_step_outputs])).item(),
             4,
         )
-        path = f"{self.outputdir}/keytotext-epoch-{self.current_epoch}-train-loss-{str(avg_traning_loss)}"
+        path = f"{self.output}/keytotext-epoch-{self.current_epoch}-train-loss-{str(avg_traning_loss)}"
         self.tokenizer.save_pretrained(path)
         self.model.save_pretrained(path)
+
+
+
 
