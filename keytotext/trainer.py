@@ -166,4 +166,12 @@ class LightningModel(pl.LightningModule):
 
     def forward(self, input_ids, attention_mask, decoder_attention_mask, labels=None):
         """ forward step """
+        output = self.model(
+            input_ids,
+            attention_mask=attention_mask,
+            labels=labels,
+            decoder_attention_mask=decoder_attention_mask,
+        )
+
+        return output.loss, output.logits
 
