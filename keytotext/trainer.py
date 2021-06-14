@@ -82,5 +82,8 @@ class DataModule(Dataset):
             keywords_attention_mask=keywords_encoding["attention_mask"].flatten(),
             labels=labels.flatten(),
             labels_attention_mask=text_encoding["attention_mask"].flatten(),
+        )
+
+class PLDataModule(LightningDataModule):
         
 
