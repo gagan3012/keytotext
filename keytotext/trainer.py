@@ -226,3 +226,12 @@ class LightningModel(pl.LightningModule):
         self.log("test_loss", loss, prog_bar=True, logger=True)
         return loss
 
+    def configure_optimizers(self):
+        """ configure optimizers """
+        return AdamW(self.parameters(), lr=0.0001)
+
+    def training_epoch_end(self, training_step_outputs):
+        """ save tokenizer and model on epoch end """
+        avg_traning_loss = np.round(
+            torch.mean(torch.stack([x["loss"] for x in training_step_outputs])).item(),
+            4,
