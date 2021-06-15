@@ -378,6 +378,7 @@ class KeytotextTrainer:
         Returns:
             list[str]: returns predictions
         """
+        if use_gpu:
         source_text = ' '.join(map(str, keywords))
 
         input_ids = self.tokenizer.encode(
