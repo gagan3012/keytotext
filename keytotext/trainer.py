@@ -377,12 +377,7 @@ class KeytotextTrainer:
         Returns:
             list[str]: returns predictions
         """
-        text = str(keywords)
-        text = text.replace(",", "|")
-        text = text.replace("'", "")
-        text = text.replace("[", "")
-        text = text.replace("]", "")
-        source_text = text.split(".")
+        source_text = ' '.join(map(str, keywords))
 
         input_ids = self.tokenizer.encode(
             source_text, return_tensors="pt", add_special_tokens=True
