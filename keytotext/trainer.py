@@ -229,7 +229,6 @@ class LightningModel(pl.LightningModule):
         """ configure optimizers """
         return AdamW(self.parameters(), lr=0.0001)
 
-        avg_traning_loss = np.round(
             torch.mean(torch.stack([x["loss"] for x in training_step_outputs])).item(),
             4,
         )
