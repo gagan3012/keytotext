@@ -236,8 +236,7 @@ class LightningModel(pl.LightningModule):
             4,
         )
         path = f"{self.output}/keytotext-epoch-{self.current_epoch}-loss-{str(avg_traning_loss)}"
-        self.tokenizer.save_pretrained(path)
-        self.model.save_pretrained(path)
+        return avg_traning_loss
 
 
 class KeytotextTrainer:
@@ -280,6 +279,7 @@ class KeytotextTrainer:
             early_stopping_patience_epochs (int, optional): monitors val_loss on epoch end and stops training, if val_loss does not improve after the specied number of epochs. set 0 to disable early stopping. Defaults to 0 (disabled)
         """
         self.target_max_token_len = target_max_token_len
+        self.max_epoch = max_epochs
 
         self.data_module = PLDataModule(
             data_df=data_df,
@@ -343,6 +343,14 @@ class KeytotextTrainer:
             self.device = torch.device("cpu")
 
         self.model = self.model.to(self.device)
+
+    def save_model(
+        self,
+        model_dir
+    ):
+        path = f"{model_dir}/keytotext-epoch-{self.max_epoch}"
+        self.tokenizer.save_pretrained(path)
+        self.model.save_pretrained(path)
 
     def predict(
             self,
