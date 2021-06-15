@@ -193,7 +193,7 @@ class LightningModel(pl.LightningModule):
 
     def validation_step(self, batch, batch_size):
         """ validation step """
-        input_ids = batch["source_text_input_ids"]
+        input_ids = batch["keywords_input_ids"]
         attention_mask = batch["keywords_attention_mask"]
         labels = batch["labels"]
         labels_attention_mask = batch["labels_attention_mask"]
@@ -293,7 +293,7 @@ class KeytotextTrainer:
             tokenizer=self.tokenizer, model=self.model, output=outputdir
         )
 
-        logger = WandbLogger(name="keytotext")
+        logger = WandbLogger(name="keytotext", project="keytotext")
 
         early_stop_callback = (
             [
@@ -344,8 +344,8 @@ class KeytotextTrainer:
         self.model = self.model.to(self.device)
 
     def save_model(
-        self,
-        model_dir
+            self,
+            model_dir
     ):
         path = f"{model_dir}/keytotext-epoch-{self.max_epoch}"
         self.tokenizer.save_pretrained(path)
