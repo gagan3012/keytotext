@@ -19,6 +19,9 @@ requires = [
     "torch",
     "transformers",
     "sentencepiece",
+    "wandb",
 ]
+license = "MIT"
+
 
 
