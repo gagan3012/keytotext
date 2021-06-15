@@ -379,6 +379,7 @@ class KeytotextTrainer:
             list[str]: returns predictions
         """
         if use_gpu:
+            if torch.cuda.is_available():
         source_text = ' '.join(map(str, keywords))
 
         input_ids = self.tokenizer.encode(
