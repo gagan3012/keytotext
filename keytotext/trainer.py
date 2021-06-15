@@ -357,6 +357,7 @@ class KeytotextTrainer:
             early_stopping: bool = True,
             skip_special_tokens: bool = True,
             clean_up_tokenization_spaces: bool = True,
+            use_gpu: bool = True
     ):
         """
         generates prediction for K2T model
