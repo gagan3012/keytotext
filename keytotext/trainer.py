@@ -236,7 +236,6 @@ class LightningModel(pl.LightningModule):
             4,
         )
         path = f"{self.output}/keytotext-epoch-{self.current_epoch}-loss-{str(avg_traning_loss)}"
-        return avg_traning_loss
 
 
 class KeytotextTrainer:
