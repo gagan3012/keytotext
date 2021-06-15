@@ -20,6 +20,7 @@ requires = [
     "transformers",
     "sentencepiece",
     "wandb",
+    "pytorch_lightning",
 ]
 license = "MIT"
 
