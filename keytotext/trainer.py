@@ -380,6 +380,7 @@ class KeytotextTrainer:
         """
         if use_gpu:
             if torch.cuda.is_available():
+                self.device = torch.device("cuda")
         source_text = ' '.join(map(str, keywords))
 
         input_ids = self.tokenizer.encode(
