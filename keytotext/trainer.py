@@ -229,7 +229,6 @@ class LightningModel(pl.LightningModule):
         """ configure optimizers """
         return AdamW(self.parameters(), lr=0.0001)
 
-        )
         path = f"{self.output}/keytotext-epoch-{self.current_epoch}-loss-{str(avg_traning_loss)}"
 
 
