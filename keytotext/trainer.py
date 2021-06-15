@@ -285,6 +285,7 @@ class KeytotextTrainer:
             tokenizer=self.tokenizer, model=self.model, output=outputdir
         )
 
+        logger = WandbLogger(project="keytotext")
 
         early_stop_callback = (
             [
