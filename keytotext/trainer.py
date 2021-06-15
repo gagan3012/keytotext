@@ -383,6 +383,7 @@ class KeytotextTrainer:
                 self.device = torch.device("cuda")
             else:
                 raise Exception("exception ---> no gpu found. set use_gpu=False, to use CPU")
+        else:
         source_text = ' '.join(map(str, keywords))
 
         input_ids = self.tokenizer.encode(
