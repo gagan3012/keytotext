@@ -15,3 +15,5 @@ def from_pretrained(self, model_name="t5-base"):
     """
 ```
 
+- ##### Train the Model
+
