@@ -55,3 +55,18 @@ def from_pretrained(self, model_name="t5-base"):
         Args:
             model_dir (str, optional): path to model directory. Defaults to "outputs".
             use_gpu (bool, optional): if True, model uses gpu for inferencing/prediction. Defaults to True.
+        """
+```
+
+- ##### Save model to directory
+
+```python
+    def save_model(
+            self,
+            model_dir="outputs"
+    ):
+        """
+        Save model to dir
+        :param model_dir:
+        :return: model is saved
+        """
