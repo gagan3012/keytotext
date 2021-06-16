@@ -108,3 +108,4 @@ def from_pretrained(self, model_name="t5-base"):
             clean_up_tokenization_spaces (bool, optional): Defaults to True.
             use_gpu: Defaults to True.
         Returns:
+            str: returns predictions
