@@ -46,3 +46,12 @@ def from_pretrained(self, model_name="t5-base"):
 
 - ##### Load Model for testing
 
+```python
+    def load_model(
+            self, model_dir: str = "outputs", use_gpu: bool = False
+    ):
+        """
+        loads a checkpoint for inferencing/prediction
+        Args:
+            model_dir (str, optional): path to model directory. Defaults to "outputs".
+            use_gpu (bool, optional): if True, model uses gpu for inferencing/prediction. Defaults to True.
