@@ -243,6 +243,7 @@ class KeytotextTrainer:
         """
         Download Model from HF hub
         :param model_name: T5
+        :return: Download the model and tokenizer
         """
         self.tokenizer = T5Tokenizer.from_pretrained(f"{model_name}")
         self.model = T5ForConditionalGeneration.from_pretrained(
