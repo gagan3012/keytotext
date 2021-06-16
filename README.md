@@ -48,6 +48,18 @@ pip install keytotext
 
 ![carbon (3)](https://user-images.githubusercontent.com/49101362/116220679-90e64180-a755-11eb-9246-82d93d924a6c.png)
 
+## Finetune Model:
+
+Keytotext now has a trainer class than be used to train and finetune any T5 based model on new data.
+
+Trainer example here: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/gagan3012/keytotext/blob/master/notebooks/Trainer.ipynb)
+
+```python
+from keytotext import KeytotextTrainer
+```
+
+![carbon (5)](https://user-images.githubusercontent.com/49101362/122148321-2aa1a500-ce0f-11eb-9ca0-61e796aeed0a.png)
+
 
 ## UI:
 
@@ -100,3 +112,4 @@ To quote keytotext please use this citation
 - https://towardsdatascience.com/data-to-text-generation-with-t5-building-a-simple-yet-advanced-nlg-model-b5cce5a6df45 (Mathew Alexander)
 - https://github.com/patil-suraj/question_generation (Suraj Patil)
 - Amazing Video by [1LittleCoder](https://twitter.com/1littlecoder) here: https://www.youtube.com/watch?v=I0iBzP-SxFY about keytotext
+- https://github.com/Shivanandroy/simpleT5 (Shivanand Roy)
