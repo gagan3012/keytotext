@@ -340,6 +340,7 @@ class KeytotextTrainer:
             model_dir="outputs"
     ):
         """
+        """
         path = f"{model_dir}/keytotext-epoch-{self.max_epoch}"
         self.tokenizer.save_pretrained(path)
         self.model.save_pretrained(path)
