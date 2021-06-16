@@ -341,6 +341,7 @@ class KeytotextTrainer:
     ):
         """
         Save model to dir
+        :param model_dir:
         """
         path = f"{model_dir}/keytotext-epoch-{self.max_epoch}"
         self.tokenizer.save_pretrained(path)
