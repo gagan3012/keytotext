@@ -10,3 +10,4 @@ This features many fucntions that are described below:
 def from_pretrained(self, model_name="t5-base"):
     """
     Download Model from HF hub
+    :param model_name: T5
