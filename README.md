@@ -48,7 +48,7 @@ pip install keytotext
 
 ![carbon (3)](https://user-images.githubusercontent.com/49101362/116220679-90e64180-a755-11eb-9246-82d93d924a6c.png)
 
-## Finetune Model:
+## Trainer:
 
 Keytotext now has a trainer class than be used to train and finetune any T5 based model on new data. Trainer docs here: [`Docs`](https://github.com/gagan3012/keytotext/blob/master/docs/TRAINER.md)
 
