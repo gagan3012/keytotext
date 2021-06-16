@@ -109,3 +109,4 @@ def from_pretrained(self, model_name="t5-base"):
             use_gpu: Defaults to True.
         Returns:
             str: returns predictions
+        """
