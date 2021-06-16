@@ -241,6 +241,7 @@ class KeytotextTrainer:
 
     def from_pretrained(self, model_name="t5-base"):
         """
+        Download Model from HF hub
         """
         self.tokenizer = T5Tokenizer.from_pretrained(f"{model_name}")
         self.model = T5ForConditionalGeneration.from_pretrained(
