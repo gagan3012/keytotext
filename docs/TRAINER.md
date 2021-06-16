@@ -106,3 +106,4 @@ def from_pretrained(self, model_name="t5-base"):
             early_stopping (bool, optional): Defaults to True.
             skip_special_tokens (bool, optional): Defaults to True.
             clean_up_tokenization_spaces (bool, optional): Defaults to True.
+            use_gpu: Defaults to True.
