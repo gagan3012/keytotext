@@ -386,7 +386,7 @@ class KeytotextTrainer:
             clean_up_tokenization_spaces (bool, optional): Defaults to True.
             use_gpu: Defaults to True.
         Returns:
-            list[str]: returns predictions
+            str: returns predictions
         """
         if use_gpu:
             if torch.cuda.is_available():
