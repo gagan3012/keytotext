@@ -17,3 +17,17 @@ def from_pretrained(self, model_name="t5-base"):
 
 - ##### Train the Model
 
+```python
+    def train(
+            self,
+            data_df: pd.DataFrame,
+            source_max_token_len: int = 512,
+            target_max_token_len: int = 512,
+            batch_size: int = 8,
+            max_epochs: int = 5,
+            use_gpu: bool = True,
+            outputdir: str = "outputs",
+            early_stopping_patience_epochs: int = 0,  # 0 to disable early stopping feature
+            test_split=0.1,
+    ):
+        """
