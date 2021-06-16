@@ -12,3 +12,4 @@ def from_pretrained(self, model_name="t5-base"):
     Download Model from HF hub
     :param model_name: T5
     :return: Download the model and tokenizer
+    """
