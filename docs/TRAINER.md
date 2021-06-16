@@ -99,3 +99,9 @@ def from_pretrained(self, model_name="t5-base"):
             num_return_sequences (int, optional): number of predictions to be returned. Defaults to 1.
             num_beams (int, optional): number of beams. Defaults to 2.
             top_k (int, optional): Defaults to 50.
+            top_p (float, optional): Defaults to 0.95.
+            do_sample (bool, optional): Defaults to True.
+            repetition_penalty (float, optional): Defaults to 2.5.
+            length_penalty (float, optional): Defaults to 1.0.
+            early_stopping (bool, optional): Defaults to True.
+            skip_special_tokens (bool, optional): Defaults to True.
