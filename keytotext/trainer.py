@@ -263,7 +263,7 @@ class KeytotextTrainer:
             test_split=0.1,
     ):
         """
-        trains T5/MT5 model on custom dataset
+        trains T5 model on custom dataset
         Args:
             data_df (pd.DataFrame): training datarame. Dataframe must have 2 column --> "keywords" and "text"
             source_max_token_len (int, optional): max token length of source text. Defaults to 512.
