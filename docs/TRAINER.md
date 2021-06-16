@@ -70,3 +70,17 @@ def from_pretrained(self, model_name="t5-base"):
         :param model_dir:
         :return: model is saved
         """
+```
+
+- ##### Make a prediction using model
+
+```python
+    def predict(
+            self,
+            keywords: list,
+            max_length: int = 512,
+            num_return_sequences: int = 1,
+            num_beams: int = 2,
+            top_k: int = 50,
+            top_p: float = 0.95,
+            do_sample: bool = True,
