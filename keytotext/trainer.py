@@ -372,7 +372,7 @@ class KeytotextTrainer:
         """
         generates prediction for K2T model
         Args:
-            Keywords (list): any text for generating predictions
+            Keywords (list): any keywords for generating predictions
             max_length (int, optional): max token length of prediction. Defaults to 512.
             num_return_sequences (int, optional): number of predictions to be returned. Defaults to 1.
             num_beams (int, optional): number of beams. Defaults to 2.
