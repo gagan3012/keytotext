@@ -306,7 +306,6 @@ class KeytotextTrainer:
             else None
         )
 
-        gpus = 1 if use_gpu else 0
         gpus = -1 if use_gpu else 0
 
         trainer = Trainer(
