@@ -38,7 +38,7 @@ Training Notebooks can be found in the [`Training Notebooks`](https://github.com
 
 ## Usage:
 
-Example usage: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gagan3012/keytotext/blob/master/Examples/K2T.ipynb)
+Example usage: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gagan3012/keytotext/blob/master/notebooks/K2T.ipynb)
 
 Example Notebooks can be found in the [`Notebooks`](https://github.com/gagan3012/keytotext/tree/master/examples) Folder
 
@@ -52,7 +52,7 @@ pip install keytotext
 
 Keytotext now has a trainer class than be used to train and finetune any T5 based model on new data. Trainer docs here: [`Docs`](https://github.com/gagan3012/keytotext/blob/master/docs/TRAINER.md)
 
-Trainer example here: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gagan3012/keytotext/blob/master/Examples/Trainer.ipynb)
+Trainer example here: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gagan3012/keytotext/blob/master/notebooks/Trainer.ipynb)
 
 ```python
 from keytotext import KeytotextTrainer
