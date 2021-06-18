@@ -138,6 +138,7 @@ class PLDataModule(LightningDataModule):
         """ test dataloader """
         return DataLoader(
             self.test_dataset, batch_size=self.batch_size, shuffle=False, num_workers=4
+            self.test_dataset, batch_size=self.batch_size, shuffle=False, num_workers=8
         )
 
     def val_dataloader(self):
