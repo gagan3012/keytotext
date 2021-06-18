@@ -25,6 +25,7 @@ SUPPORTED_TASKS = {
         "default": {
             "model": "mrm8488/t5-base-finetuned-common_gen",
         },
+    },
     }
 }
 
