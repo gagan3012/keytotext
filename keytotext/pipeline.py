@@ -29,6 +29,7 @@ SUPPORTED_TASKS = {
     "k2t-new": {
         "impl": NMPipeline,
         "default": {
+            "model": "gagan3012/k2t-new",
     }
 }
 
