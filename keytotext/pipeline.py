@@ -26,6 +26,7 @@ SUPPORTED_TASKS = {
             "model": "mrm8488/t5-base-finetuned-common_gen",
         },
     },
+    "k2t-new": {
     }
 }
 
