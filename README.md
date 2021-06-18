@@ -107,10 +107,13 @@ To quote keytotext please use this citation
 }
 ```
 
-## References:
+# References 
+- https://github.com/Shivanandroy/simpleT5 (Shivanand Roy)
+- https://github.com/patil-suraj/question_generation (Suraj Patil)
+
+
+## Articles about keytotext:
 
 - https://towardsdatascience.com/data-to-text-generation-with-t5-building-a-simple-yet-advanced-nlg-model-b5cce5a6df45 (Mathew Alexander)
-- https://github.com/patil-suraj/question_generation (Suraj Patil)
 - Amazing Video by [1LittleCoder](https://twitter.com/1littlecoder) here: https://www.youtube.com/watch?v=I0iBzP-SxFY about keytotext
-- https://github.com/Shivanandroy/simpleT5 (Shivanand Roy)
 - https://medium.com/mlearning-ai/generating-sentences-from-keywords-using-transformers-in-nlp-e89f4de5cf6b (Prakhar Mishra)
