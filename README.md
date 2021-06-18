@@ -113,3 +113,4 @@ To quote keytotext please use this citation
 - https://github.com/patil-suraj/question_generation (Suraj Patil)
 - Amazing Video by [1LittleCoder](https://twitter.com/1littlecoder) here: https://www.youtube.com/watch?v=I0iBzP-SxFY about keytotext
 - https://github.com/Shivanandroy/simpleT5 (Shivanand Roy)
+- https://medium.com/mlearning-ai/generating-sentences-from-keywords-using-transformers-in-nlp-e89f4de5cf6b (Prakhar Mishra)
