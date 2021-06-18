@@ -28,6 +28,7 @@ SUPPORTED_TASKS = {
     },
     "k2t-new": {
         "impl": NMPipeline,
+        "default": {
     }
 }
 
