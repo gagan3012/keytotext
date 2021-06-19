@@ -231,6 +231,7 @@ class LightningModel(pl.LightningModule):
 
 
 
+class trainer:
     """
     Keytotext model trainer
     """
