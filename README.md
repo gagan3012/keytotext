@@ -58,8 +58,6 @@ Trainer example here: [![Open In Colab](https://colab.research.google.com/assets
 from keytotext import trainer
 ```
 
-![carbon (5)](https://user-images.githubusercontent.com/49101362/122148321-2aa1a500-ce0f-11eb-9ca0-61e796aeed0a.png)
-
 
 ## UI:
 
