@@ -55,7 +55,7 @@ Keytotext now has a trainer class than be used to train and finetune any T5 base
 Trainer example here: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gagan3012/keytotext/blob/master/notebooks/Trainer.ipynb)
 
 ```python
-from keytotext import KeytotextTrainer
+from keytotext import trainer
 ```
 
 ![carbon (5)](https://user-images.githubusercontent.com/49101362/122148321-2aa1a500-ce0f-11eb-9ca0-61e796aeed0a.png)
