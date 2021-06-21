@@ -30,3 +30,4 @@ requirements:
 
 test:
   imports:
+    - keytotext
