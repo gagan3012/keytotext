@@ -6,3 +6,4 @@ package:
   name: {{ name|lower }}
   version: {{ version }}
 
+source:
