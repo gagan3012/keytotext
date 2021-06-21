@@ -33,3 +33,4 @@ test:
     - keytotext
   commands:
     - pip check
+  requires:
