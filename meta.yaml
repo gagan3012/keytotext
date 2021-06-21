@@ -26,3 +26,4 @@ requirements:
     - sklearn
     - torch
     - transformers
+    - wandb
