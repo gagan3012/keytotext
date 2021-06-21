@@ -29,3 +29,4 @@ requirements:
     - wandb
 
 test:
+  imports:
