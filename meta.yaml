@@ -36,3 +36,4 @@ test:
   requires:
     - pip
 
+about:
