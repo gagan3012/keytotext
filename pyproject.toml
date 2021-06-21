@@ -23,7 +23,6 @@ requires = [
     "pytorch_lightning",
     "sklearn",
 ]
-license = "MIT"
 
 
 
