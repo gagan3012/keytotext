@@ -4,3 +4,4 @@
 
 package:
   name: {{ name|lower }}
+  version: {{ version }}
