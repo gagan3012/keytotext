@@ -23,4 +23,3 @@ requires = [
     "pytorch_lightning",
     "sklearn",
 ]
-
