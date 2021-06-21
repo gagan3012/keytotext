@@ -37,3 +37,4 @@ test:
     - pip
 
 about:
+  home: https://github.com/gagan3012/keytotext
