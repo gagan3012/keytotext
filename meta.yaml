@@ -25,3 +25,4 @@ requirements:
     - sentencepiece
     - sklearn
     - torch
+    - transformers
