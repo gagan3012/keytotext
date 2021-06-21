@@ -21,3 +21,4 @@ requirements:
     - python >=3.7
   run:
     - python >=3.7
+    - pytorch-lightning
