@@ -32,3 +32,4 @@ test:
   imports:
     - keytotext
   commands:
+    - pip check
