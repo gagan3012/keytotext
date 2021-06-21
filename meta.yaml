@@ -24,6 +24,7 @@ requirements:
     - pytorch-lightning
     - sentencepiece
     - scikit-learn
+    - pytorch
     - transformers
     - wandb
 
