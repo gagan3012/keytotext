@@ -7,3 +7,4 @@ package:
   version: {{ version }}
 
 source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/keytotext-{{ version }}.tar.gz
