@@ -1,6 +1,3 @@
-        inputs = keywords
-        result = ""
-        if not kwargs:
             kwargs = self.default_generate_kwargs
 
         for txt in inputs:
