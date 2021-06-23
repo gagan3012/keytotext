@@ -1,6 +1,3 @@
-    :param use_cuda:
-    :return:
-    (:class:):
             `K2TEval`: A Keytotext eval pipeline for the task.
 
     """
