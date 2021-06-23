@@ -1,4 +1,3 @@
-            The task defining which pipeline will be returned. Currently accepted tasks are:
             - :obj:`"k2t"`: will return a :class:`K2TPipeline` which is based on the k2t model based on t5-small
             - :obj:`"k2t-tiny"`: will return a :class:`K2TPipeline` which is based on the k2t model based on t5-tiny
             - :obj:`"k2t-base"`: will return a :class:`K2TPipeline` which is based on the k2t model based on t5-base
