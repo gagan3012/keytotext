@@ -1,6 +1,3 @@
-            `K2TEval`: A Keytotext eval pipeline for the task.
-
-    """
 
     if task not in SUPPORTED_TASKS:
         raise KeyError(
