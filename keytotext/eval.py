@@ -1,7 +1,3 @@
-    task: str,
-    model: Optional = None,
-    tokenizer: Optional[Union[str, PreTrainedTokenizer]] = None,
-    use_cuda: Optional[bool] = True,
 ) -> K2TEval:
     """
 
