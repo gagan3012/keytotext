@@ -1,4 +1,3 @@
-            "max_length": 1024,
             "num_beams": 4,
             "length_penalty": 1.5,
             "no_repeat_ngram_size": 3,
