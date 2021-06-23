@@ -1,6 +1,3 @@
-            truncation=truncation,
-            padding="max_length" if padding else False,
-            pad_to_max_length=padding,
             return_tensors="pt",
         )
         return inputs
