@@ -1,4 +1,3 @@
-from typing import Optional, Union
 from transformers import (
     AutoModelForSeq2SeqLM,
     AutoTokenizer,
