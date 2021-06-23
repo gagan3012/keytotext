@@ -1,4 +1,3 @@
-
         assert self.model.__class__.__name__ in ["T5ForConditionalGeneration"]
 
         if "T5ForConditionalGeneration" in self.model.__class__.__name__:
