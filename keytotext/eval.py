@@ -1,7 +1,4 @@
 
-    targeted_task = SUPPORTED_TASKS[task]
-    task_class = targeted_task["impl"]
-
     if model is None:
         model = targeted_task["default"]["model"]
 
