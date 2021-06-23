@@ -1,4 +1,3 @@
-
         self.default_generate_kwargs = {
             "max_length": 1024,
             "num_beams": 4,
