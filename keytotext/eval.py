@@ -1,6 +1,3 @@
-        inputs,
-        padding=True,
-        truncation=True,
         add_special_tokens=True,
         max_length=1024,
     ):
