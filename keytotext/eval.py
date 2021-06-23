@@ -1,6 +1,3 @@
-        "default": {
-            "model": "gagan3012/k2t",
-        },
     },
     "k2t-base": {
         "impl": K2TEval,
