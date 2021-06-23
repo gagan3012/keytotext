@@ -1,7 +1,3 @@
-
-SUPPORTED_TASKS = {
-    "k2t": {
-        "impl": K2TEval,
         "default": {
             "model": "gagan3012/k2t",
         },
