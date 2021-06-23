@@ -1,7 +1,4 @@
 
-        result = re.sub("<pad>|</s>", "", result)
-        return result.strip()
-
     def _tokenize(
         self,
         inputs,
