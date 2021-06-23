@@ -1,7 +1,3 @@
-            "model": "gagan3012/k2t-base",
-        },
-    },
-}
 
 
 def eval_pipeline(
