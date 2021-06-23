@@ -1,6 +1,4 @@
     :param use_cuda:
-    (:obj:`bool`, `optional`, defaults to :obj:`True`):
-            Whether or not to use a GPU or not Default: True
     :return:
     (:class:):
             `K2TEval`: A Keytotext eval pipeline for the task.
