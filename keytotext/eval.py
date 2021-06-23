@@ -1,4 +1,3 @@
-            self.model_type = "t5"
 
         self.default_generate_kwargs = {
             "max_length": 1024,
