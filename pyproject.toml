@@ -2,7 +2,7 @@
 requires = [
     "flit-core >=2,<4"
 ]
-build-backend = "flit_core.buildapi"
+build-backend = "flit-core.buildapi"
 
 [tool.flit.metadata]
 module = "keytotext"
