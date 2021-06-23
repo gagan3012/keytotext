@@ -1,5 +1,3 @@
-                "Please provided a PretrainedTokenizer "
-                "class or a path/identifier to a pretrained tokenizer."
             )
     if isinstance(tokenizer, (str, tuple)):
         tokenizer = AutoTokenizer.from_pretrained(tokenizer)
