@@ -1,5 +1,3 @@
-            kwargs = self.default_generate_kwargs
-
         for txt in inputs:
             input_ids = self._tokenize("{} </s>".format(txt), padding=False)
             outputs = self.model.generate(input_ids.to(self.device), **kwargs)
