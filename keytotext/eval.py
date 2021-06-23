@@ -1,7 +1,3 @@
-            return_tensors="pt",
-        )
-        return inputs
-
 
 SUPPORTED_TASKS = {
     "k2t": {
