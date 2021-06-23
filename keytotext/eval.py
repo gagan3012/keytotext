@@ -1,7 +1,3 @@
-        add_special_tokens=True,
-        max_length=1024,
-    ):
-        inputs = self.tokenizer.encode(
             inputs,
             max_length=max_length,
             add_special_tokens=add_special_tokens,
