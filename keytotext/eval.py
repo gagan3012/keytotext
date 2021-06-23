@@ -1,6 +1,3 @@
-        else:
-            # Impossible to guest what is the right tokenizer here
-            raise Exception(
                 "Please provided a PretrainedTokenizer "
                 "class or a path/identifier to a pretrained tokenizer."
             )
