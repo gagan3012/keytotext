@@ -1,7 +1,4 @@
 
-    if model is None:
-        model = targeted_task["default"]["model"]
-
     if tokenizer is None:
         if isinstance(model, str):
             tokenizer = model
