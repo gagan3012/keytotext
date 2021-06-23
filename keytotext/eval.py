@@ -1,6 +1,3 @@
-            - :obj:`"k2t-base"`: will return a :class:`K2TPipeline` which is based on the k2t model based on t5-base
-    :param model:
-    (:obj:`str` or `optional`):
             The model that will be used by the pipeline to make predictions.
 
             If not provided, the default for the :obj:`task` will be loaded.
