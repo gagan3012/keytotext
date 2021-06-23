@@ -1,6 +1,3 @@
-            )
-    if isinstance(tokenizer, (str, tuple)):
-        tokenizer = AutoTokenizer.from_pretrained(tokenizer)
 
     # Instantiate model if needed
     if isinstance(model, str):
