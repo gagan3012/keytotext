@@ -1,4 +1,3 @@
-            "early_stopping": True,
         }
 
     def __call__(self, keywords, **kwargs):
