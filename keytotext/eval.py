@@ -1,8 +1,4 @@
 
-    # Instantiate model if needed
-    if isinstance(model, str):
-        model = AutoModelForSeq2SeqLM.from_pretrained(model)
-
     if task == "k2t":
         return task_class(model=model, tokenizer=tokenizer, use_cuda=use_cuda)
     if task == "k2t-base":
