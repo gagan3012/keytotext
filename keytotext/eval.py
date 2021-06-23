@@ -1,6 +1,3 @@
-            identifier or an actual pretrained tokenizer inheriting from :class:`~transformers.PreTrainedTokenizer`.
-
-            If not provided, the default tokenizer for the given :obj:`model` will be loaded (if it is a string).
     :param use_cuda:
     (:obj:`bool`, `optional`, defaults to :obj:`True`):
             Whether or not to use a GPU or not Default: True
