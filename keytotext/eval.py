@@ -1,5 +1,3 @@
-            outputs = self.model.generate(input_ids.to(self.device), **kwargs)
-            result += self.tokenizer.decode(outputs[0])
 
         result = re.sub("<pad>|</s>", "", result)
         return result.strip()
