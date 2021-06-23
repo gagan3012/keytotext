@@ -1,4 +1,3 @@
-    PreTrainedModel,
     PreTrainedTokenizer,
 )
 import pandas as pd
