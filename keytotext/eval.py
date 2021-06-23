@@ -1,4 +1,3 @@
-        self.device = "cuda" if torch.cuda.is_available() and use_cuda else "cpu"
         self.model.to(self.device)
 
         assert self.model.__class__.__name__ in ["T5ForConditionalGeneration"]
