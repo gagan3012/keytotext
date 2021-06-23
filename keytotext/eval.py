@@ -1,4 +1,3 @@
-    AutoTokenizer,
     PreTrainedModel,
     PreTrainedTokenizer,
 )
