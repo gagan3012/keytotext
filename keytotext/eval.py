@@ -1,7 +1,3 @@
-
-    if task not in SUPPORTED_TASKS:
-        raise KeyError(
-            "Unknown task {}, available tasks are {}".format(
                 task, list(SUPPORTED_TASKS.keys())
             )
         )
