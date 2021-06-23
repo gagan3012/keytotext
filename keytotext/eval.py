@@ -1,7 +1,3 @@
-
-    if tokenizer is None:
-        if isinstance(model, str):
-            tokenizer = model
         else:
             # Impossible to guest what is the right tokenizer here
             raise Exception(
