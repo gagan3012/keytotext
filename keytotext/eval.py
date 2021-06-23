@@ -1,4 +1,3 @@
-        }
 
     def __call__(self, keywords, **kwargs):
         inputs = keywords
