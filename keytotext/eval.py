@@ -1,7 +1,3 @@
-            The model that will be used by the pipeline to make predictions.
-    :param tokenizer:
-    (:obj:`str` or `optional`):
-            The tokenizer that will be used by the pipeline to encode data for the model. This can be a model
             identifier or an actual pretrained tokenizer inheriting from :class:`~transformers.PreTrainedTokenizer`.
 
             If not provided, the default tokenizer for the given :obj:`model` will be loaded (if it is a string).
