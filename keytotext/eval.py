@@ -1,6 +1,4 @@
             The model that will be used by the pipeline to make predictions.
-
-            If not provided, the default for the :obj:`task` will be loaded.
     :param tokenizer:
     (:obj:`str` or `optional`):
             The tokenizer that will be used by the pipeline to encode data for the model. This can be a model
