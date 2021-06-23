@@ -1,4 +1,3 @@
-        if "T5ForConditionalGeneration" in self.model.__class__.__name__:
             self.model_type = "t5"
 
         self.default_generate_kwargs = {
