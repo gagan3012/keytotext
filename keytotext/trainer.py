@@ -284,6 +284,7 @@ class trainer:
 
         self.data_module = PLDataModule(
             train_df=train_df,
+            test_df= test_df,
             tokenizer=self.tokenizer,
             batch_size=batch_size,
             source_max_token_len=source_max_token_len,
