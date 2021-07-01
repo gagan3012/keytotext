@@ -275,6 +275,7 @@ class trainer:
             outputdir (str, optional): output directory to save model checkpoints. Defaults to "outputs".
             early_stopping_patience_epochs (int, optional): monitors val_loss on epoch end and stops training, if val_loss does not improve after the specied number of epochs. set 0 to disable early stopping. Defaults to 0 (disabled)
             :param test_df:
+            :param train_df:
         """
         self.target_max_token_len = target_max_token_len
         self.max_epoch = max_epochs
