@@ -87,7 +87,6 @@ class DataModule(Dataset):
 class PLDataModule(LightningDataModule):
     def __init__(
             self,
-            data_df: pd.DataFrame,
             tokenizer: T5Tokenizer,
             source_max_token_len: int = 512,
             target_max_token_len: int = 512,
