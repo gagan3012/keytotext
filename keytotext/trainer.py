@@ -113,7 +113,6 @@ class PLDataModule(LightningDataModule):
         self.source_max_token_len = source_max_token_len
         self.tokenizer = tokenizer
 
-        self.train_df, self.test_df = train_test_split(self.data_df, test_size=self.split, shuffle=True)
 
     def setup(self, stage=None):
         self.train_dataset = DataModule(
