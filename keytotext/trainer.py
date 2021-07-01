@@ -281,7 +281,6 @@ class trainer:
         self.max_epoch = max_epochs
 
         self.data_module = PLDataModule(
-            data_df=data_df,
             tokenizer=self.tokenizer,
             batch_size=batch_size,
             source_max_token_len=source_max_token_len,
