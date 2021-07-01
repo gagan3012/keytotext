@@ -252,6 +252,7 @@ class trainer:
 
     def train(
             self,
+            train_df: pd.DataFrame,
             source_max_token_len: int = 512,
             target_max_token_len: int = 512,
             batch_size: int = 8,
