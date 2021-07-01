@@ -280,6 +280,7 @@ class trainer:
         self.target_max_token_len = target_max_token_len
         self.max_epoch = max_epochs
         self.train_df = train_df
+        self.test_df = test_df
 
         self.data_module = PLDataModule(
             tokenizer=self.tokenizer,
