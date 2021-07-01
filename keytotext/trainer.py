@@ -393,7 +393,6 @@ class trainer:
             use_gpu: Defaults to True.
         Returns:
             str: returns predictions
-            :param keywords:
         """
         if use_gpu:
             if torch.cuda.is_available():
