@@ -493,3 +493,4 @@ Potential use case can include:
         commit_url = model_repo.push_to_hub()
 
         print("Check out your model at:")
+        print(f"https://huggingface.co/{hf_username}/{model_name}")
