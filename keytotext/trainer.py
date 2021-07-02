@@ -444,3 +444,17 @@ class trainer:
                                 git_email=f"{hf_username}@users.noreply.huggingface.co", git_user=hf_username)
 
         readme_txt= """
+        ---
+language: "en"
+thumbnail: "Keywords to Sentences"
+tags:
+- keytotext
+- k2t
+- Keywords to Sentences
+license: "MIT"
+datasets:
+- WebNLG
+- Dart 
+metrics:
+- NLG
+---
