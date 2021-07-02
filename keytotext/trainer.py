@@ -194,6 +194,7 @@ class LightningModel(pl.LightningModule):
             decoder_attention_mask=labels_attention_mask,
             labels=labels,
         )
+        train_acc = self.val_acc(outputs.logits.argmax(1), labels)
         self.log("train_loss", loss, prog_bar=True, logger=True)
         return loss
 
