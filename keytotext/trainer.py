@@ -489,3 +489,4 @@ Potential use case can include:
 - Fine tuning of topic modeling models 
         """.strip()
 
+        (Path(model_repo.local_dir) / 'README.md').write_text(readme_txt)
