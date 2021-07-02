@@ -192,7 +192,7 @@ class LightningModel(pl.LightningModule):
             labels=labels,
             **batch
         )
-        acc = self.val_acc(outputs.logits.argmax(1), labels)
+        # acc = self.val_acc(outputs.logits.argmax(1), labels)
         self.log("train_loss", loss, prog_bar=True, logger=True)
         self.log(f"train_acc", acc, prog_bar=True, logger=True)
         return loss
