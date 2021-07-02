@@ -440,4 +440,5 @@ class trainer:
         token = HfApi().login(username=hf_username, password=hf_password)
         del hf_password
         model_url = HfApi().create_repo(token=token, name=model_name, exist_ok=True)
+        model_repo = Repository("./model", clone_from=model_url, use_auth_token=token,
 
