@@ -353,7 +353,6 @@ class trainer:
 
     def save_model(
             self,
-            model_dir="outputs"
     ):
         """
         Save model to dir
