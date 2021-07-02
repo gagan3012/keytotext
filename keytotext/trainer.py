@@ -481,3 +481,4 @@ Idea is to build a model which will take keywords as inputs and generate sentenc
 Potential use case can include: 
 - Marketing 
 - Search Engine Optimization
+- Topic generation etc.
