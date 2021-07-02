@@ -213,7 +213,7 @@ class LightningModel(pl.LightningModule):
         )
         # acc = self.val_acc(outputs.logits.argmax(1), labels)
         self.log("val_loss", loss, prog_bar=True, logger=True)
-        self.log(f"val_acc", acc, prog_bar=True, logger=True)
+        # self.log(f"val_acc", acc, prog_bar=True, logger=True)
         return loss
 
     def test_step(self, batch, batch_size):
