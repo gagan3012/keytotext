@@ -490,3 +490,4 @@ Potential use case can include:
         """.strip()
 
         (Path(model_repo.local_dir) / 'README.md').write_text(readme_txt)
+        commit_url = model_repo.push_to_hub()
