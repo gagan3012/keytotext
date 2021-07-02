@@ -15,6 +15,7 @@ from pytorch_lightning.callbacks.early_stopping import EarlyStopping
 from pytorch_lightning import LightningDataModule
 from pytorch_lightning import Trainer
 from getpass import getpass
+from huggingface_hub import HfApi, Repository
 
 
 
