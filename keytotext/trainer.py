@@ -475,3 +475,6 @@ metrics:
 
 ![keytotext](https://socialify.git.ci/gagan3012/keytotext/image?description=1&forks=1&language=1&owner=1&stargazers=1&theme=Light)
 
+
+Idea is to build a model which will take keywords as inputs and generate sentences as outputs.
+
