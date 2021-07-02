@@ -437,4 +437,5 @@ class trainer:
 
     def upload(self,model_name,hf_username):
         hf_password = getpass("Enter your HuggingFace password")
+        token = HfApi().login(username=hf_username, password=hf_password)
 
