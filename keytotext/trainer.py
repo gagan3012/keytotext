@@ -18,8 +18,6 @@ from huggingface_hub import HfApi, Repository
 from pathlib import Path
 from torchmetrics import Accuracy
 
-
-
 torch.cuda.empty_cache()
 pl.seed_everything(42)
 
@@ -92,8 +90,8 @@ class DataModule(Dataset):
 class PLDataModule(LightningDataModule):
     def __init__(
             self,
-            train_df:pd.DataFrame,
-            test_df:pd.DataFrame,
+            train_df: pd.DataFrame,
+            test_df: pd.DataFrame,
             tokenizer: T5Tokenizer,
             source_max_token_len: int = 512,
             target_max_token_len: int = 512,
@@ -117,7 +115,6 @@ class PLDataModule(LightningDataModule):
         self.target_max_token_len = target_max_token_len
         self.source_max_token_len = source_max_token_len
         self.tokenizer = tokenizer
-
 
     def setup(self, stage=None):
         self.train_dataset = DataModule(
@@ -193,10 +190,11 @@ class LightningModel(pl.LightningModule):
             attention_mask=attention_mask,
             decoder_attention_mask=labels_attention_mask,
             labels=labels,
+            **batch
         )
-        train_acc = self.val_acc(outputs.logits.argmax(1), labels)
+        acc = self.val_acc(outputs.logits.argmax(1), labels)
         self.log("train_loss", loss, prog_bar=True, logger=True)
-        self.log(f"train_acc", train_acc, prog_bar=True,logger=True)
+        self.log(f"train_acc", acc, prog_bar=True, logger=True)
         return loss
 
     def validation_step(self, batch, batch_size):
@@ -211,10 +209,11 @@ class LightningModel(pl.LightningModule):
             attention_mask=attention_mask,
             decoder_attention_mask=labels_attention_mask,
             labels=labels,
+            **batch
         )
-        val_acc = self.val_acc(outputs.logits.argmax(1), labels)
+        acc = self.val_acc(outputs.logits.argmax(1), labels)
         self.log("val_loss", loss, prog_bar=True, logger=True)
-        self.log(f"val_acc", val_acc, prog_bar=True,logger=True)
+        self.log(f"val_acc", acc, prog_bar=True, logger=True)
         return loss
 
     def test_step(self, batch, batch_size):
@@ -229,6 +228,7 @@ class LightningModel(pl.LightningModule):
             attention_mask=attention_mask,
             decoder_attention_mask=labels_attention_mask,
             labels=labels,
+            **batch
         )
 
         self.log("test_loss", loss, prog_bar=True, logger=True)
@@ -237,7 +237,6 @@ class LightningModel(pl.LightningModule):
     def configure_optimizers(self):
         """ configure optimizers """
         return AdamW(self.parameters(), lr=0.0001)
-
 
 
 class trainer:
@@ -293,7 +292,7 @@ class trainer:
 
         self.data_module = PLDataModule(
             train_df=train_df,
-            test_df= test_df,
+            test_df=test_df,
             tokenizer=self.tokenizer,
             batch_size=batch_size,
             source_max_token_len=source_max_token_len,
@@ -439,7 +438,7 @@ class trainer:
         ]
         return preds[0]
 
-    def upload(self,model_name,hf_username):
+    def upload(self, model_name, hf_username):
         hf_password = getpass("Enter your HuggingFace password")
         token = HfApi().login(username=hf_username, password=hf_password)
         del hf_password
@@ -447,7 +446,7 @@ class trainer:
         model_repo = Repository("./model", clone_from=model_url, use_auth_token=token,
                                 git_email=f"{hf_username}@users.noreply.huggingface.co", git_user=hf_username)
 
-        readme_txt= f"""
+        readme_txt = f"""
         ---
 language: "en"
 thumbnail: "Keywords to Sentences"
@@ -497,12 +496,3 @@ Potential use case can include:
 
         print("Check out your model at:")
         print(f"https://huggingface.co/{hf_username}/{model_name}")
-
-
-
-
-
-
-
-
-
