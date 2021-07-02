@@ -458,3 +458,7 @@ datasets:
 metrics:
 - NLG
 ---
+        
+        <h1 align="center">keytotext</h1>
+
+[![pypi Version](https://img.shields.io/pypi/v/keytotext.svg?logo=pypi&logoColor=white)](https://pypi.org/project/keytotext/)
