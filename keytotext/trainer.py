@@ -460,6 +460,7 @@ metrics:
 - NLG
 
 model-index:
+- name: {model_name}
 ---
         
         <h1 align="center">keytotext</h1>
