@@ -196,6 +196,7 @@ class LightningModel(pl.LightningModule):
         )
         train_acc = self.val_acc(outputs.logits.argmax(1), labels)
         self.log("train_loss", loss, prog_bar=True, logger=True)
+        self.log(f"train_acc", train_acc, prog_bar=True,logger=True)
         return loss
 
     def validation_step(self, batch, batch_size):
