@@ -360,7 +360,6 @@ class trainer:
         :param model_dir:
         :return: model is saved
         """
-        path = f"{model_dir}/keytotext-epoch-{self.max_epoch}"
         self.tokenizer.save_pretrained(path)
         self.model.save_pretrained(path)
 
