@@ -190,11 +190,8 @@ class LightningModel(pl.LightningModule):
             attention_mask=attention_mask,
             decoder_attention_mask=labels_attention_mask,
             labels=labels,
-            **batch
         )
-        # acc = self.val_acc(outputs.logits.argmax(1), labels)
         self.log("train_loss", loss, prog_bar=True, logger=True)
-        # self.log(f"train_acc", acc, prog_bar=True, logger=True)
         return loss
 
     def validation_step(self, batch, batch_size):
@@ -209,11 +206,8 @@ class LightningModel(pl.LightningModule):
             attention_mask=attention_mask,
             decoder_attention_mask=labels_attention_mask,
             labels=labels,
-            **batch
         )
-        # acc = self.val_acc(outputs.logits.argmax(1), labels)
         self.log("val_loss", loss, prog_bar=True, logger=True)
-        # self.log(f"val_acc", acc, prog_bar=True, logger=True)
         return loss
 
     def test_step(self, batch, batch_size):
@@ -228,7 +222,6 @@ class LightningModel(pl.LightningModule):
             attention_mask=attention_mask,
             decoder_attention_mask=labels_attention_mask,
             labels=labels,
-            **batch
         )
 
         self.log("test_loss", loss, prog_bar=True, logger=True)
