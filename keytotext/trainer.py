@@ -458,7 +458,6 @@ model-index:
 - name: {model_name}
 ---
         
-        <h1 align="center">keytotext</h1>
 #keytotext
 
 [![pypi Version](https://img.shields.io/pypi/v/keytotext.svg?logo=pypi&logoColor=white)](https://pypi.org/project/keytotext/)
