@@ -433,6 +433,7 @@ class trainer:
 
     def upload(self, model_name, hf_username):
         hf_password = getpass("Enter your HuggingFace password")
+        if Path('./model').exists():
         token = HfApi().login(username=hf_username, password=hf_password)
         del hf_password
         model_url = HfApi().create_repo(token=token, name=model_name, exist_ok=True)
