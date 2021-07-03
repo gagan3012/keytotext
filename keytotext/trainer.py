@@ -166,6 +166,7 @@ class LightningModel(pl.LightningModule):
         self.output = output
         #self.val_acc = Accuracy()
         #self.train_acc = Accuracy()
+        # self.train_acc = Accuracy()
 
     def forward(self, input_ids, attention_mask, decoder_attention_mask, labels=None):
         """ forward step """
