@@ -432,6 +432,7 @@ class trainer:
         return preds[0]
 
     def upload(self, model_name, hf_username):
+    def upload(self, hf_username, model_name):
         hf_password = getpass("Enter your HuggingFace password")
         if Path('./model').exists():
             shutil.rmtree('./model')
