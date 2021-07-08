@@ -7,6 +7,7 @@ dataset = load_dataset('common_gen',split='train')
 df = pd.DataFrame()
 df['keywords']=dataset['concepts']
 df['text'] = dataset['target']
+dataset = load_dataset('common_gen', split='train')
 
 def clean(keywords):
   source_text = ' '.join(map(str, keywords))
