@@ -4,6 +4,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 
 dataset = load_dataset('common_gen',split='train')
+df = pd.DataFrame()
 df['keywords']=dataset['concepts']
 model = trainer()
 model.from_pretrained(model_name="t5-small")
