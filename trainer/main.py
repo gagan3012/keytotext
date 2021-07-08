@@ -1,5 +1,6 @@
 from keytotext import trainer
 from datasets import load_dataset
+import pandas as pd
 
 model = trainer()
 model.from_pretrained(model_name="t5-small")
