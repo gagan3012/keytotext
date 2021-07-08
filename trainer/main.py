@@ -22,4 +22,3 @@ def create_df(dataset):
 
 model = trainer()
 model.from_pretrained(model_name="t5-small")
-model.upload("gagan3012","k2t-test3")
