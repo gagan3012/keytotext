@@ -13,6 +13,7 @@ def clean(keywords):
 
 def create_df(dataset):
     df = pd.DataFrame()
+    df['keywords'] = dataset['concepts']
 
 
 model = trainer()
