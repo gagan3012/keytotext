@@ -12,6 +12,7 @@ def clean(keywords):
 
 df['keywords'] = df['keywords'].apply(lambda x: clean(x))
 
+def create_df(dataset):
 
 
 model = trainer()
