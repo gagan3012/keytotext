@@ -8,3 +8,4 @@ def clean(keywords):
 
 
 def create_df():
+    dataset = load_dataset('common_gen', split='train')
