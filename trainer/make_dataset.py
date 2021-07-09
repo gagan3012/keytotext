@@ -1,4 +1,3 @@
-    return source_text
 
 
 def create_df():
