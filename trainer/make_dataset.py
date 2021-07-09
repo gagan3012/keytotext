@@ -1,4 +1,3 @@
-
 def create_df():
     dataset = load_dataset('common_gen', split='train')
     df = pd.DataFrame()
