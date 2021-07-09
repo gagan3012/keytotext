@@ -4,7 +4,6 @@ from keytotext import trainer
     return source_text
 
 
-def create_df(dataset):
 
 model = trainer()
 model.from_pretrained(model_name="t5-small")
