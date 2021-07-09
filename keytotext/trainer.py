@@ -18,7 +18,6 @@ from pytorch_lightning import Trainer
 from getpass import getpass
 from huggingface_hub import HfApi, Repository
 from pathlib import Path
-from torchmetrics import Accuracy
 
 torch.cuda.empty_cache()
 pl.seed_everything(42)
