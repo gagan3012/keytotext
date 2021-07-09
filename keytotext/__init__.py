@@ -8,3 +8,4 @@ __version__ = "1.4.7"
 
 from .pipeline import pipeline
 from .trainer import trainer
+from .make_dataset import make_dataset
