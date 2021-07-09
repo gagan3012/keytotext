@@ -1,5 +1,6 @@
 from keytotext import trainer, make_dataset
 
+train_df = make_dataset(split='train')
 test_df = make_dataset(split='test')
 
 model = trainer()
