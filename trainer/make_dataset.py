@@ -1,4 +1,3 @@
-
 def clean(keywords):
     source_text = ' '.join(map(str, keywords))
     return source_text
