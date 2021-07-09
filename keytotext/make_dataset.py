@@ -5,4 +5,5 @@ def clean(keywords):
     source_text = ' '.join(map(str, keywords))
     return source_text
 
+
 def make_dataset(dataset='common_gen', split='train'):
