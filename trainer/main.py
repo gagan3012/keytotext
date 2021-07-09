@@ -13,7 +13,6 @@ def create_df(dataset):
     return train_df, test_df
 
 
-train_df, test_df = create_df(dataset)
 
 model = trainer()
 model.from_pretrained(model_name="t5-small")
