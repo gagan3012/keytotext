@@ -11,4 +11,5 @@ def make_dataset(dataset='common_gen', split='train'):
         dataset = load_dataset(dataset, split=split)
         df = pd.DataFrame()
         df['keywords'] = dataset['concepts']
+        df['text'] = dataset['target']
         df['keywords'] = df['keywords'].apply(lambda x: clean(x))
