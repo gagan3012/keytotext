@@ -13,3 +13,4 @@ def create_df():
     df['keywords'] = dataset['concepts']
     df['text'] = dataset['target']
     df['keywords'] = df['keywords'].apply(lambda x: clean(x))
+    train_df, test_df = train_test_split(df, test_size=0.01, random_state=42)
