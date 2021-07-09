@@ -1,6 +1,5 @@
 from keytotext import trainer
 
-dataset = load_dataset('common_gen', split='train')
 
 
 def clean(keywords):
