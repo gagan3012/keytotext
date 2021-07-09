@@ -22,5 +22,6 @@ requires = [
     "wandb",
     "pytorch_lightning",
     "sklearn",
+    "datasets"
 ]
 license = "MIT"
