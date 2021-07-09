@@ -1,6 +1,5 @@
 from keytotext import trainer
 import pandas as pd
-from sklearn.model_selection import train_test_split
 
 dataset = load_dataset('common_gen', split='train')
 
