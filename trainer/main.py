@@ -5,7 +5,6 @@ from keytotext import trainer
 
 
 def create_df(dataset):
-    df = pd.DataFrame()
 
 model = trainer()
 model.from_pretrained(model_name="t5-small")
