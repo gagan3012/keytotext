@@ -21,7 +21,6 @@ requires = [
     "sentencepiece",
     "wandb",
     "pytorch_lightning",
-    "sklearn",
     "datasets"
 ]
 license = "MIT"
