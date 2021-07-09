@@ -1,4 +1,3 @@
-    dataset = load_dataset('common_gen', split='train')
     df = pd.DataFrame()
     df['keywords'] = dataset['concepts']
     df['text'] = dataset['target']
