@@ -13,3 +13,4 @@ def make_dataset(dataset='common_gen', split='train'):
         df['keywords'] = dataset['concepts']
         df['text'] = dataset['target']
         df['keywords'] = df['keywords'].apply(lambda x: clean(x))
+        return None, None
