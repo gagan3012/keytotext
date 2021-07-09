@@ -1,5 +1,4 @@
 from keytotext import trainer
-import pandas as pd
 
 dataset = load_dataset('common_gen', split='train')
 
