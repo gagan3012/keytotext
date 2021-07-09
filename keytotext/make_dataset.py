@@ -7,3 +7,4 @@ def clean(keywords):
 
 
 def make_dataset(dataset='common_gen', split='train'):
+        dataset = load_dataset(dataset, split=split)
