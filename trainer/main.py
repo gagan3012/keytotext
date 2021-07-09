@@ -1,6 +1,5 @@
 from keytotext import trainer
 
-    source_text = ' '.join(map(str, keywords))
 
 model = trainer()
 model.from_pretrained(model_name="t5-small")
