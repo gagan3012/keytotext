@@ -111,3 +111,9 @@ def from_pretrained(self, model_name="t5-base"):
             str: returns predictions
         """
 ```
+
+#### Upload to huggingface
+
+```python
+model.upload(hf_username="gagan3012", model_name="k2t-test3")
+```
