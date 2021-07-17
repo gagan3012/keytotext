@@ -38,7 +38,7 @@ Training Notebooks can be found in the [`Training Notebooks`](https://github.com
 
 ## Usage:
 
-Example usage: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gagan3012/keytotext/blob/master/Examples/K2T.ipynb)
+Example usage: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gagan3012/keytotext/blob/master/notebooks/K2T.ipynb)
 
 Example Notebooks can be found in the [`Notebooks`](https://github.com/gagan3012/keytotext/tree/master/examples) Folder
 
@@ -48,18 +48,17 @@ pip install keytotext
 
 ![carbon (3)](https://user-images.githubusercontent.com/49101362/116220679-90e64180-a755-11eb-9246-82d93d924a6c.png)
 
-## Finetune Model:
+## Trainer:
 
 Keytotext now has a trainer class than be used to train and finetune any T5 based model on new data. Trainer docs here: [`Docs`](https://github.com/gagan3012/keytotext/blob/master/docs/TRAINER.md)
 
-Trainer example here: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/gagan3012/keytotext/blob/master/notebooks/Trainer.ipynb)
+Trainer example here: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gagan3012/keytotext/blob/master/notebooks/Trainer.ipynb)
 
 ```python
-from keytotext import KeytotextTrainer
+from keytotext import trainer
 ```
 
-![carbon (5)](https://user-images.githubusercontent.com/49101362/122148321-2aa1a500-ce0f-11eb-9ca0-61e796aeed0a.png)
-
+![carbon (6)](https://user-images.githubusercontent.com/49101362/125130656-5989fe80-e0cf-11eb-8c07-c659767911b4.png)
 
 ## UI:
 
@@ -107,9 +106,14 @@ To quote keytotext please use this citation
 }
 ```
 
-## References:
+# References 
+- https://github.com/Shivanandroy/simpleT5 (Shivanand Roy)
+- https://github.com/patil-suraj/question_generation (Suraj Patil)
+- https://github.com/MathewAlexander/T5_nlg (Mathew Alexander)
+
+
+## Articles about keytotext:
 
 - https://towardsdatascience.com/data-to-text-generation-with-t5-building-a-simple-yet-advanced-nlg-model-b5cce5a6df45 (Mathew Alexander)
-- https://github.com/patil-suraj/question_generation (Suraj Patil)
 - Amazing Video by [1LittleCoder](https://twitter.com/1littlecoder) here: https://www.youtube.com/watch?v=I0iBzP-SxFY about keytotext
-- https://github.com/Shivanandroy/simpleT5 (Shivanand Roy)
+- https://medium.com/mlearning-ai/generating-sentences-from-keywords-using-transformers-in-nlp-e89f4de5cf6b (Prakhar Mishra)
