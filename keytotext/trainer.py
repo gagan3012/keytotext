@@ -445,6 +445,7 @@ class trainer:
 
         :param test_df:
         :param metrics:
+        :return: Output metrics for keytotext
     def upload(self, hf_username, model_name):
         hf_password = getpass("Enter your HuggingFace password")
         if Path('./model').exists():
