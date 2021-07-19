@@ -437,6 +437,7 @@ class trainer:
 
 
     def evaluate(
+            test_df: pd.DataFrame,
     def upload(self, hf_username, model_name):
         hf_password = getpass("Enter your HuggingFace password")
         if Path('./model').exists():
