@@ -453,6 +453,7 @@ class trainer:
         predictions = [self.predict(x) for x in input_text]
 
         results = metric.compute(predictions=predictions, references=references)
+
     def upload(self, hf_username, model_name):
         hf_password = getpass("Enter your HuggingFace password")
         if Path('./model').exists():
