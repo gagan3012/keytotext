@@ -440,6 +440,7 @@ class trainer:
             self,
             test_df: pd.DataFrame,
             metrics: str = "rouge"
+    ):
     def upload(self, hf_username, model_name):
         hf_password = getpass("Enter your HuggingFace password")
         if Path('./model').exists():
