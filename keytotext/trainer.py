@@ -449,6 +449,7 @@ class trainer:
         """
         metric = load_metric(metrics)
         input_text = test_df['input_text']
+        references = test_df['output_text']
     def upload(self, hf_username, model_name):
         hf_password = getpass("Enter your HuggingFace password")
         if Path('./model').exists():
