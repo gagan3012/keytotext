@@ -484,6 +484,7 @@ class trainer:
                 'Rouge_L Mid Precision': results["rougeL"].mid.precision,
                 'Rouge_L Mid recall': results["rougeL"].mid.recall,
                 'Rouge_L Mid F1': results["rougeL"].mid.fmeasure,
+                'Rouge_L High Precision': results["rougeL"].high.precision,
     def upload(self, hf_username, model_name):
         hf_password = getpass("Enter your HuggingFace password")
         if Path('./model').exists():
