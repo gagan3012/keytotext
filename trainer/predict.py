@@ -9,3 +9,4 @@ keywords = ['New delhi','fire','house']
 
 text = model.predict(keywords)
 
+print(text)
