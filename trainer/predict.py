@@ -6,3 +6,4 @@ model = trainer()
 model.load_model()
 
 keywords = ['New delhi','fire','house']
+
