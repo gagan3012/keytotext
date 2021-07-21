@@ -8,3 +8,4 @@ model.load_model()
 keywords = ['New delhi','fire','house']
 
 text = model.predict(keywords)
+
