@@ -469,7 +469,6 @@ class trainer:
                 "Rouge_2 High recall": results["rouge2"].high.recall,
                 "Rouge_2 High F1": results["rouge2"].high.fmeasure,
             },
-                'Rouge_L High F1': results["rougeL"].high.fmeasure,
             },
             'rougeLsum': {
                 'rougeLsum Low Precision': results["rougeLsum"].low.precision,
