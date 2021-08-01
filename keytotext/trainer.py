@@ -360,6 +360,10 @@ class trainer:
         self.model.save_pretrained(path)
 
     def predict(
+        self,
+        keywords: list,
+        max_length: int = 512,
+        num_return_sequences: int = 1,
     ):
         """
         generates prediction for K2T model
