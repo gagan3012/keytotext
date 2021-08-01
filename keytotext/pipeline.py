@@ -31,6 +31,7 @@ SUPPORTED_TASKS = {
         "default": {
             "model": "gagan3012/k2t-new",
         },
+    },
 }
 
 
