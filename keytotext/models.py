@@ -122,6 +122,7 @@ class K2TPipeline:
         padding=True,
         truncation=True,
         add_special_tokens=True,
+        max_length=1024,
     ):
         inputs = self.tokenizer.encode(
             inputs,
