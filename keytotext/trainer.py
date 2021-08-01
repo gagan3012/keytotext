@@ -228,7 +228,7 @@ class LightningModel(pl.LightningModule):
         return loss
 
     def configure_optimizers(self):
-        """ configure optimizers """
+        """configure optimizers"""
         return AdamW(self.parameters(), lr=0.0001)
 
 
