@@ -7,6 +7,7 @@ def clean(keywords):
     return source_text
 
 
+def make_dataset(dataset="common_gen", split="train"):
         dataset = load_dataset(dataset, split=split)
         df = pd.DataFrame()
         return df
