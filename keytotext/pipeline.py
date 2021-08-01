@@ -96,4 +96,3 @@ def pipeline(
 
     return task_class(model=model, tokenizer=tokenizer, use_cuda=use_cuda)
 
-
