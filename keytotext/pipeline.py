@@ -36,7 +36,6 @@ SUPPORTED_TASKS = {
 
 
 def pipeline(
-        use_cuda: Optional[bool] = True,
 ):
     """
 
