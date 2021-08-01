@@ -150,7 +150,6 @@ class PLDataModule(LightningDataModule):
 
 
 class LightningModel(pl.LightningModule):
-    """ PyTorch Lightning Model class"""
 
     def __init__(self, tokenizer, model, output: str = "outputs"):
         """
