@@ -36,7 +36,6 @@ SUPPORTED_TASKS = {
 
 
 def pipeline(
-        tokenizer: Optional[Union[str, PreTrainedTokenizer]] = None,
         use_cuda: Optional[bool] = True,
 ):
     """
