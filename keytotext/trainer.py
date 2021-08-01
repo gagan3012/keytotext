@@ -252,6 +252,9 @@ class trainer:
         )
 
     def train(
+        self,
+        train_df: pd.DataFrame,
+        test_df: pd.DataFrame,
     ):
         """
         trains T5 model on custom dataset
