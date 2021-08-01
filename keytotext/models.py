@@ -52,6 +52,7 @@ class NMPipeline:
         return texts
 
     def _tokenize(
+        self,
     ):
         inputs = self.tokenizer.encode(
             inputs,
