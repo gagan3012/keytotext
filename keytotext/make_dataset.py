@@ -7,7 +7,6 @@ def clean(keywords):
     return source_text
 
 
-    if dataset == 'common_gen':
         dataset = load_dataset(dataset, split=split)
         df = pd.DataFrame()
         df['keywords'] = dataset['concepts']
