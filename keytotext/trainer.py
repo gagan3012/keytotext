@@ -360,8 +360,6 @@ class trainer:
         self.model.save_pretrained(path)
 
     def predict(
-            clean_up_tokenization_spaces: bool = True,
-            use_gpu: bool = True
     ):
         """
         generates prediction for K2T model
