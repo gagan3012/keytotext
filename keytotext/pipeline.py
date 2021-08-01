@@ -37,6 +37,7 @@ SUPPORTED_TASKS = {
 
 def pipeline(
     task: str,
+    model: Optional = None,
 ):
     """
 
