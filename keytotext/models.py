@@ -117,7 +117,6 @@ class K2TPipeline:
         return texts
 
     def _tokenize(
-            self,
             inputs,
             padding=True,
             truncation=True,
