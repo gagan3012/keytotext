@@ -30,7 +30,6 @@ class DataModule(Dataset):
     """
 
     def __init__(
-            source_max_token_len: int = 512,
             target_max_token_len: int = 512,
     ):
         """
