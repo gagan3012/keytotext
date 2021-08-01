@@ -95,6 +95,8 @@ class PLDataModule(LightningDataModule):
         tokenizer: T5Tokenizer,
         source_max_token_len: int = 512,
         target_max_token_len: int = 512,
+        batch_size: int = 4,
+        split: float = 0.1,
     ):
         """
 
