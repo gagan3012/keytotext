@@ -327,7 +327,7 @@ class trainer:
 
         trainer.fit(self.T5Model, self.data_module)
 
-    def load_model(
+    def load_model(self, model_dir: str = "outputs", use_gpu: bool = False):
         """
         loads a checkpoint for inferencing/prediction
         Args:
