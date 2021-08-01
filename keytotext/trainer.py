@@ -360,12 +360,6 @@ class trainer:
         self.model.save_pretrained(path)
 
     def predict(
-            self,
-            keywords: list,
-            max_length: int = 512,
-            num_return_sequences: int = 1,
-            num_beams: int = 2,
-            top_k: int = 50,
             top_p: float = 0.95,
             do_sample: bool = True,
             repetition_penalty: float = 2.5,
