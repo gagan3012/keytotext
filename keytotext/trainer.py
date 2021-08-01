@@ -89,6 +89,9 @@ class DataModule(Dataset):
 
 class PLDataModule(LightningDataModule):
     def __init__(
+        self,
+        train_df: pd.DataFrame,
+        test_df: pd.DataFrame,
     ):
         """
 
