@@ -252,9 +252,6 @@ class trainer:
         )
 
     def train(
-            use_gpu: bool = True,
-            outputdir: str = "outputs",
-            early_stopping_patience_epochs: int = 0,  # 0 to disable early stopping feature
             test_split=0.1,
     ):
         """
