@@ -30,7 +30,6 @@ class DataModule(Dataset):
     """
 
     def __init__(
-            self,
             data: pd.DataFrame,
             tokenizer: T5Tokenizer,
             source_max_token_len: int = 512,
