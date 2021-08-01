@@ -95,4 +95,3 @@ def pipeline(
         model = AutoModelForSeq2SeqLM.from_pretrained(model)
 
     return task_class(model=model, tokenizer=tokenizer, use_cuda=use_cuda)
-
