@@ -75,7 +75,6 @@ class DataModule(Dataset):
         )
 
         labels = text_encoding["input_ids"]
-            ] = -100
 
         return dict(
             keywords=data_row["keywords"],
