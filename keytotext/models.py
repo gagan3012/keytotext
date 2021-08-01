@@ -73,6 +73,7 @@ class NMPipeline:
 
 class K2TPipeline:
     def __init__(
+        self, model: PreTrainedModel, tokenizer: PreTrainedTokenizer, use_cuda: bool
     ):
         self.model = model
         self.tokenizer = tokenizer
