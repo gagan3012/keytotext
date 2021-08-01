@@ -8,6 +8,7 @@ import re
 
 class NMPipeline:
     def __init__(
+        self, model: PreTrainedModel, tokenizer: PreTrainedTokenizer, use_cuda: bool
     ):
         self.model = model
         self.tokenizer = tokenizer
