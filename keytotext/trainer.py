@@ -369,6 +369,10 @@ class trainer:
         top_p: float = 0.95,
         do_sample: bool = True,
         repetition_penalty: float = 2.5,
+        length_penalty: float = 1.0,
+        early_stopping: bool = True,
+        skip_special_tokens: bool = True,
+        clean_up_tokenization_spaces: bool = True,
     ):
         """
         generates prediction for K2T model
