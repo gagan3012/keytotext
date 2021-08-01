@@ -404,7 +404,7 @@ class trainer:
         else:
             self.device = torch.device("cpu")
 
-        source_text = ' '.join(map(str, keywords))
+        source_text = " ".join(map(str, keywords))
 
         input_ids = self.tokenizer.encode(
             source_text, return_tensors="pt", add_special_tokens=True
