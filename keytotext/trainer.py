@@ -554,7 +554,7 @@ Potential use case can include:
 - Fine tuning of topic modeling models 
         """.strip()
 
-        (Path(model_repo.local_dir) / 'README.md').write_text(readme_txt)
+        (Path(model_repo.local_dir) / "README.md").write_text(readme_txt)
         self.save_model()
         commit_url = model_repo.push_to_hub()
 
