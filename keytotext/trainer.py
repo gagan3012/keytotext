@@ -195,7 +195,7 @@ class LightningModel(pl.LightningModule):
         return loss
 
     def validation_step(self, batch, batch_size):
-        """ validation step """
+        """validation step"""
         input_ids = batch["keywords_input_ids"]
         attention_mask = batch["keywords_attention_mask"]
         labels = batch["labels"]
