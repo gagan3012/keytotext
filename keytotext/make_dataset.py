@@ -12,6 +12,7 @@ def make_dataset(dataset="common_gen", split="train"):
         dataset = load_dataset(dataset, split=split)
         df = pd.DataFrame()
         df["keywords"] = dataset["concepts"]
+        df["text"] = dataset["target"]
         return df
     else:
         return None
