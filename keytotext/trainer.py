@@ -89,9 +89,6 @@ class DataModule(Dataset):
 
 class PLDataModule(LightningDataModule):
     def __init__(
-            target_max_token_len: int = 512,
-            batch_size: int = 4,
-            split: float = 0.1
     ):
         """
 
