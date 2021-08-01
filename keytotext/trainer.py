@@ -255,6 +255,9 @@ class trainer:
         self,
         train_df: pd.DataFrame,
         test_df: pd.DataFrame,
+        source_max_token_len: int = 512,
+        target_max_token_len: int = 512,
+        batch_size: int = 8,
     ):
         """
         trains T5 model on custom dataset
