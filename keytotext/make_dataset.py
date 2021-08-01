@@ -9,7 +9,6 @@ def clean(keywords):
 
         dataset = load_dataset(dataset, split=split)
         df = pd.DataFrame()
-        df['text'] = dataset['target']
         return df
     else:
         return None
