@@ -432,7 +432,7 @@ class trainer:
         ]
         return preds[0]
 
-
+    def evaluate(self, test_df: pd.DataFrame, metrics: str = "rouge"):
         """
 
         :param test_df:
