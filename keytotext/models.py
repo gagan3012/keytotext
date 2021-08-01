@@ -52,7 +52,6 @@ class NMPipeline:
         return texts
 
     def _tokenize(
-            truncation=True,
             add_special_tokens=True,
             max_length=1024,
     ):
