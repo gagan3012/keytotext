@@ -252,7 +252,6 @@ class trainer:
         )
 
     def train(
-            test_split=0.1,
     ):
         """
         trains T5 model on custom dataset
