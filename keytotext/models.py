@@ -56,6 +56,7 @@ class NMPipeline:
         inputs,
         padding=True,
         truncation=True,
+        add_special_tokens=True,
     ):
         inputs = self.tokenizer.encode(
             inputs,
