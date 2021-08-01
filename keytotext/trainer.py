@@ -292,7 +292,7 @@ class trainer:
             batch_size=batch_size,
             source_max_token_len=source_max_token_len,
             target_max_token_len=target_max_token_len,
-            split=test_split
+            split=test_split,
         )
 
         self.T5Model = LightningModel(
