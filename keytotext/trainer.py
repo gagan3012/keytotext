@@ -328,7 +328,6 @@ class trainer:
         trainer.fit(self.T5Model, self.data_module)
 
     def load_model(
-    ):
         """
         loads a checkpoint for inferencing/prediction
         Args:
