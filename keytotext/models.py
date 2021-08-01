@@ -117,7 +117,6 @@ class K2TPipeline:
         return texts
 
     def _tokenize(
-            add_special_tokens=True,
             max_length=1024,
     ):
         inputs = self.tokenizer.encode(
