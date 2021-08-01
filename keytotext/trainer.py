@@ -398,7 +398,7 @@ class trainer:
             if torch.cuda.is_available():
                 self.device = torch.device("cuda")
             else:
-                raise Exception("exception ---> no gpu found. set use_gpu=False, to use CPU")
+                raise Exception(
                     "exception ---> no gpu found. set use_gpu=False, to use CPU"
                 )
         else:
