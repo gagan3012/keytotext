@@ -25,3 +25,5 @@ class SentencePieceUnigramTokenizer(BaseTokenizer):
         replacement: str = "▁",
         add_prefix_space: bool = True,
         unk_token: Union[str, AddedToken] = "<unk>",
+        eos_token: Union[str, AddedToken] = "</s>",
+        pad_token: Union[str, AddedToken] = "<pad>",
