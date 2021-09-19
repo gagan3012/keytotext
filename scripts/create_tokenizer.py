@@ -88,3 +88,6 @@ class SentencePieceUnigramTokenizer(BaseTokenizer):
         show_progress: bool = True,
     ):
         """Train the model using the given iterator"""
+        trainer = trainers.UnigramTrainer(
+            vocab_size=vocab_size,
+            special_tokens=self.special_tokens_list,
