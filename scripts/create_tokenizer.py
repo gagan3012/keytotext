@@ -68,3 +68,6 @@ class SentencePieceUnigramTokenizer(BaseTokenizer):
         self,
         files: Union[str, List[str]],
         vocab_size: int = 8000,
+        show_progress: bool = True,
+    ):
+        """Train the model using the given files"""
