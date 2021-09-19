@@ -38,3 +38,4 @@ class SentencePieceUnigramTokenizer(BaseTokenizer):
             self.special_tokens_list[token_dict["id"]] = token_dict["token"]
         tokenizer = Tokenizer(Unigram())
         tokenizer.normalizer = normalizers.Sequence(
+            [
