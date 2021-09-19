@@ -86,3 +86,5 @@ class SentencePieceUnigramTokenizer(BaseTokenizer):
         iterator: Union[Iterator[str], Iterator[Iterator[str]]],
         vocab_size: int = 8000,
         show_progress: bool = True,
+    ):
+        """Train the model using the given iterator"""
