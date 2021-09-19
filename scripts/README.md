@@ -91,15 +91,15 @@ Depending on the number of sentences that need to be processed, this may take qu
 
 ```shell
 # Huggingface Hub variables
-export HF_NAME="<YOUR_HF_HUB_USERNAME>"
+export HF_NAME="gagan3012"
 export HF_PWD="<YOUR_HF_HUB_PASSWORD>"
 export HF_TOKEN="<YOUR_HF_HUB_API_TOKEN>"
-export HF_PROJECT="t5-base-it"
+export HF_PROJECT="t5-k2t"
 
 # Variables for training the tokenizer and creating the config
 export VOCAB_SIZE="32000"
 export N_INPUT_SENTENCES="1000000" # Num of sentences to train the tokenizer
-export DATASET="gsarti/clean_mc4_it" # Name of the dataset in the Huggingface Hub
+export DATASET="common_gen" # Name of the dataset in the Huggingface Hub
 export DATASET_CONFIG="full" # Config of the dataset in the Huggingface Hub 
 export DATASET_SPLIT="train" # Split to use for training tokenizer and model
 export TEXT_FIELD="text" # Field containing the text to be used for training
