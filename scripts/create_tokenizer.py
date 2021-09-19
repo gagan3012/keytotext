@@ -141,3 +141,6 @@ if __name__ == "__main__":
     parser.add_argument("--model_dir", type=str, required=True)
     parser.add_argument("--dataset", type=str, required=True)
     parser.add_argument("--dataset_config", type=str, default=None)
+    parser.add_argument("--dataset_split", type=str, default="train")
+    parser.add_argument("--text_field", type=str, default="text")
+    parser.add_argument("--vocab_size", type=int, default=32_000)
