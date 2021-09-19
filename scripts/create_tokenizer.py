@@ -105,6 +105,7 @@ class SentencePieceUnigramTokenizer(BaseTokenizer):
 def main(args):
     # Initialize a dataset
     cfg = DownloadConfig(num_proc=args.num_proc)
+    dataset = datasets.load_dataset(
         args.dataset,
         name=args.dataset_config,
         split=args.dataset_split,
