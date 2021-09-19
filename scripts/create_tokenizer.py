@@ -95,3 +95,6 @@ class SentencePieceUnigramTokenizer(BaseTokenizer):
         )
         self._tokenizer.train_from_iterator(iterator, trainer=trainer)
         self.add_unk_id()
+
+    def add_unk_id(self):
+        tokenizer_json = json.loads(self._tokenizer.to_str())
