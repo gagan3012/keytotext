@@ -7,3 +7,5 @@ numpy==1.19.5
 tokenizers==0.10.3
 sentencepiece==0.1.96
 protobuf==3.17.3
+tensorboard==2.6.0
+torch==1.9.0
