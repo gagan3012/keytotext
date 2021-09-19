@@ -129,3 +129,6 @@ def main(args):
     )
     # Save files to disk
     tokenizer.save(f"{args.model_dir}/tokenizer.json")
+    config = T5Config.from_pretrained(
+        args.config_type, vocab_size=tokenizer.get_vocab_size()
+    )
