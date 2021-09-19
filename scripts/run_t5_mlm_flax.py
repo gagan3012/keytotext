@@ -18,5 +18,6 @@ Pretraining the library models for T5-like span-masked language modeling on a te
 Here is the full list of checkpoints on the hub that can be pretrained by this script:
 https://huggingface.co/models?filter=t5
 Adapted from the original version to support gradient accumulation and restarting.
+"""
 # You can also adapt this script on your own masked language modeling task. Pointers for this are left as comments.
 import logging
