@@ -62,3 +62,6 @@ class SentencePieceUnigramTokenizer(BaseTokenizer):
             "replacement": replacement,
             "add_prefix_space": add_prefix_space,
         }
+        super().__init__(tokenizer, parameters)
+
+    def train(
