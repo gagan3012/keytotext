@@ -14,3 +14,6 @@ from tokenizers.models import Unigram
 from tokenizers.processors import TemplateProcessing
 
 
+class SentencePieceUnigramTokenizer(BaseTokenizer):
+    """
+    This class is a copy of `DeDLOC's tokenizer implementation <https://github.com/yandex-research/DeDLOC/blob/main/sahajbert/tokenizer/tokenizer_model.py>`__ .
