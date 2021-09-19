@@ -43,3 +43,6 @@ class SentencePieceUnigramTokenizer(BaseTokenizer):
                 normalizers.NFKC(),
                 normalizers.Replace(Regex(" {2,}"), " "),
                 normalizers.Lowercase(),
+            ]
+        )
+        tokenizer.pre_tokenizer = pre_tokenizers.Sequence(
