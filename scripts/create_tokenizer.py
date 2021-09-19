@@ -74,4 +74,5 @@ class SentencePieceUnigramTokenizer(BaseTokenizer):
         trainer = trainers.UnigramTrainer(
             vocab_size=vocab_size,
             special_tokens=self.special_tokens_list,
+            show_progress=show_progress,
         )
