@@ -101,3 +101,6 @@ class SentencePieceUnigramTokenizer(BaseTokenizer):
         tokenizer_json["model"]["unk_id"] = self.special_tokens["unk"]["id"]
         self._tokenizer = Tokenizer.from_str(json.dumps(tokenizer_json))
 
+def main(args):
+    # Initialize a dataset
+    cfg = DownloadConfig(num_proc=args.num_proc)
