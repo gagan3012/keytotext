@@ -30,3 +30,7 @@ class SentencePieceUnigramTokenizer(BaseTokenizer):
     ):
         self.special_tokens = {
             "pad": {"id": 0, "token": pad_token},
+            "eos": {"id": 1, "token": eos_token},
+            "unk": {"id": 2, "token": unk_token},
+        }
+        self.special_tokens_list = [None] * len(self.special_tokens)
