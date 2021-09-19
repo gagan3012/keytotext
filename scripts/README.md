@@ -95,7 +95,9 @@ export HF_NAME="gagan3012"
 export HF_PWD="<YOUR_HF_HUB_PASSWORD>"
 export HF_TOKEN="<YOUR_HF_HUB_API_TOKEN>"
 export HF_PROJECT="t5-k2t"
+```
 
+```shell
 # Variables for training the tokenizer and creating the config
 export VOCAB_SIZE="32000"
 export N_INPUT_SENTENCES="1000000" # Num of sentences to train the tokenizer
