@@ -36,3 +36,4 @@ class SentencePieceUnigramTokenizer(BaseTokenizer):
         self.special_tokens_list = [None] * len(self.special_tokens)
         for token_dict in self.special_tokens.values():
             self.special_tokens_list[token_dict["id"]] = token_dict["token"]
+        tokenizer = Tokenizer(Unigram())
