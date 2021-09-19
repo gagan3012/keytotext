@@ -5,3 +5,6 @@ import argparse
 from typing import Iterator, List, Union
 
 import datasets
+from datasets.utils import DownloadConfig
+from transformers import T5Config
+
