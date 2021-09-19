@@ -79,3 +79,7 @@ class SentencePieceUnigramTokenizer(BaseTokenizer):
         if isinstance(files, str):
             files = [files]
         self._tokenizer.train(files, trainer=trainer)
+        self.add_unk_id()
+
+    def train_from_iterator(
+        self,
