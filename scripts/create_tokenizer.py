@@ -50,3 +50,6 @@ class SentencePieceUnigramTokenizer(BaseTokenizer):
                 pre_tokenizers.Metaspace(replacement=replacement, add_prefix_space=add_prefix_space),
                 pre_tokenizers.Digits(individual_digits=True),
                 pre_tokenizers.Punctuation(),
+            ]
+        )
+        tokenizer.decoder = decoders.Metaspace(replacement=replacement, add_prefix_space=add_prefix_space)
