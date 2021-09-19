@@ -27,3 +27,6 @@ class SentencePieceUnigramTokenizer(BaseTokenizer):
         unk_token: Union[str, AddedToken] = "<unk>",
         eos_token: Union[str, AddedToken] = "</s>",
         pad_token: Union[str, AddedToken] = "<pad>",
+    ):
+        self.special_tokens = {
+            "pad": {"id": 0, "token": pad_token},
