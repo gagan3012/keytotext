@@ -125,3 +125,7 @@ def main(args):
     tokenizer.train_from_iterator(
         iterator=batch_iterator(input_sentence_size=args.input_sentence_size),
         vocab_size=args.vocab_size,
+        show_progress=True,
+    )
+    # Save files to disk
+    tokenizer.save(f"{args.model_dir}/tokenizer.json")
