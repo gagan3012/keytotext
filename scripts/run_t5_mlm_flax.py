@@ -15,3 +15,6 @@
 # limitations under the License.
 """
 Pretraining the library models for T5-like span-masked language modeling on a text file or a dataset.
+Here is the full list of checkpoints on the hub that can be pretrained by this script:
+https://huggingface.co/models?filter=t5
+Adapted from the original version to support gradient accumulation and restarting.
