@@ -22,3 +22,6 @@ class SentencePieceUnigramTokenizer(BaseTokenizer):
     """
     def __init__(
         self,
+        replacement: str = "▁",
+        add_prefix_space: bool = True,
+        unk_token: Union[str, AddedToken] = "<unk>",
