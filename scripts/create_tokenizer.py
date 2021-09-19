@@ -58,3 +58,7 @@ class SentencePieceUnigramTokenizer(BaseTokenizer):
             special_tokens=[(self.special_tokens["eos"]["token"], self.special_tokens["eos"]["id"])],
         )
         parameters = {
+            "model": "SentencePieceUnigram",
+            "replacement": replacement,
+            "add_prefix_space": add_prefix_space,
+        }
