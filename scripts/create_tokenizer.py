@@ -148,3 +148,5 @@ if __name__ == "__main__":
     parser.add_argument("--batch_size", type=int, default=10000)
     parser.add_argument("--num_proc", type=int, default=96)
     parser.add_argument("--config_type", type=str, default="google/t5-v1_1-base")
+    args = parser.parse_args()
+    main(args)
