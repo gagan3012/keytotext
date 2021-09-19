@@ -83,3 +83,6 @@ class SentencePieceUnigramTokenizer(BaseTokenizer):
 
     def train_from_iterator(
         self,
+        iterator: Union[Iterator[str], Iterator[Iterator[str]]],
+        vocab_size: int = 8000,
+        show_progress: bool = True,
