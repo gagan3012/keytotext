@@ -98,3 +98,6 @@ class SentencePieceUnigramTokenizer(BaseTokenizer):
 
     def add_unk_id(self):
         tokenizer_json = json.loads(self._tokenizer.to_str())
+        tokenizer_json["model"]["unk_id"] = self.special_tokens["unk"]["id"]
+        self._tokenizer = Tokenizer.from_str(json.dumps(tokenizer_json))
+
