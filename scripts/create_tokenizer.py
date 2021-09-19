@@ -132,3 +132,6 @@ def main(args):
     config = T5Config.from_pretrained(
         args.config_type, vocab_size=tokenizer.get_vocab_size()
     )
+    config.save_pretrained(args.model_dir)
+    print(f"Tokenizer and config saved in {args.model_dir}")
+
