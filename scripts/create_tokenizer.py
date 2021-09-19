@@ -76,3 +76,6 @@ class SentencePieceUnigramTokenizer(BaseTokenizer):
             special_tokens=self.special_tokens_list,
             show_progress=show_progress,
         )
+        if isinstance(files, str):
+            files = [files]
+        self._tokenizer.train(files, trainer=trainer)
