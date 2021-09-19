@@ -71,3 +71,6 @@ class SentencePieceUnigramTokenizer(BaseTokenizer):
         show_progress: bool = True,
     ):
         """Train the model using the given files"""
+        trainer = trainers.UnigramTrainer(
+            vocab_size=vocab_size,
+            special_tokens=self.special_tokens_list,
