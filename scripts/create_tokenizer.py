@@ -135,3 +135,7 @@ def main(args):
     config.save_pretrained(args.model_dir)
     print(f"Tokenizer and config saved in {args.model_dir}")
 
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--model_dir", type=str, required=True)
