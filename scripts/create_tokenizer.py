@@ -65,3 +65,6 @@ class SentencePieceUnigramTokenizer(BaseTokenizer):
         super().__init__(tokenizer, parameters)
 
     def train(
+        self,
+        files: Union[str, List[str]],
+        vocab_size: int = 8000,
