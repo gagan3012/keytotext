@@ -109,3 +109,8 @@ def main(args):
         args.dataset,
         name=args.dataset_config,
         split=args.dataset_split,
+        download_config=cfg
+    )
+    # Initialize a tokenizer
+    tokenizer = SentencePieceUnigramTokenizer(
+        unk_token="<unk>", eos_token="</s>", pad_token="<pad>"
