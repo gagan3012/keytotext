@@ -9,3 +9,6 @@ def main(args):
     tf_model.save_pretrained(args.model_dir)
 
 
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--model_dir', type=str, default='.')
