@@ -221,7 +221,10 @@ def compute_input_and_target_lengths(
 
     tokens_length = inputs_length
 
-    while _tokens_length_to_inputs_length_targets_length(tokens_length + 1)[0] <= inputs_length:
+    while (
+        _tokens_length_to_inputs_length_targets_length(tokens_length + 1)[0]
+        <= inputs_length
+    ):
         tokens_length += 1
 
     inputs_length, targets_length = _tokens_length_to_inputs_length_targets_length(tokens_length)
