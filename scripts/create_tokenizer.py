@@ -72,6 +72,7 @@ class SentencePieceUnigramTokenizer(BaseTokenizer):
             single=f"$A {self.special_tokens['eos']['token']}",
             special_tokens=[
                 (self.special_tokens["eos"]["token"], self.special_tokens["eos"]["id"])
+            ],
         )
         parameters = {
             "model": "SentencePieceUnigram",
