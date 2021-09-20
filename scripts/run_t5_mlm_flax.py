@@ -187,7 +187,9 @@ class DataTrainingArguments:
     )
 
 
-def compute_input_and_target_lengths(inputs_length, noise_density, mean_noise_span_length):
+def compute_input_and_target_lengths(
+    inputs_length, noise_density, mean_noise_span_length
+):
     """This function is copy of `random_spans_helper <https://github.com/google-research/text-to-text-transfer-transformer/blob/84f8bcc14b5f2c03de51bd3587609ba8f6bbd1cd/t5/data/preprocessors.py#L2466>`__ .
     Training parameters to avoid padding with random_spans_noise_mask.
     When training a model with random_spans_noise_mask, we would like to set the other
