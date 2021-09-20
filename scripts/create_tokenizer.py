@@ -17,6 +17,8 @@ from tokenizers import (
     decoders,
     normalizers,
     pre_tokenizers,
+    trainers,
+)
 from tokenizers.implementations.base_tokenizer import BaseTokenizer
 from tokenizers.models import Unigram
 from tokenizers.processors import TemplateProcessing
