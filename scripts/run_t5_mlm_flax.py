@@ -594,7 +594,7 @@ if __name__ == "__main__":
             model_args.tokenizer_name,
             cache_dir=model_args.cache_dir,
             use_fast=model_args.use_fast_tokenizer,
-            use_auth_token=model_args.auth_token
+            use_auth_token=model_args.auth_token,
         )
     elif model_args.model_name_or_path:
         tokenizer = AutoTokenizer.from_pretrained(
