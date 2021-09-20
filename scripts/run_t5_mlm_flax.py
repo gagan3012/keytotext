@@ -463,7 +463,9 @@ def save_checkpoint(
             f.write(to_bytes(state.opt_state))
         with open(os.path.join(save_dir, "training_state.json"), "w") as f:
             json.dump({"step": state.step.item()}, f)
-    logger.info(f'Saving model in {save_dir} {"and pushing it to HF Hub" if push_to_hub else ""}')
+    logger.info(
+        f'Saving model in {save_dir} {"and pushing it to HF Hub" if push_to_hub else ""}'
+    )
     model.save_pretrained(
         save_dir,
         params=state.params,
