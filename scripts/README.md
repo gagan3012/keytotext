@@ -116,7 +116,7 @@ git clone "https://huggingface.co/${HF_NAME}/${HF_PROJECT}"
 mv $HF_PROJECT $MODEL_PATH
 
 # Create the tokenizer and the config
-python create_tokenizer_cfg.py \
+python create_tokenizer.py \
     --model_dir $MODEL_PATH \
     --dataset $DATASET \
     --dataset_config $DATASET_CONFIG \
