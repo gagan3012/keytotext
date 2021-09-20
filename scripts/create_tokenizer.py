@@ -137,7 +137,8 @@ def main(args):
         if input_sentence_size is None:
             input_sentence_size = len(dataset)
         for i in range(0, input_sentence_size, batch_size):
-            yield dataset[i: i + batch_size][args.text_field]
+            yield dataset[i : i + batch_size][args.text_field]
+
     # Train tokenizer
     tokenizer.train_from_iterator(
         iterator=batch_iterator(input_sentence_size=args.input_sentence_size),
