@@ -10,6 +10,9 @@ import datasets
 from datasets.utils import DownloadConfig
 from transformers import T5Config
 
+from tokenizers import (
+    AddedToken,
+    Regex,
 from tokenizers.implementations.base_tokenizer import BaseTokenizer
 from tokenizers.models import Unigram
 from tokenizers.processors import TemplateProcessing
