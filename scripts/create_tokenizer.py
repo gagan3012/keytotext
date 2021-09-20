@@ -16,7 +16,7 @@ from tokenizers.processors import TemplateProcessing
 
 class SentencePieceUnigramTokenizer(BaseTokenizer):
     """
-    This class is a copy of `DeDLOC's tokenizer implementation <https://github.com/yandex-research/DeDLOC/blob/main/sahajbert/tokenizer/tokenizer_model.py>`__ .
+    This class is a copy of `DeDLOC's tokenizer implementation <https://github.com/yandex-research/DeDLOC/blob/main/sahajbert/tokenizer/tokenizer_model.py>`
     Custom SentencePiece Unigram Tokenizer with NMT, NKFC, spaces and lower-casing characters normalization
     Represents the Unigram algorithm, with the pretokenization used by SentencePiece
     """
