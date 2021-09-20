@@ -58,7 +58,6 @@ class SentencePieceUnigramTokenizer(BaseTokenizer):
         )
         tokenizer.pre_tokenizer = pre_tokenizers.Sequence(
             [
-                pre_tokenizers.Metaspace(replacement=replacement, add_prefix_space=add_prefix_space),
                 pre_tokenizers.Digits(individual_digits=True),
                 pre_tokenizers.Punctuation(),
             ]
