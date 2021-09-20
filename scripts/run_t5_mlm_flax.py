@@ -227,7 +227,9 @@ def compute_input_and_target_lengths(
     ):
         tokens_length += 1
 
-    inputs_length, targets_length = _tokens_length_to_inputs_length_targets_length(tokens_length)
+    inputs_length, targets_length = _tokens_length_to_inputs_length_targets_length(
+        tokens_length
+    )
 
     # minor hack to get the targets length to be equal to inputs length
     # which is more likely to have been set to a nice round number.
