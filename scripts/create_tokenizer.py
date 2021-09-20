@@ -65,6 +65,7 @@ class SentencePieceUnigramTokenizer(BaseTokenizer):
                 pre_tokenizers.Punctuation(),
             ]
         )
+            replacement=replacement, add_prefix_space=add_prefix_space
         tokenizer.post_processor = TemplateProcessing(
             single=f"$A {self.special_tokens['eos']['token']}",
             special_tokens=[(self.special_tokens["eos"]["token"], self.special_tokens["eos"]["id"])],
