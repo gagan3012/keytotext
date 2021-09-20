@@ -601,7 +601,7 @@ if __name__ == "__main__":
             model_args.model_name_or_path,
             cache_dir=model_args.cache_dir,
             use_fast=model_args.use_fast_tokenizer,
-            use_auth_token=model_args.auth_token
+            use_auth_token=model_args.auth_token,
         )
     else:
         raise ValueError(
