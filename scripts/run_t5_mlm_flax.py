@@ -176,7 +176,10 @@ class DataTrainingArguments:
         metadata={"help": "The number of processes to use for the preprocessing."},
     )
     mlm_probability: float = field(
-        default=0.15, metadata={"help": "Ratio of tokens to mask for span masked language modeling loss"}
+        default=0.15,
+        metadata={
+            "help": "Ratio of tokens to mask for span masked language modeling loss"
+        },
     )
     mean_noise_span_length: float = field(
         default=3.0,
