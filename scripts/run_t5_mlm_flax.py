@@ -448,7 +448,14 @@ def mb_item(x):
     return x.item() if hasattr(x, "item") else x
 
 
-def save_checkpoint(model, save_dir, state, cur_step: int, with_opt: bool = True, push_to_hub: bool = False):
+def save_checkpoint(
+    model,
+    save_dir,
+    state,
+    cur_step: int,
+    with_opt: bool = True,
+    push_to_hub: bool = False,
+):
     state = jax_utils.unreplicate(state)
     if with_opt:
         logger.info(f'Saving optimizer and training state in {save_dir}...')
