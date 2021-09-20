@@ -3,7 +3,9 @@ from transformers import T5ForConditionalGeneration, TFT5ForConditionalGeneratio
 
 
 def main(args):
-    pt_model = T5ForConditionalGeneration.from_pretrained(args.model_dir, from_flax=True)
+    pt_model = T5ForConditionalGeneration.from_pretrained(
+        args.model_dir, from_flax=True
+    )
     pt_model.save_pretrained(args.model_dir)
     tf_model = TFT5ForConditionalGeneration.from_pretrained(args.model_dir, from_pt=True)
     tf_model.save_pretrained(args.model_dir)
