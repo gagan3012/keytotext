@@ -458,7 +458,7 @@ def save_checkpoint(
 ):
     state = jax_utils.unreplicate(state)
     if with_opt:
-        logger.info(f'Saving optimizer and training state in {save_dir}...')
+        logger.info(f"Saving optimizer and training state in {save_dir}...")
         with open(os.path.join(save_dir, "opt_state.msgpack"), "wb") as f:
             f.write(to_bytes(state.opt_state))
         with open(os.path.join(save_dir, "training_state.json"), "w") as f:
