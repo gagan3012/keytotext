@@ -611,11 +611,15 @@ if __name__ == "__main__":
 
     if model_args.config_name:
         config = T5Config.from_pretrained(
-            model_args.config_name, cache_dir=model_args.cache_dir, vocab_size=len(tokenizer)
+            model_args.config_name,
+            cache_dir=model_args.cache_dir,
+            vocab_size=len(tokenizer),
         )
     elif model_args.model_name_or_path:
         config = T5Config.from_pretrained(
-            model_args.model_name_or_path, cache_dir=model_args.cache_dir, vocab_size=len(tokenizer)
+            model_args.model_name_or_path,
+            cache_dir=model_args.cache_dir,
+            vocab_size=len(tokenizer),
         )
     else:
         config = CONFIG_MAPPING[model_args.model_type]()
@@ -631,12 +635,10 @@ if __name__ == "__main__":
 
     max_seq_length = min(data_args.max_seq_length, tokenizer.model_max_length)
 
-
     # Otherwise, we tokenize every text, then concatenate them together before splitting them in smaller parts.
     # Since we make sure that all sequences are of the same length, no attention_mask is needed.
     def tokenize_function(examples):
         return tokenizer(examples[text_column_name], return_attention_mask=False)
-
 
     tokenized_datasets = datasets.map(
         tokenize_function,
@@ -655,7 +657,6 @@ if __name__ == "__main__":
         mean_noise_span_length=data_args.mean_noise_span_length,
     )
 
-
     # Main data processing function that will concatenate all texts from our dataset and generate chunks of expanded_inputs_length.
     def group_texts(examples):
         # Concatenate all texts.
@@ -664,14 +665,18 @@ if __name__ == "__main__":
         # We drop the small remainder, we could add padding if the model supported it instead of this drop, you can
         # customize this part to your needs.
         if total_length >= expanded_inputs_length:
-            total_length = (total_length // expanded_inputs_length) * expanded_inputs_length
+            total_length = (
+                total_length // expanded_inputs_length
+            ) * expanded_inputs_length
         # Split by chunks of max_len.
         result = {
-            k: [t[i: i + expanded_inputs_length] for i in range(0, total_length, expanded_inputs_length)]
+            k: [
+                t[i : i + expanded_inputs_length]
+                for i in range(0, total_length, expanded_inputs_length)
+            ]
             for k, t in concatenated_examples.items()
         }
         return result
-
 
     # Note that with `batched=True`, this map processes 1,000 texts together, so group_texts throws away a
     # remainder for each of those groups of 1,000 texts. You can adjust that batch_size here but a higher value
@@ -712,10 +717,15 @@ if __name__ == "__main__":
 
     if model_args.model_name_or_path:
         model = FlaxT5ForConditionalGeneration.from_pretrained(
-            model_args.model_name_or_path, config=config, seed=training_args.seed, dtype=getattr(jnp, model_args.dtype)
+            model_args.model_name_or_path,
+            config=config,
+            seed=training_args.seed,
+            dtype=getattr(jnp, model_args.dtype),
         )
     else:
-        model = FlaxT5ForConditionalGeneration(config, seed=training_args.seed, dtype=getattr(jnp, model_args.dtype))
+        model = FlaxT5ForConditionalGeneration(
+            config, seed=training_args.seed, dtype=getattr(jnp, model_args.dtype)
+        )
 
     # Data collator
     # This one will take care of randomly masking the tokens.
@@ -731,8 +741,11 @@ if __name__ == "__main__":
 
     # Store some constant
     num_epochs = int(training_args.num_train_epochs)
-    train_batch_size = int(
-        training_args.per_device_train_batch_size) * jax.device_count() * training_args.gradient_accumulation_steps
+    train_batch_size = (
+        int(training_args.per_device_train_batch_size)
+        * jax.device_count()
+        * training_args.gradient_accumulation_steps
+    )
     eval_batch_size = int(training_args.per_device_eval_batch_size) * jax.device_count()
 
     num_train_steps = len(tokenized_datasets["train"]) // train_batch_size * num_epochs
@@ -744,11 +757,14 @@ if __name__ == "__main__":
         # See https://arxiv.org/pdf/2104.07705.pdf for rationale of choosing the peak at % of training steps
         warmup_steps = int(training_args.warmup_ratio * num_train_steps)
         logging.info(
-            f"Warmup steps set to {100 * training_args.warmup_ratio}% = {warmup_steps} of total train steps {num_train_steps}")
+            f"Warmup steps set to {100 * training_args.warmup_ratio}% = {warmup_steps} of total train steps {num_train_steps}"
+        )
     else:
         raise Exception("Need either --warmup_steps or --warmup_ratio")
     warmup_fn = optax.linear_schedule(
-        init_value=0.0, end_value=training_args.learning_rate, transition_steps=warmup_steps
+        init_value=0.0,
+        end_value=training_args.learning_rate,
+        transition_steps=warmup_steps,
     )
     decay_fn = optax.linear_schedule(
         init_value=training_args.learning_rate,
@@ -759,7 +775,6 @@ if __name__ == "__main__":
         schedules=[warmup_fn, decay_fn], boundaries=[warmup_steps]
     )
 
-
     # We use Optax's "masking" functionality to not apply weight decay
     # to bias and LayerNorm scale parameters. decay_mask_fn returns a
     # mask boolean with the same structure as the parameters.
@@ -767,11 +782,14 @@ if __name__ == "__main__":
     def decay_mask_fn(params):
         flat_params = traverse_util.flatten_dict(params)
         flat_mask = {
-            path: (path[-1] != "bias" and path[-2:] not in [("layer_norm", "scale"), ("final_layer_norm", "scale")])
+            path: (
+                path[-1] != "bias"
+                and path[-2:]
+                not in [("layer_norm", "scale"), ("final_layer_norm", "scale")]
+            )
             for path in flat_params
         }
         return traverse_util.unflatten_dict(flat_mask)
-
 
     # create adam optimizer
     if training_args.adafactor:
@@ -790,17 +808,22 @@ if __name__ == "__main__":
         )
 
     if training_args.gradient_accumulation_steps > 1:
-        optimizer = optax.MultiSteps(optimizer, training_args.gradient_accumulation_steps)
+        optimizer = optax.MultiSteps(
+            optimizer, training_args.gradient_accumulation_steps
+        )
     grad_accum_steps = training_args.gradient_accumulation_steps
 
     # Setup train state
-    state = train_state.TrainState.create(apply_fn=model.__call__, params=model.params, tx=optimizer)
+    state = train_state.TrainState.create(
+        apply_fn=model.__call__, params=model.params, tx=optimizer
+    )
 
     if training_args.resume_from_checkpoint:
-        state, resume_step = restore_checkpoint(training_args.resume_from_checkpoint, state)
+        state, resume_step = restore_checkpoint(
+            training_args.resume_from_checkpoint, state
+        )
     else:
         resume_step = 0
-
 
     # Define gradient update step fn
     def train_step(state, batch, dropout_rng):
@@ -809,10 +832,14 @@ if __name__ == "__main__":
         def loss_fn(params):
             labels = batch.pop("labels")
 
-            logits = state.apply_fn(**batch, params=params, dropout_rng=dropout_rng, train=True)[0]
+            logits = state.apply_fn(
+                **batch, params=params, dropout_rng=dropout_rng, train=True
+            )[0]
 
             # compute loss
-            loss = optax.softmax_cross_entropy(logits, onehot(labels, logits.shape[-1])).mean()
+            loss = optax.softmax_cross_entropy(
+                logits, onehot(labels, logits.shape[-1])
+            ).mean()
 
             return loss
 
@@ -822,16 +849,19 @@ if __name__ == "__main__":
         new_state = state.apply_gradients(grads=grad)
 
         metrics = jax.lax.pmean(
-            {"loss": loss, "learning_rate": linear_decay_lr_schedule_fn(state.step // grad_accum_steps)},
-            axis_name="batch"
+            {
+                "loss": loss,
+                "learning_rate": linear_decay_lr_schedule_fn(
+                    state.step // grad_accum_steps
+                ),
+            },
+            axis_name="batch",
         )
 
         return new_state, metrics, new_dropout_rng
 
-
     # Create parallel version of the train step
     p_train_step = jax.pmap(train_step, "batch", donate_argnums=(0,))
-
 
     # Define eval fn
     def eval_step(params, batch):
@@ -851,7 +881,6 @@ if __name__ == "__main__":
 
         return metrics
 
-
     p_eval_step = jax.pmap(eval_step, "batch", donate_argnums=(0,))
 
     # Replicate the train state on each device
@@ -861,8 +890,12 @@ if __name__ == "__main__":
     logger.info(f"  Num examples = {len(datasets['train'])}")
     logger.info(f"  Num tokenized group examples {len(tokenized_datasets['train'])}")
     logger.info(f"  Num Epochs = {num_epochs}")
-    logger.info(f"  Instantaneous batch size per device = {training_args.per_device_train_batch_size}")
-    logger.info(f"  Total train batch size (w. parallel, distributed and grad_accum) = {train_batch_size}")
+    logger.info(
+        f"  Instantaneous batch size per device = {training_args.per_device_train_batch_size}"
+    )
+    logger.info(
+        f"  Total train batch size (w. parallel, distributed and grad_accum) = {train_batch_size}"
+    )
     logger.info(f"  Total optimization steps = {num_train_steps}")
 
     train_time = 0
@@ -895,21 +928,30 @@ if __name__ == "__main__":
             if cur_step < resume_step:
                 continue
 
-            batch_idx = [x for x in range(step * train_batch_size, (step + 1) * train_batch_size)]
+            batch_idx = [
+                x for x in range(step * train_batch_size, (step + 1) * train_batch_size)
+            ]
             samples = [tokenized_datasets["train"][int(idx)] for idx in batch_idx]
             model_inputs = data_collator(samples)
 
             # Model forward
             model_inputs = shard(model_inputs.data)
-            state, train_metric, dropout_rngs = p_train_step(state, model_inputs, dropout_rngs)
+            state, train_metric, dropout_rngs = p_train_step(
+                state, model_inputs, dropout_rngs
+            )
             train_metrics.append(train_metric)
 
-            if cur_step % training_args.logging_steps * grad_accum_steps == 0 and cur_step > 0:
+            if (
+                cur_step % training_args.logging_steps * grad_accum_steps == 0
+                and cur_step > 0
+            ):
                 # Save metrics
                 train_metric = jax_utils.unreplicate(train_metric)
                 train_time += time.time() - train_start
                 if has_tensorboard and jax.process_index() == 0:
-                    write_train_metric(summary_writer, train_metrics, train_time, cur_step)
+                    write_train_metric(
+                        summary_writer, train_metrics, train_time, cur_step
+                    )
 
                 epochs.write(
                     f"Step... ({cur_step} | Loss: {train_metric['loss'].mean()}, Learning Rate: {train_metric['learning_rate'].mean()})"
@@ -917,15 +959,24 @@ if __name__ == "__main__":
 
                 train_metrics = []
 
-            if cur_step % training_args.eval_steps * grad_accum_steps == 0 and cur_step > 0:
+            if (
+                cur_step % training_args.eval_steps * grad_accum_steps == 0
+                and cur_step > 0
+            ):
                 # ======================== Evaluating ==============================
                 num_eval_samples = len(tokenized_datasets["validation"])
                 eval_samples_idx = jnp.arange(num_eval_samples)
-                eval_batch_idx = generate_batch_splits(eval_samples_idx, eval_batch_size)
+                eval_batch_idx = generate_batch_splits(
+                    eval_samples_idx, eval_batch_size
+                )
 
                 eval_metrics = []
-                for i, batch_idx in enumerate(tqdm(eval_batch_idx, desc="Evaluating ...", position=2)):
-                    samples = [tokenized_datasets["validation"][int(idx)] for idx in batch_idx]
+                for i, batch_idx in enumerate(
+                    tqdm(eval_batch_idx, desc="Evaluating ...", position=2)
+                ):
+                    samples = [
+                        tokenized_datasets["validation"][int(idx)] for idx in batch_idx
+                    ]
                     model_inputs = data_collator(samples)
 
                     # Model forward
@@ -938,13 +989,18 @@ if __name__ == "__main__":
                 eval_metrics = jax.tree_map(jnp.mean, eval_metrics)
 
                 # Update progress bar
-                epochs.write(f"Step... ({cur_step} | Loss: {eval_metrics['loss']}, Acc: {eval_metrics['accuracy']})")
+                epochs.write(
+                    f"Step... ({cur_step} | Loss: {eval_metrics['loss']}, Acc: {eval_metrics['accuracy']})"
+                )
 
                 # Save metrics
                 if has_tensorboard and jax.process_index() == 0:
                     write_eval_metric(summary_writer, eval_metrics, cur_step)
 
-            if cur_step % training_args.save_steps * grad_accum_steps == 0 and cur_step > 0:
+            if (
+                cur_step % training_args.save_steps * grad_accum_steps == 0
+                and cur_step > 0
+            ):
                 # save checkpoint after each epoch and push checkpoint to the hub
                 if jax.process_index() == 0:
                     save_checkpoint(
@@ -953,11 +1009,18 @@ if __name__ == "__main__":
                         state,
                         cur_step,
                         with_opt=True,
-                        push_to_hub=True
+                        push_to_hub=True,
                     )
 
     if jax.process_index() == 0:
-        save_checkpoint(model, training_args.output_dir, state, cur_step, with_opt=False, push_to_hub=True)
+        save_checkpoint(
+            model,
+            training_args.output_dir,
+            state,
+            cur_step,
+            with_opt=False,
+            push_to_hub=True,
+        )
         # params = jax.device_get(jax.tree_map(lambda x: x[0], state.params))
         # model.save_pretrained(
         #    training_args.output_dir,
