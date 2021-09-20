@@ -114,9 +114,7 @@ class ModelArguments:
     )
     auth_token: Optional[str] = field(
         default=None,
-        metadata={
-            "help": "Auth token for private repositories on the Huggingface Hub"
-        }
+        metadata={"help": "Auth token for private repositories on the Huggingface Hub"},
     )
 
 
