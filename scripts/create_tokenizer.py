@@ -13,6 +13,10 @@ from transformers import T5Config
 from tokenizers import (
     AddedToken,
     Regex,
+    Tokenizer,
+    decoders,
+    normalizers,
+    pre_tokenizers,
 from tokenizers.implementations.base_tokenizer import BaseTokenizer
 from tokenizers.models import Unigram
 from tokenizers.processors import TemplateProcessing
