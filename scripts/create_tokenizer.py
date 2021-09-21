@@ -33,7 +33,7 @@ class SentencePieceUnigramTokenizer(BaseTokenizer):
 
     def __init__(
         self,
-        replacement: str = "_",
+        replacement = "_",
         add_prefix_space: bool = True,
         unk_token: Union[str, AddedToken] = "<unk>",
         eos_token: Union[str, AddedToken] = "</s>",
