@@ -1,4 +1,4 @@
-# Pretrain and Fine-tune a T5 model with Flax on GCP
+# Pretrain and Fine-tune a T5 model with Flax on GCP (Approach abandoned)
 
 This tutorial details how pretrain and fine-tune a [FlaxT5](https://github.com/huggingface/transformers/blob/master/src/transformers/models/t5/modeling_flax_t5.py) model from HuggingFace using a TPU VM available on Google Cloud.
 
