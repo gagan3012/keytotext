@@ -324,6 +324,7 @@ class trainer:
             max_epochs=max_epochs,
             gpus=gpus,
             progress_bar_refresh_rate=5,
+            tpu_cores=tpu_cores
         )
 
         trainer.fit(self.T5Model, self.data_module)
