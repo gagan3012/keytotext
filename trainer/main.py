@@ -1,7 +1,7 @@
 from keytotext import trainer, make_dataset
 
 train_df = make_dataset('common_gen', split='train')
-eval_df = make_dataset('common_gen', split='val')
+eval_df = make_dataset('common_gen', split='validation')
 test_df = make_dataset('common_gen', split='test')
 
 model = trainer()
