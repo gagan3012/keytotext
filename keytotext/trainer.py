@@ -263,6 +263,7 @@ class trainer:
         outputdir: str = "outputs",
         early_stopping_patience_epochs: int = 0,  # 0 to disable early stopping feature
         test_split=0.1,
+        tpu_cores = None,
     ):
         """
         trains T5 model on custom dataset
