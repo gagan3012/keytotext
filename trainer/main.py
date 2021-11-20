@@ -1,3 +1,7 @@
+# for TPU trainign with tf.data.Dataset
+
+import torch
+import torch_xla.core.xla_model as xm
 from keytotext import trainer, make_dataset
 
 train_df = make_dataset('common_gen', split='train')
