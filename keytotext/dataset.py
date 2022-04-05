@@ -31,7 +31,8 @@ def make_dataset(dataset="common_gen", split="train"):
     else:
         dataset = load_dataset(dataset, split=split)
         df = pd.DataFrame()
-
-    return None
+        df["text"] = dataset["text"]
+        df = make_keywords(df)
+        return df
   except:
     return ValueError("Dataset not found")
