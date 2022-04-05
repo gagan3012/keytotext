@@ -22,6 +22,7 @@ requires = [
     "wandb",
     "pytorch_lightning",
     "datasets",
-    "huggingface_hub"
+    "huggingface_hub",
+    "keybert",
 ]
 license = "MIT"
