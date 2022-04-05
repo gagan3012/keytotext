@@ -19,7 +19,7 @@ def make_keywords(df):
     print(i)
   return df
 
-def dataset(dataset="common_gen", split="train"):
+def make_dataset(dataset="common_gen", split="train"):
   try:
     if dataset == "common_gen":
         dataset = load_dataset(dataset, split=split)
