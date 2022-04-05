@@ -502,7 +502,6 @@ class trainer:
         if Path("./model").exists():
             shutil.rmtree("./model")
         HfApi.set_access_token(token)
-        del hf_password
         model_url = HfApi().create_repo(token=token, name=model_name, exist_ok=True)
         model_repo = Repository(
             "./model",
