@@ -928,9 +928,7 @@ if __name__ == "__main__":
             if cur_step < resume_step:
                 continue
 
-            batch_idx = [
-                x for x in range(step * train_batch_size, (step + 1) * train_batch_size)
-            ]
+            batch_idx = list(range(step * train_batch_size, (step + 1) * train_batch_size))
             samples = [tokenized_datasets["train"][int(idx)] for idx in batch_idx]
             model_inputs = data_collator(samples)
 
