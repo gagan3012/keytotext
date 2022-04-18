@@ -1,6 +1,8 @@
+from cv2 import randShuffle
 from datasets import load_dataset
 import pandas as pd
 from keybert import KeyBERT
+from tqdm import tqdm
 
 
 def clean(keywords):
@@ -12,7 +14,7 @@ def clean_keywords(keywords):
 
 def make_keywords(df):
   kw_model = KeyBERT()
-  for i in range(len(df)):
+  for i in tqdm(range(len(df))):
     keyword = kw_model.extract_keywords(df['text'][i])
     clean = clean_keywords(keyword)
     df["keywords"][i] = clean
@@ -34,5 +36,5 @@ def make_dataset(dataset="common_gen", split="train"):
         df["text"] = dataset["text"]
         df = make_keywords(df)
         return df
-  except:
-    return ValueError("Dataset not found")
+  except Exception as e:
+    raise e
