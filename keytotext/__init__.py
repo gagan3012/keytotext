@@ -4,7 +4,7 @@ Keytotext converts a list of Keywords to sentences and larger texts
 """
 
 
-__version__ = "2.2.2"
+__version__ = "2.2.4"
 
 from .pipeline import pipeline
 from .trainer import trainer

@@ -16,7 +16,8 @@ def make_keywords(dataset):
   kw_model = KeyBERT()
   df = pd.DataFrame()
   df["text"] = dataset["text"] or dataset["target"] or dataset["article"]
-  df["keywords"] = None
+  df["keywords"] = 0
+  print(df)
   for i in tqdm(range(len(df))):
     keyword = kw_model.extract_keywords(df['text'][i])
     clean = clean_keywords(keyword)
