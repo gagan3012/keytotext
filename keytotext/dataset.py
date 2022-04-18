@@ -14,10 +14,8 @@ def clean_keywords(keywords):
 
 def make_keywords(dataset):
   kw_model = KeyBERT()
-  df = pd.DataFrame()
-  df["text"] = dataset["text"] or dataset["target"] or dataset["article"]
-  df["keywords"] = 0
-  print(df)
+  df = pd.DataFrame(columns=['text', 'keywords'])
+  df["text"] = dataset["text"] 
   for i in tqdm(range(len(df))):
     keyword = kw_model.extract_keywords(df['text'][i])
     clean = clean_keywords(keyword)
@@ -25,7 +23,6 @@ def make_keywords(dataset):
   return df
 
 def make_dataset(dataset="common_gen", split="train"):
-  try:
     if dataset == "common_gen":
         dataset = load_dataset(dataset, split=split)
         df = pd.DataFrame()
@@ -35,7 +32,7 @@ def make_dataset(dataset="common_gen", split="train"):
         return df
     else:
         dataset = load_dataset(dataset, split=split)
-        df = make_keywords(df)
+        print(dataset)
+        df = make_keywords(dataset=dataset)
         return df
-  except Exception as e:
-    raise e
+  

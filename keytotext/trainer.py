@@ -497,8 +497,9 @@ class trainer:
         }
         return output
 
-    def upload(self, hf_username, model_name):
-        token = getpass("Enter your HuggingFace access token")
+    def upload(self, hf_username, model_name, token):
+        if token is None: 
+            token = getpass("Enter your HuggingFace access token")
         if Path("./model").exists():
             shutil.rmtree("./model")
         HfApi.set_access_token(token)
