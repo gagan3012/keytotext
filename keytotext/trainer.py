@@ -318,13 +318,12 @@ class trainer:
         )
 
         gpus = -1 if use_gpu else 0
-
+#delete  progress_bar_refresh_rate=5,since this keyword argument is no longer supported by latest version (1.7.0) of pytorch.Lightning.Trainer module
         trainer = Trainer(
             logger=logger,
             callbacks=early_stop_callback,
             max_epochs=max_epochs,
-            gpus=gpus,
-            progress_bar_refresh_rate=5,
+            gpus=gpus,           
             tpu_cores=tpu_cores
         )
 

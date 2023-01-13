@@ -32,6 +32,12 @@ SUPPORTED_TASKS = {
             "model": "gagan3012/k2t-new",
         },
     },
+    "anath/T5key2textcomgenminime": {
+        "impl": NMPipeline,
+        "default": {
+            "model": "anath/T5key2textcomgenminime",
+        },
+    },
 }
 
 
