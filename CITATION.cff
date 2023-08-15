@@ -4,7 +4,7 @@ authors:
 - family-names: "Bhatia"
   given-names: "Gagan"
   orcid: "https://orcid.org/0009-0003-1972-501X"
-title: "Keytotext"
+title: "Keytotext: Training LLMs for guided storytelling (Keywords to Sentences)"
 version: 1.5.0
 date-released: 2021-05-01
 url: "https://github.com/gagan3012/keytotext"
